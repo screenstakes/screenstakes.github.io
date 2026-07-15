@@ -448,27 +448,36 @@ Questions about these terms or the privacy policy can be sent through the app's 
 <script>
 /* waitlist */
 const FORM_ENDPOINT = "https://formspree.io/f/mlgqggkp";
+const ML_URL = "https://assets.mailerlite.com/jsonp/2512203/forms/193083877270488275/subscribe";
 async function joinWaitlist(e){
   e.preventDefault();
   const btn = document.getElementById('wlbtn');
   const email = document.getElementById('wlemail').value.trim();
-  if(!email) return false;
+  if(!email || !/.+@.+\..+/.test(email)) return false;
   btn.textContent = 'shuffling…';
   btn.disabled = true;
+
+  // primary: MailerLite (instant welcome email + launch blast). fire-and-forget,
+  // no-cors so the browser sends it even though we can't read the response.
   try{
-    const r = await fetch(FORM_ENDPOINT, {
-      method:'POST',
+    const body = new URLSearchParams();
+    body.append('fields[email]', email);
+    body.append('ml-submit', '1');
+    body.append('anticsrf', 'true');
+    fetch(ML_URL, {method:'POST', mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body.toString()});
+  }catch(err){}
+
+  // safety net: Formspree (guaranteed capture, second copy in Fitz's dashboard)
+  try{
+    await fetch(FORM_ENDPOINT, {method:'POST',
       headers:{'Accept':'application/json','Content-Type':'application/json'},
-      body: JSON.stringify({email: email, source: 'screenstakes.github.io waitlist'})
-    });
-    if(!r.ok) throw new Error();
-    document.getElementById('wlform').style.display = 'none';
-    document.getElementById('wldone').style.display = 'block';
-    confetti(110);
-  }catch(err){
-    btn.textContent = 'try again';
-    btn.disabled = false;
-  }
+      body: JSON.stringify({email: email, source: 'screenstakes.github.io waitlist'})});
+  }catch(err){}
+
+  document.getElementById('wlform').style.display = 'none';
+  document.getElementById('wldone').style.display = 'block';
+  confetti(110);
   return false;
 }
 
