@@ -12,23 +12,32 @@
   .wordmark{font-size:13px;font-weight:900;letter-spacing:.34em;color:var(--gold)}
   .candles{display:inline-block;margin-left:8px;vertical-align:-2px}
   h1{font-size:30px;font-weight:900;margin:14px 0 6px;line-height:1.15}
-  .lede{color:var(--dim);font-size:15px;line-height:1.55;margin-bottom:8px}
+  .lede{color:var(--dim);font-size:15px;line-height:1.55}
   .lede b{color:var(--gold)}
-  .tzchip{display:inline-block;margin:10px 0 22px;font-size:12px;font-weight:700;color:var(--dim);
-    border:1.5px solid var(--line);border-radius:20px;padding:6px 14px}
+  .tzchip{display:block;margin:14px 0 6px;font-size:13px;font-weight:800;color:var(--goldink);
+    background:var(--gold);border-radius:12px;padding:10px 14px;text-align:center}
   .lbl{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:20px 0 10px}
-  #days{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
-  .day{flex:0 0 auto;text-align:center;padding:12px 16px;border-radius:16px;background:var(--card);
-    border:2px solid var(--line);cursor:pointer;min-width:74px}
-  .day .dw{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
-  .day .dn{font-size:22px;font-weight:900;margin-top:2px}
-  .day .ct{font-size:10.5px;font-weight:700;color:var(--gold);margin-top:2px}
-  .day.sel{border-color:var(--gold);background:var(--card2)}
-  .day.sel .dw{color:var(--gold)}
+
+  /* month view */
+  #cal{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px 14px}
+  #cal-title{text-align:center;font-size:17px;font-weight:900;margin-bottom:12px;letter-spacing:.06em}
+  .dowrow,.weekrow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .dow{text-align:center;font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;
+    letter-spacing:.06em;padding-bottom:6px}
+  .weekrow{margin-top:6px}
+  .cell{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border-radius:12px;font-size:15px;font-weight:800;color:#5b5142;position:relative}
+  .cell.open{background:var(--card2);border:2px solid var(--gold);color:var(--text);cursor:pointer}
+  .cell.open .n{position:absolute;bottom:4px;font-size:8.5px;font-weight:800;color:var(--gold)}
+  .cell.sel{background:var(--gold);color:var(--goldink)}
+  .cell.sel .n{color:var(--goldink)}
+
   #slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
   .slot{padding:13px 0;text-align:center;font-size:15px;font-weight:800;border-radius:14px;
     background:var(--card);border:2px solid var(--line);cursor:pointer;font-variant-numeric:tabular-nums}
   .slot.sel{background:var(--gold);border-color:var(--gold);color:var(--goldink)}
+  .spin{color:var(--dim);font-size:14px;padding:16px 0;text-align:center;grid-column:1/-1}
+
   #form{margin-top:22px;display:none}
   .field{margin-bottom:12px}
   .field label{display:block;font-size:12px;font-weight:800;color:var(--dim);margin-bottom:6px}
@@ -40,13 +49,19 @@
   #book:disabled{opacity:.55}
   #msg{margin-top:12px;font-size:13.5px;font-weight:700;text-align:center}
   #msg.err{color:var(--red)} #msg.okc{color:var(--green)}
+
+  .vcbox{margin-top:18px;padding:16px 18px;border-radius:16px;background:var(--card);
+    border:2px dashed var(--gold);font-size:13.5px;color:var(--dim);line-height:1.6}
+  .vcbox b{color:var(--text)} .vcbox a{color:var(--gold);font-weight:800}
+
   #done{display:none;margin-top:26px;padding:26px 22px;border-radius:20px;background:var(--card);
     border:2px solid var(--green);text-align:center}
   #done h2{color:var(--green);font-size:24px;margin-bottom:8px}
-  #done p{color:var(--dim);font-size:14.5px;line-height:1.6}
-  #done a{color:var(--gold);font-weight:800}
+  #done p{color:var(--dim);font-size:14.5px;line-height:1.65}
+  #done b{color:var(--text)}
+  #done .dbtn{display:inline-block;margin-top:12px;background:var(--gold);color:var(--goldink);
+    font-weight:900;padding:13px 26px;border-radius:12px;text-decoration:none;font-size:15px}
   .fine{margin-top:34px;font-size:11px;color:#6d6152;line-height:1.6;text-align:center}
-  .spin{color:var(--dim);font-size:14px;padding:20px 0;text-align:center}
   .hp{position:absolute;left:-5000px;opacity:0}
 </style></head>
 <body>
@@ -62,13 +77,13 @@
 </div>
 
 <h1>Book your free trading call</h1>
-<p class="lede">30 minutes, just us. We look at <b>your chart</b>, figure out where you're at, and map your plan. Free — you just show up ready to work.</p>
-<div class="tzchip" id="tz">times shown in your timezone</div>
+<p class="lede">30 minutes, just us. We look at <b>your chart</b>, figure out where you're at, and map your plan. The call happens in the <b>🔊 Mentorship VC</b> in my Discord.</p>
+<div class="tzchip">⏰ ALL TIMES ARE CST — CENTRAL (TEXAS) TIME</div>
 
 <div class="lbl">pick a day</div>
-<div id="days"><div class="spin">loading days…</div></div>
+<div id="cal"><div class="spin">loading the calendar…</div></div>
 
-<div class="lbl">pick a time</div>
+<div class="lbl">pick a time <span style="color:var(--dim)">· CST</span></div>
 <div id="slots"><div class="spin">pick a day first</div></div>
 
 <div id="form">
@@ -82,55 +97,70 @@
   <div id="msg"></div>
 </div>
 
+<div class="vcbox">📍 <b>Where the call happens:</b> join the <a href="https://discord.gg/rDgmrar4N">fitztradez Discord</a> → at your time, hop in the <b>🔊 Mentorship VC</b> voice channel (under "The Vault").</div>
+
 <div id="done">
   <h2>You're booked ✅</h2>
-  <p id="done-when"></p>
-  <p>Check your email — invite + call link are on the way.<br>
-  Before the call: join the <a href="https://discord.gg/rDgmrar4N">Discord</a> and bring one chart you've been looking at.</p>
+  <p id="done-when" style="font-weight:800;color:var(--text)"></p>
+  <p>Check your email for the invite. The call is in the <b>🔊 Mentorship VC</b> voice channel — be in the server before your time.</p>
+  <a class="dbtn" href="https://discord.gg/rDgmrar4N">Join the Discord</a>
 </div>
 
 <p class="fine">free education from a fellow student of the game — not financial advice, no signals, no profit promises.<br>@fitztradez</p>
 
 <script>
 const API = 'https://script.google.com/macros/s/AKfycbycaRQVU0pARercqxHFQG2TmMsfIEXaAXWY6Xswi4GSkRk6VONU5FH83wmIKtvfo3ug_g/exec';
+const CT = 'America/Chicago';
 
 const $ = id => document.getElementById(id);
-let slots = [], byDay = {}, selDay = null, selSlot = null;
+let byDay = {}, selDay = null, selSlot = null;
 
-const dayKey = iso => new Date(iso).toLocaleDateString([], {year:'numeric',month:'2-digit',day:'2-digit'});
-const fmtTime = iso => new Date(iso).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'});
-
-$('tz').textContent = 'times shown in your timezone — ' + Intl.DateTimeFormat().resolvedOptions().timeZone.replace('_',' ');
+const ctDate = iso => new Date(iso).toLocaleDateString('en-CA', { timeZone: CT });            // YYYY-MM-DD in CST
+const fmtTime = iso => new Date(iso).toLocaleTimeString('en-US', { timeZone: CT, hour: 'numeric', minute: '2-digit' });
 
 async function load(){
   try{
     const r = await fetch(API + '?action=slots');
     const j = await r.json();
     if(!j.ok) throw new Error(j.error);
-    slots = j.slots; byDay = {};
-    for(const s of slots) (byDay[dayKey(s)] = byDay[dayKey(s)] || []).push(s);
-    renderDays();
+    byDay = {};
+    for(const s of j.slots) (byDay[ctDate(s)] = byDay[ctDate(s)] || []).push(s);
+    renderCal();
   }catch(e){
-    $('days').innerHTML = '<div class="spin">couldn\'t load times — refresh the page</div>';
+    $('cal').innerHTML = '<div class="spin">couldn\'t load the calendar — refresh the page</div>';
   }
 }
 
-function renderDays(){
-  const days = Object.keys(byDay);
-  if(!days.length){ $('days').innerHTML = '<div class="spin">no open times rn — check back soon</div>'; return; }
-  $('days').innerHTML = '';
-  for(const k of days){
-    const d = new Date(byDay[k][0]);
-    const el = document.createElement('div');
-    el.className = 'day';
-    el.innerHTML = `<div class="dw">${d.toLocaleDateString([], {weekday:'short'})}</div>` +
-      `<div class="dn">${d.getDate()}</div>` +
-      `<div class="ct">${byDay[k].length} open</div>`;
-    el.onclick = () => { selDay = k; selSlot = null; $('form').style.display='none';
-      [...document.querySelectorAll('.day')].forEach(x=>x.classList.remove('sel'));
-      el.classList.add('sel'); renderSlots(); };
-    $('days').appendChild(el);
+function renderCal(){
+  const keys = Object.keys(byDay).sort();
+  if(!keys.length){ $('cal').innerHTML = '<div class="spin">no open times rn — check back soon</div>'; return; }
+  // render the month of the first open day (CST)
+  const [yy, mm] = keys[0].split('-').map(Number);
+  const monthName = new Date(yy, mm-1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const firstDow = new Date(yy, mm-1, 1).getDay();            // 0=Sun
+  const daysInMonth = new Date(yy, mm, 0).getDate();
+  const todayCT = new Date().toLocaleDateString('en-CA', { timeZone: CT });
+
+  let html = `<div id="cal-title">${monthName}</div><div class="dowrow">` +
+    ['sun','mon','tue','wed','thu','fri','sat'].map(d=>`<div class="dow">${d}</div>`).join('') + '</div>';
+  let cells = [];
+  for(let i=0;i<firstDow;i++) cells.push('<div class="cell"></div>');
+  for(let d=1; d<=daysInMonth; d++){
+    const key = `${yy}-${String(mm).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const open = byDay[key];
+    if(open) cells.push(`<div class="cell open" data-day="${key}">${d}<span class="n">${open.length} open</span></div>`);
+    else cells.push(`<div class="cell"${key===todayCT?' style="border:1.5px solid #3a2f22;border-radius:12px"':''}>${d}</div>`);
   }
+  let rows = '';
+  for(let i=0;i<cells.length;i+=7) rows += `<div class="weekrow">${cells.slice(i,i+7).join('')}</div>`;
+  $('cal').innerHTML = html + rows;
+
+  [...document.querySelectorAll('.cell.open')].forEach(el => el.onclick = () => {
+    selDay = el.dataset.day; selSlot = null; $('form').style.display='none';
+    [...document.querySelectorAll('.cell')].forEach(x=>x.classList.remove('sel'));
+    el.classList.add('sel'); renderSlots();
+    $('slots').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
 }
 
 function renderSlots(){
@@ -158,9 +188,10 @@ $('book').onclick = async () => {
     const r = await fetch(API + '?' + q.toString());
     const j = await r.json();
     if(j.ok && j.booked){
-      $('form').style.display='none'; $('slots').innerHTML=''; $('days').style.pointerEvents='none';
+      $('form').style.display='none'; $('slots').innerHTML=''; $('cal').style.pointerEvents='none';
       $('done').style.display='block';
-      $('done-when').textContent = new Date(selSlot).toLocaleString([], {weekday:'long',month:'long',day:'numeric',hour:'numeric',minute:'2-digit'});
+      $('done-when').textContent = new Date(selSlot).toLocaleString('en-US',
+        { timeZone: CT, weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit' }) + ' CST';
       $('done').scrollIntoView({behavior:'smooth'});
     } else if(j.error === 'slot taken'){
       msg.className='err'; msg.textContent='someone grabbed that one — pick another'; $('book').disabled=false; load();
