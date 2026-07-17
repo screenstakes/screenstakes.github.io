@@ -78,12 +78,12 @@
 
 <h1>Book your free trading call</h1>
 <p class="lede">30 minutes, just us. We look at <b>your chart</b>, figure out where you're at, and map your plan. The call happens in the <b>🔊 Mentorship VC</b> in my Discord.</p>
-<div class="tzchip">⏰ ALL TIMES ARE CST — CENTRAL TIME</div>
+<div class="tzchip">⏰ ALL TIMES ARE EST — EASTERN TIME</div>
 
 <div class="lbl">pick a day</div>
 <div id="cal"><div class="spin">loading the calendar…</div></div>
 
-<div class="lbl">pick a time <span style="color:var(--dim)">· CST</span></div>
+<div class="lbl">pick a time <span style="color:var(--dim)">· EST</span></div>
 <div id="slots"><div class="spin">pick a day first</div></div>
 
 <div id="form">
@@ -110,7 +110,7 @@
 
 <script>
 const API = 'https://script.google.com/macros/s/AKfycbycaRQVU0pARercqxHFQG2TmMsfIEXaAXWY6Xswi4GSkRk6VONU5FH83wmIKtvfo3ug_g/exec';
-const CT = 'America/Chicago';
+const CT = 'America/New_York';
 
 const $ = id => document.getElementById(id);
 let byDay = {}, selDay = null, selSlot = null;
@@ -191,7 +191,7 @@ $('book').onclick = async () => {
       $('form').style.display='none'; $('slots').innerHTML=''; $('cal').style.pointerEvents='none';
       $('done').style.display='block';
       $('done-when').textContent = new Date(selSlot).toLocaleString('en-US',
-        { timeZone: CT, weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit' }) + ' CST';
+        { timeZone: CT, weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit' }) + ' EST';
       $('done').scrollIntoView({behavior:'smooth'});
     } else if(j.error === 'slot taken'){
       msg.className='err'; msg.textContent='someone grabbed that one — pick another'; $('book').disabled=false; load();
