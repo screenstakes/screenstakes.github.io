@@ -256,6 +256,8 @@
       <p class="l">The beta goes out to the waitlist <b style="color:var(--text)">before</b> the App Store ever sees it. Drop your email and you'll get the install link the day it's live — plus first shot at the leaderboard while everyone else is still scrolling.</p>
       <form class="wl-form" id="wlform" onsubmit="return joinWaitlist(event)">
         <input type="email" id="wlemail" name="email" placeholder="your@email.com" required autocomplete="email">
+        <!-- spam trap: hidden from real users, bots fill it -->
+        <input type="text" id="wlcompany" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
         <button class="btn" id="wlbtn" type="submit">claim my seat 🃏</button>
       </form>
       <div class="done" id="wldone">
@@ -454,9 +456,35 @@ const FORM_ENDPOINT = "https://formspree.io/f/mlgqggkp";
 const WAITLIST_API = "https://script.google.com/macros/s/AKfycbynLM8hNOgk29MelYpGPWwHBxX-Etq8Qc4itGV-JqAhBIEYPvU6cIfo03mhwF_40yQNxg/exec";
 async function joinWaitlist(e){
   e.preventDefault();
+  // spam trap: if the hidden field is filled, it's a bot — fake success, send nothing
+  if(document.getElementById('wlcompany').value){
+    document.getElementById('wlform').style.display = 'none';
+    document.getElementById('wldone').style.display = 'block';
+    return false;
+  }
   const btn = document.getElementById('wlbtn');
   const email = document.getElementById('wlemail').value.trim();
-  if(!email || !/.+@.+\..+/.test(email)) return false;
+  // stricter than ".+@.+\..+" — blocks spaces, commas and header-injection
+  // characters, and caps length so nothing absurd reaches the backend
+  if(!email || email.length > 254 || !/^[^\s@,;:<>()[\]\\"]+@[^\s@,;:<>()[\]\\"]+\.[A-Za-z]{2,}$/.test(email)) return false;
+  // throttle: one signup per browser per 60s, and never the same address
+  // twice. Client-side only — the Apps Script still needs its own limit.
+  try{
+    const now = Date.now();
+    const last = parseInt(localStorage.getItem('ss_wl_at') || '0', 10);
+    if(now - last < 60000){
+      document.getElementById('wlform').style.display = 'none';
+      document.getElementById('wldone').style.display = 'block';
+      return false;
+    }
+    if((localStorage.getItem('ss_wl_email') || '') === email.toLowerCase()){
+      document.getElementById('wlform').style.display = 'none';
+      document.getElementById('wldone').style.display = 'block';
+      return false;
+    }
+    localStorage.setItem('ss_wl_at', String(now));
+    localStorage.setItem('ss_wl_email', email.toLowerCase());
+  }catch(err){}
   btn.textContent = 'shuffling…';
   btn.disabled = true;
 
