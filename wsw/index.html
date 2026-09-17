@@ -140,7 +140,6 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .cmp{min-width:0}
 @media (max-width:360px){.compare{grid-template-columns:minmax(0,1fr)}}
 .cmp .big small{display:block;font:600 12px/1.3 var(--display);color:var(--ink-3);margin-top:4px}
-@media (max-width:540px){.cmp{padding:12px}.cmp .sub{display:none}.cmp h3{font-size:16px}.cmp .big{font-size:20px}.cmp .legend li{font-size:13.5px;grid-template-columns:12px 1fr auto;gap:6px}.cmp .legend .amt{font-size:14px}.compare{gap:8px}}
 .cmp{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
 .cmp h3{font:800 18px/1.2 var(--display);margin:0}
 .cmp .sub{font-size:14px;line-height:1.45;color:var(--ink-3);margin:-4px 0 0}
@@ -148,6 +147,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .minibar{height:36px;border-radius:8px;overflow:hidden;display:flex;gap:3px;background:var(--well)}
 .minibar div{height:100%;flex:none;transition:width .4s ease}
 .cmp .legend li{font-size:14px}.cmp .legend .amt{font-size:15px}
+@media (max-width:540px){.cmp{padding:12px}.cmp .sub{display:none}.cmp h3{font-size:16px}.cmp .big{font-size:20px}.cmp .legend li{font-size:13.5px;grid-template-columns:12px 1fr auto;gap:6px}.cmp .legend .amt{font-size:14px}.compare{gap:8px}.cmp .legend .sw{width:12px;height:12px}}
 .link{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;border-radius:10px;padding:14px 16px;background:var(--b-soft);color:var(--ink-2);font-size:15.5px;line-height:1.5}
 .link b{color:var(--ink)}.link .eq{width:38px;height:38px;border-radius:50%;background:var(--av-b);color:var(--av-ink);display:grid;place-items:center;font:800 24px/1 var(--display)}
 
@@ -272,9 +272,9 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .fut.ok{background:var(--yes);transform:scale(1)}
 .fut.short{background:transparent;box-shadow:inset 0 0 0 2.5px var(--no);transform:scale(1)}
 .stats{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
-.stat{background:var(--well);border-radius:12px;padding:12px 14px}
+.stat{background:var(--well);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column}
 .stat .k{display:block;font:700 12px/1.3 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.stat .v{display:block;font:800 26px/1.1 var(--display);color:var(--ink);margin-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat .v{display:block;font:800 26px/1.1 var(--display);color:var(--ink);margin-top:auto;padding-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (max-width:460px){.stat .v{font-size:22px}}
 @media (max-width:360px){.stat .v{font-size:18px}}
 .run{font:700 15px/1 var(--display);color:var(--btn-ink);background:var(--btn);border:0;border-radius:10px;min-height:46px;padding:0 18px;cursor:pointer;justify-self:start}
@@ -342,12 +342,13 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .card2 .row2{display:grid;grid-template-columns:52px 1fr;gap:8px;font-size:13.5px}
 .card2 .row2 b{font:800 12px/1.5 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
 .votes{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-@media (max-width:460px){.votes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.vote{padding:0 8px 0 4px;font-size:13px}}
 .vote{display:inline-flex;align-items:center;gap:6px;font:700 13.5px/1 var(--display);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 12px 0 5px;min-height:40px;cursor:pointer}
-.vote i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--display);font-style:normal;background:var(--well);color:var(--ink-2)}
+.vote i{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--display);font-style:normal;background:var(--well);color:var(--ink-2)}
 .vote[aria-pressed="true"]{border-color:var(--yes);background:var(--yes-soft)}
 .vote[aria-pressed="true"] i{background:var(--yes);color:var(--card)}
 .vote:disabled{cursor:default;opacity:.85}
+@media (max-width:460px){.votes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.vote{padding:0 6px 0 3px;gap:4px;font-size:12.5px;min-width:0}.vote i{width:22px;height:22px;font-size:10px}}
+@media (max-width:360px){.votes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .count{font:800 14px/1.3 var(--display);color:var(--ink-2)}
 .acts{display:flex;flex-wrap:wrap;gap:8px}
 .act{font:700 15px/1 var(--display);border-radius:10px;min-height:46px;padding:0 16px;cursor:pointer;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink)}
@@ -497,7 +498,7 @@ img{max-width:100%}
         c.setAttribute("aria-pressed", String(y === ui.bills)); c.setAttribute("aria-label", y + ": " + k(left) + " left in Pile A");
       });
       var n = ui.bills - 2032, left = Math.round(pileAAfter(ui.bills));
-      $("cap").innerHTML = n < 10 ? "<b>" + ui.bills + ":</b> " + n + " bill" + (n > 1 ? "s" : "") + " paid (" + k(50 * n) + "). " + k(left) + " still in Pile A."
+      $("cap").innerHTML = n < 10 ? "<b>" + ui.bills + ":</b> " + n + " bill" + (n > 1 ? "s" : "") + " paid (" + k(50 * n) + "). " + k(left) + " still in Pile\u00a0A."
         : "<b>2042:</b> all ten bills paid, $500K in total, and the pile is empty. It only started at about $422K. <b>The other $78K came from what the bonds earned</b>, if they pay about 4%.";
     } });
 
@@ -724,7 +725,7 @@ img{max-width:100%}
   }
   S({ ch: "How we win", title: "Edge 2: put a number on “certainty.”",
     say: "The case asks us to define “a high degree of certainty.” So we test it: play out 100 pretend futures and count how often every bill gets paid.",
-    html: '<div class="seg-btns" id="prof" role="group" aria-label="Mix" style="--n:3"><button type="button" id="prof-careful" data-prof="careful">Careful<small>about 5% a year</small></button><button type="button" id="prof-balanced" data-prof="balanced">Balanced<small>about 6% a year</small></button><button type="button" id="prof-aggressive" data-prof="aggressive">Aggressive<small>about 7.5% a year</small></button></div>' +
+    html: '<div class="seg-btns" id="prof" role="group" aria-label="Mix" style="--n:3"><button type="button" id="prof-careful" data-prof="careful">Careful<small>about 5%/yr</small></button><button type="button" id="prof-balanced" data-prof="balanced">Balanced<small>about 6%/yr</small></button><button type="button" id="prof-aggressive" data-prof="aggressive">Aggressive<small>about 7.5%/yr</small></button></div>' +
       '<p class="cap" style="min-height:0">Pick a mix. <b>Green</b> = every bill paid. <b>Red</b> = Pile A came up short.</p>' +
       '<div class="dots-grid" id="futs" role="img"></div>' +
       '<div class="stats"><div class="stat"><span class="k">Bills paid</span><span class="v" id="s-ok"></span></div><div class="stat"><span class="k">Avg. for building</span><span class="v" id="s-avg"></span></div></div>' +
@@ -992,6 +993,8 @@ img{max-width:100%}
     new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   } catch (e) {}
   render(false);
+  /* labels are measured in pixels; re-place them once the web font has swapped in */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
 })();
 </script>
 
