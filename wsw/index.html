@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#142F63">
+<meta name="robots" content="noindex, nofollow">
+<title>The Two Piles · Wall Street Warriors</title>
+<meta name="description" content="Laura Gao's Wharton case in plain steps: the money, the two piles, how WInS connects, our plan, how we win, and who does what.">
+<meta property="og:title" content="The Two Piles">
+<meta property="og:description" content="Wall Street Warriors' plain-English guide to the Laura Gao case.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://screenstakes.github.io/wsw/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142F63'/%3E%3Crect x='12' y='30' width='22' height='22' rx='4' fill='%236F7FA0'/%3E%3Crect x='38' y='40' width='14' height='12' rx='4' fill='%23D98B2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F5F7FB; --card:#FFFFFF; --ink:#142F63; --ink-2:#4B5872; --ink-3:#6E7B94;
+  --line:#DDE3EC; --well:#EEF2F8;
+  --dep:#2D5DA8; --dep-2:#6F95D2; --grow:#B9CDEB;
+  --a:#6F7FA0; --a-soft:#E6EAF2; --paid:#C3CBDA;
+  --b:#D98B2B; --b-soft:#FBEEDC;
+  --g1:#1E4B95; --g2:#4F7BC4; --g3:#93B2E0; --s1:#5E6E8F; --s2:#A3AEC4;
+  --yes:#1B7549; --yes-soft:#E3F2E9; --no:#A33A2E; --no-soft:#F8E7E4;
+  --r1:#D3DDEF; --r2:#A9BDE0; --r3:#7C9CD1; --r4:#4F7BC4; --r5:#1E4B95;
+  --av-b:#A8620F; --av-ink:#FFFFFF;
+  --focus:#2D5DA8;
+  --display:"Montserrat","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1627; --card:#16213A; --ink:#E8EEF9; --ink-2:#B3BFD6; --ink-3:#8E9BB4;
+    --line:#2A3858; --well:#1C2945;
+    --dep:#6F95D2; --dep-2:#A8C1E8; --grow:#35507F;
+    --a:#8A9ABD; --a-soft:#243252; --paid:#3A4868;
+    --b:#E9A650; --b-soft:#3A2D1C;
+    --g1:#7FA7E8; --g2:#4F7BC4; --g3:#34558C; --s1:#C7CEDB; --s2:#7D889E;
+    --yes:#7FD0A0; --yes-soft:#17352A; --no:#F0998D; --no-soft:#3D2226;
+    --r1:#2E4470; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
+    --av-b:#E9A650; --av-ink:#0E1627;
+    --focus:#A8C1E8;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1627; --card:#16213A; --ink:#E8EEF9; --ink-2:#B3BFD6; --ink-3:#8E9BB4;
+  --line:#2A3858; --well:#1C2945;
+  --dep:#6F95D2; --dep-2:#A8C1E8; --grow:#35507F;
+  --a:#8A9ABD; --a-soft:#243252; --paid:#3A4868;
+  --b:#E9A650; --b-soft:#3A2D1C;
+  --g1:#7FA7E8; --g2:#4F7BC4; --g3:#34558C; --s1:#C7CEDB; --s2:#7D889E;
+  --yes:#7FD0A0; --yes-soft:#17352A; --no:#F0998D; --no-soft:#3D2226;
+  --r1:#2E4470; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
+  --av-b:#E9A650; --av-ink:#0E1627;
+  --focus:#A8C1E8;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--body);padding-inline:16px;padding-block:24px 48px}
+.wrap{max-width:680px;margin:0 auto;display:grid;gap:16px}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* chapters */
+.chapters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-block:2px}
+.chapters::-webkit-scrollbar{display:none}
+.chapters button{flex:none;font:700 13px/1 var(--display);color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px;min-height:38px;cursor:pointer;white-space:nowrap}
+.chapters button[aria-current="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
+.progress{height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--b);width:0;transition:width .35s ease}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px;display:grid;gap:22px}
+@media (max-width:460px){.card{padding:22px 18px}}
+.step-n{font:700 12px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+h1{font:800 clamp(24px,6vw,32px)/1.15 var(--display);letter-spacing:-.015em;margin:8px 0 0;text-wrap:balance}
+.say{font-size:17px;line-height:1.6;color:var(--ink-2);margin:10px 0 0;max-width:58ch;text-wrap:pretty}
+.say b{color:var(--ink);font-weight:600}
+.body{display:grid;gap:14px}
+
+/* ---- the pot (money story only) ---- */
+.pot{display:grid;gap:12px}
+.pot-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pot-head .when{font:700 14px/1.3 var(--display);color:var(--ink-3)}
+.pot-head .total{font:800 28px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:relative;height:60px;border-radius:10px;background:var(--well);overflow:hidden;display:flex;gap:3px}
+.seg{height:100%;flex:none;width:0;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.seg.first{border-radius:10px 0 0 10px}.seg.last{border-radius:0 10px 10px 0}.seg.only{border-radius:10px}
+.seg.dep{background:var(--dep)}.seg.dep2{background:var(--dep-2)}
+.seg.grow{background:repeating-linear-gradient(135deg,var(--grow) 0 7px,var(--dep-2) 7px 14px)}
+.seg.a{background:var(--a)}.seg.b{background:var(--b)}
+.empty{position:absolute;inset:0;display:grid;place-items:center;font:600 15px/1 var(--display);color:var(--ink-3)}
+.legend{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.legend li{display:grid;grid-template-columns:16px 1fr auto;gap:10px;align-items:center;font-size:15px;color:var(--ink-2)}
+.sw{width:16px;height:16px;border-radius:4px;display:inline-block}
+.legend .amt{font:700 17px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* ---- shared controls ---- */
+.panel{background:var(--well);border-radius:12px;padding:14px 16px;display:grid;gap:10px}
+.row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+@media (max-width:560px){.row{grid-template-columns:1fr;gap:8px}.row .play{justify-self:start}}
+.play{font:700 14px/1 var(--display);color:var(--card);background:var(--ink);border:0;border-radius:10px;min-height:44px;padding:0 16px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.play svg{width:12px;height:12px;fill:currentColor}
+input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor:pointer}
+.ticks{display:flex;justify-content:space-between;font:600 12px/1 var(--display);color:var(--ink-3);margin-top:-2px;font-variant-numeric:tabular-nums}
+.cap{font-size:15px;line-height:1.5;color:var(--ink-2);margin:0;min-height:3em}
+.cap b{color:var(--ink)}
+.seg-btns{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:8px}
+.seg-btns button{font:600 15px/1.25 var(--body);color:var(--ink);background:var(--well);border:1px solid var(--line);border-radius:10px;padding:10px 8px;min-height:52px;cursor:pointer}
+.seg-btns button small{display:block;font-size:12.5px;color:var(--ink-3);font-weight:500;margin-top:2px}
+.seg-btns button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
+.seg-btns button[aria-pressed="true"] small{color:var(--card);opacity:.85}
+@media (max-width:520px){.seg-btns.four{--n:2 !important}.seg-btns button{padding:10px 4px;font-size:14px}}
+.note{border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.note b{color:var(--ink)}
+.note.a{background:var(--a-soft)}.note.b{background:var(--b-soft)}.note.plain{background:var(--well)}
+.who{display:inline-flex;align-items:center;gap:6px;font:700 13px/1 var(--display);color:var(--ink);background:var(--b-soft);border-radius:999px;padding:5px 10px 5px 5px;vertical-align:middle}
+.who i{width:20px;height:20px;border-radius:50%;background:var(--av-b);color:var(--av-ink);font:800 10px/20px var(--display);text-align:center;font-style:normal}
+
+/* ---- step 5: columns draining ---- */
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;align-items:end;height:170px;padding-top:6px}
+.col{display:grid;grid-template-rows:1fr auto;gap:6px;height:100%;cursor:pointer;background:none;border:0;padding:0}
+.col .well{position:relative;background:var(--well);border-radius:6px 6px 3px 3px;overflow:hidden}
+.col .fill{position:absolute;left:0;right:0;bottom:0;background:var(--a);border-radius:6px 6px 0 0;transition:height .35s ease,background .2s}
+.col.future .fill{background:var(--paid)}
+.col.on .fill{background:var(--ink)}
+.col span{font:700 11px/1 var(--display);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.col.on span{color:var(--ink)}
+@media (max-width:420px){.col span{font-size:9.5px}.cols{gap:3px}}
+
+/* ---- step 7: recipe compare ---- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:540px){.compare{grid-template-columns:1fr}}
+.cmp{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.cmp h3{font:800 18px/1.2 var(--display);margin:0}
+.cmp .sub{font-size:14px;line-height:1.45;color:var(--ink-3);margin:-4px 0 0}
+.cmp .big{font:800 24px/1 var(--display);font-variant-numeric:tabular-nums}
+.minibar{height:36px;border-radius:8px;overflow:hidden;display:flex;gap:3px;background:var(--well)}
+.minibar div{height:100%;flex:none;transition:width .4s ease}
+.cmp .legend li{font-size:14px}.cmp .legend .amt{font-size:15px}
+.link{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;border-radius:10px;padding:14px 16px;background:var(--b-soft);color:var(--ink-2);font-size:15.5px;line-height:1.5}
+.link b{color:var(--ink)}.link .eq{width:38px;height:38px;border-radius:50%;background:var(--av-b);color:var(--av-ink);display:grid;place-items:center;font:800 24px/1 var(--display)}
+
+/* ---- step 8: the 16-year ribbon ---- */
+.ribbon{position:relative;height:96px;margin-top:4px}
+.ribbon .track{position:absolute;left:0;right:0;top:34px;height:28px;background:var(--well);border-radius:8px}
+.ribbon .hl{position:absolute;top:34px;height:28px;border-radius:8px;transition:left .4s ease,width .4s ease,background .3s}
+.ribbon .yr{position:absolute;top:70px;font:700 12px/1 var(--display);color:var(--ink-3);transform:translateX(-50%);white-space:nowrap}
+.ribbon .yr.l{transform:none}.ribbon .yr.r{transform:translateX(-100%)}
+.ribbon .pin{position:absolute;top:0;transform:translateX(-50%);font:700 12px/1.2 var(--display);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:5px 8px;white-space:nowrap;transition:left .4s ease}
+.ribbon .pin::after{content:"";position:absolute;left:var(--ax,50%);bottom:-6px;width:10px;height:10px;background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+.explain{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;border-radius:12px;padding:14px 16px;background:var(--well)}
+.explain .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line)}
+.explain .ic svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.explain b{display:block;font:800 16px/1.3 var(--display);color:var(--ink);margin-bottom:2px}
+.explain span{font-size:15px;line-height:1.5;color:var(--ink-2)}
+
+/* ---- step 9: counts ---- */
+.counts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:540px){.counts{grid-template-columns:1fr}}
+.counts section{border-radius:12px;padding:14px 16px}
+.counts .yes{background:var(--yes-soft)}.counts .no{background:var(--no-soft)}
+.counts h3{font:800 16px/1.2 var(--display);margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.counts .yes h3{color:var(--yes)}.counts .no h3{color:var(--no)}
+.counts h3 svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.counts ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:15px;line-height:1.45;color:var(--ink)}
+.flow{list-style:none;margin:0;padding:0}
+.flow li{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+.flow li:first-child{border-top:0;padding-top:0}
+.flow time{font:800 14px/1.4 var(--display);color:var(--ink)}
+.flow span{font-size:15px;line-height:1.5;color:var(--ink-2)}.flow b{color:var(--ink)}
+
+/* ---- step 10: clues + risk scale ---- */
+.clues{display:grid;gap:8px}
+.clue{display:grid;gap:6px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;color:var(--ink)}
+.clue q{font:italic 500 15.5px/1.45 var(--body);color:var(--ink)}
+.clue .mean{display:none;font-size:14.5px;line-height:1.5;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:8px}
+.clue .mean b{color:var(--ink)}
+.clue .tap{font:700 12px/1 var(--display);color:var(--ink-3);letter-spacing:.04em}
+.clue[aria-expanded="true"]{border-color:var(--ink);background:var(--well)}
+.clue[aria-expanded="true"] .mean{display:block}
+.clue[aria-expanded="true"] .tap{display:none}
+.scale{position:relative;height:74px}
+.scale .stops{position:absolute;left:0;right:0;top:24px;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.scale .stops i{height:14px;border-radius:4px}
+.scale .stops i:nth-child(1){background:var(--r1)}.scale .stops i:nth-child(2){background:var(--r2)}.scale .stops i:nth-child(3){background:var(--r3)}.scale .stops i:nth-child(4){background:var(--r4)}.scale .stops i:nth-child(5){background:var(--r5)}
+.scale .lab{position:absolute;top:48px;left:0;right:0;display:flex;justify-content:space-between;font:700 12px/1 var(--display);color:var(--ink-3)}
+.scale .mk{position:absolute;top:0;transform:translateX(-50%);display:grid;gap:0;transition:left .45s cubic-bezier(.2,.7,.2,1)}
+.scale .mk span{font:800 12px/1 var(--display);color:var(--card);background:var(--ink);border-radius:6px;padding:4px 7px;white-space:nowrap}
+.scale .mk::after{content:"";width:0;height:0;margin-left:calc(var(--ax,50%) - 6px);border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid var(--ink)}
+
+/* ---- step 11: does it fit? ---- */
+.picks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:540px){.picks{grid-template-columns:1fr}}
+.pick{display:grid;gap:6px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;color:var(--ink);align-content:start}
+.pick b{font:800 15.5px/1.3 var(--display)}
+.pick .q{font:700 12px/1 var(--display);color:var(--ink-3);letter-spacing:.04em}
+.pick .v{display:none;font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+.pick .badge{display:none;font:800 12px/1 var(--display);letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:5px 8px;justify-self:start}
+.pick[aria-expanded="true"] .v,.pick[aria-expanded="true"] .badge{display:block}
+.pick[aria-expanded="true"] .q{display:none}
+.pick.good[aria-expanded="true"]{background:var(--yes-soft);border-color:transparent}
+.pick.bad[aria-expanded="true"]{background:var(--no-soft);border-color:transparent}
+.pick.good .badge{background:var(--yes);color:var(--card)}
+.pick.bad .badge{background:var(--no);color:var(--card)}
+
+/* ---- step 12: donut ---- */
+.donut-wrap{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:center}
+@media (max-width:560px){.donut-wrap{grid-template-columns:1fr;justify-items:center}}
+.donut{width:220px;height:220px;max-width:100%}
+.donut circle.slice{fill:none;cursor:pointer;transition:stroke-width .2s}
+.donut text{fill:var(--ink);font-family:var(--display)}
+.donut .ctr1{font-weight:800;font-size:26px}.donut .ctr2{font-weight:600;font-size:12px;fill:var(--ink-3)}
+.keys{display:grid;gap:6px;width:100%}
+.key{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;text-align:left;background:none;border:1px solid transparent;border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--ink-2);font-size:14.5px}
+.key b{font:800 15px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.key[aria-pressed="true"]{background:var(--well);border-color:var(--line);color:var(--ink)}
+.key .grp{grid-column:2 / 4;font:700 11px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:-2px}
+.tnote{border:1px solid var(--line);border-left:4px solid var(--b);border-radius:10px;padding:14px 16px;display:grid;gap:6px;background:var(--card)}
+.tnote .t{font:800 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.tnote p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-2);display:grid;grid-template-columns:96px 1fr;gap:10px}
+.tnote p b{color:var(--ink)}
+@media (max-width:420px){.tnote p{grid-template-columns:1fr;gap:0}}
+
+/* ---- step 13: area chart ---- */
+.area svg{display:block;width:100%;height:auto}
+.area text{font-family:var(--display);font-size:14px;font-weight:700;fill:var(--ink-3)}
+.area text.in{fill:var(--card);font-size:16px;font-weight:800}
+.area .mark{stroke:var(--b);stroke-width:5;stroke-linecap:round}
+@media (max-width:560px){.area text{font-size:26px}.area text.in{font-size:28px}}
+.readout{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.readout .y{font:800 22px/1 var(--display)}
+.readout .m{font:700 15px/1.3 var(--display);color:var(--ink-2)}
+
+/* ---- step 14: most teams vs us ---- */
+.vs{display:grid;gap:8px}
+.vs-row{display:grid;grid-template-columns:1fr;gap:4px;border-radius:12px;padding:12px 14px;background:var(--well);transition:background .3s}
+.vs-row .topic{font:800 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.vs-row .txt{font-size:15.5px;line-height:1.45;color:var(--ink)}
+.vs.us .vs-row{background:var(--b-soft)}
+.vs-foot{font-size:14px;color:var(--ink-3);margin:0}
+
+/* ---- step 15: range bars ---- */
+.range{display:grid;gap:10px}
+.rtrack{position:relative;height:44px;background:var(--well);border-radius:10px}
+.rfill{position:absolute;top:0;bottom:0;border-radius:10px;background:var(--b);transition:left .5s cubic-bezier(.2,.7,.2,1),width .5s cubic-bezier(.2,.7,.2,1)}
+.rticks{position:relative;height:16px;font:700 12px/1 var(--display);color:var(--ink-3)}
+.rticks span{position:absolute;transform:translateX(-50%)}
+.rticks span:first-child{transform:none}.rticks span:last-child{transform:translateX(-100%)}
+.bubble{position:relative;border-radius:14px;padding:16px 18px;background:var(--card);border:1px solid var(--line);font:600 17px/1.45 var(--display);color:var(--ink)}
+.bubble small{display:block;font:600 13px/1.4 var(--body);color:var(--ink-3);margin-top:6px}
+.verdict-chip{display:inline-block;font:800 12px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:5px 8px;margin-bottom:8px}
+.verdict-chip.bad{background:var(--no-soft);color:var(--no)}.verdict-chip.good{background:var(--yes-soft);color:var(--yes)}
+
+/* ---- step 16: futures ---- */
+.dots-grid{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px;max-width:520px}
+@media (max-width:460px){.dots-grid{gap:3px}}
+.fut{aspect-ratio:1;border-radius:50%;background:var(--line);transform:scale(.6);transition:transform .2s,background .2s}
+.fut.ok{background:var(--yes);transform:scale(1)}
+.fut.short{background:transparent;box-shadow:inset 0 0 0 2.5px var(--no);transform:scale(1)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--well);border-radius:12px;padding:12px 14px}
+.stat .k{display:block;font:700 12px/1.3 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.stat .v{display:block;font:800 26px/1.1 var(--display);color:var(--ink);margin-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:460px){.stat .v{font-size:22px}}
+.run{font:700 15px/1 var(--display);color:var(--card);background:var(--ink);border:0;border-radius:10px;min-height:46px;padding:0 18px;cursor:pointer;justify-self:start}
+
+/* ---- questions, team, words ---- */
+.qs{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:q}
+.qs li{counter-increment:q;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.qs li::before{content:counter(q);width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--card);font:800 15px/36px var(--display);text-align:center}
+.qs b{display:block;font:700 17px/1.35 var(--display);color:var(--ink);margin-bottom:2px}
+.qs span{font-size:15px;color:var(--ink-2)}
+.team{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.team .mem{flex:1 1 0;min-width:0}
+@media (max-width:560px){.team .mem{flex:0 0 calc((100% - 16px) / 3)}}
+.mem{display:grid;justify-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;cursor:pointer;color:var(--ink)}
+.mem .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:800 17px/1 var(--display);color:var(--av-ink)}
+.mem b{font:800 14px/1.1 var(--display)}
+.mem small{font:600 11.5px/1.2 var(--display);color:var(--ink-3);text-align:center}
+.mem[aria-pressed="true"]{border-color:var(--ink);background:var(--well)}
+.job{border-radius:12px;padding:16px 18px;background:var(--well);display:grid;gap:8px}
+.job h3{font:800 20px/1.2 var(--display);margin:0}
+.job .role{font:700 13px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.job ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15.5px;line-height:1.5;color:var(--ink)}
+.words{margin:0;display:grid}
+.words div{display:grid;grid-template-columns:minmax(120px,36%) 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+.words div:first-child{border-top:0;padding-top:0}
+.words dt{font:700 15px/1.4 var(--display);color:var(--ink)}
+.words dd{margin:0;font-size:15px;color:var(--ink-2)}
+@media (max-width:460px){.words div{grid-template-columns:1fr;gap:2px}}
+
+.tree{display:grid;gap:6px}
+.tree .top{display:grid;grid-template-columns:45fr 40fr;gap:6px;height:150px}
+.tree .bot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;height:84px}
+.tile{position:relative;display:grid;align-content:space-between;gap:4px;text-align:left;border:2px solid transparent;border-radius:12px;padding:10px 12px;cursor:pointer;color:var(--card);min-width:0;overflow:hidden}
+.tile .nm{font:800 15px/1.2 var(--display)}
+.tile .pc{font:700 12px/1 var(--display);opacity:.9}
+.tile .ow{justify-self:start;font:700 11.5px/1 var(--display);background:rgba(255,255,255,.22);border-radius:999px;padding:4px 8px;white-space:nowrap}
+.tile.t-safe{background:var(--s1)}.tile.t-core{background:var(--g1)}.tile.t-stk{background:var(--g2)}
+.bot .tile{padding:8px 9px}.bot .tile .nm{font-size:13.5px}
+.tile[aria-pressed="true"]{border-color:var(--b);box-shadow:0 0 0 3px var(--b-soft)}
+.jobs{display:grid;gap:6px}
+.jobrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer;color:var(--ink);font:700 15px/1.3 var(--display)}
+.jobrow[aria-pressed="true"]{border-color:var(--ink);background:var(--well)}
+.pillname{font:700 12px/1 var(--display);border-radius:999px;padding:5px 9px;white-space:nowrap}
+.pillname.open{background:var(--well);color:var(--ink-3);border:1px dashed var(--line)}
+.pillname.set{background:var(--av-b);color:var(--av-ink)}
+.detail{border-radius:12px;padding:14px 16px;background:var(--well);display:grid;gap:6px}
+.detail .k{font:800 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.detail h3{font:800 18px/1.25 var(--display);margin:0}
+.detail ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px;line-height:1.45}
+.sub-h{font:800 15px/1.3 var(--display);margin:4px 0 -4px}
+@media (max-width:420px){.tree .top{height:128px}.tree .bot{height:92px}.bot .tile .nm{font-size:12.5px}.tile .ow{font-size:10.5px;padding:3px 6px}}
+
+.chat{border:1px solid var(--line);border-radius:14px;background:var(--well);padding:12px;display:grid;gap:8px;min-height:120px}
+.msg{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:start;animation:fade .3s ease both}
+.msg .av2{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:800 12px/1 var(--display);background:var(--s1);color:var(--av-ink)}
+.msg .bub{background:var(--card);border:1px solid var(--line);border-radius:4px 12px 12px 12px;padding:9px 12px;font-size:14.5px;line-height:1.45;color:var(--ink);min-width:0}
+.msg .bub .who2{display:block;font:800 12px/1 var(--display);color:var(--ink-3);margin-bottom:4px}
+.msg.sys{grid-template-columns:1fr;justify-items:center}
+.msg.sys .bub{border-radius:999px;font:800 12.5px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;padding:7px 12px}
+.msg.sys.ok .bub{background:var(--yes-soft);color:var(--yes);border-color:transparent}
+.msg.sys.hold .bub{background:var(--no-soft);color:var(--no);border-color:transparent}
+.card2{display:grid;gap:3px;margin-top:2px}
+.card2 .row2{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13.5px}
+.card2 .row2 b{font:800 11.5px/1.5 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
+.votes{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.vote{display:inline-flex;align-items:center;gap:6px;font:700 13.5px/1 var(--display);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 12px 0 5px;min-height:40px;cursor:pointer}
+.vote i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--display);font-style:normal;background:var(--well);color:var(--ink-2)}
+.vote[aria-pressed="true"]{border-color:var(--yes);background:var(--yes-soft)}
+.vote[aria-pressed="true"] i{background:var(--yes);color:var(--card)}
+.vote:disabled{cursor:default;opacity:.85}
+.count{font:800 14px/1.3 var(--display);color:var(--ink-2)}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.act{font:700 15px/1 var(--display);border-radius:10px;min-height:46px;padding:0 16px;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--card)}
+.act.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.act:disabled{opacity:.4;cursor:default}
+.rules{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.rules li{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.45;color:var(--ink)}
+.rules li:first-child{border-top:0;padding-top:0}
+.rules li svg{width:18px;height:18px;margin-top:2px;stroke:var(--b);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.nav{display:flex;gap:10px}
+.nav button{font:700 16px/1 var(--display);border-radius:12px;padding:0 22px;min-height:54px;cursor:pointer;border:1px solid var(--line)}
+.nav .back{background:var(--card);color:var(--ink-2)}
+.nav .next{background:var(--ink);color:var(--card);border-color:var(--ink);flex:1;max-width:320px;margin-left:auto}
+.nav button:disabled{opacity:.35;cursor:default}
+.hint{text-align:center;font-size:13px;color:var(--ink-3);margin:0}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+</style>
+<style>
+/* standalone page: what the artifact host used to supply */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100%}
+img{max-width:100%}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="chapters" id="chapters" aria-label="Chapters"></nav>
+  <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+
+  <main class="card">
+    <div id="text" aria-live="polite"></div>
+    <section class="pot" id="pot" aria-label="The money">
+      <div class="pot-head"><span class="when" id="when"></span><span class="total" id="total"></span></div>
+      <div class="bar" id="bar" role="img"></div>
+      <ul class="legend" id="legend"></ul>
+    </section>
+    <div class="body" id="body"></div>
+  </main>
+
+  <div class="nav">
+    <button class="back" id="back" type="button">Back</button>
+    <button class="next" id="next" type="button">Next</button>
+  </div>
+  <p class="hint">Tap Next to keep going. Numbers are rounded, and anything marked “example” is a sample, not our final plan.</p>
+</div>
+
+<script>
+(function () {
+  function $(id) { return document.getElementById(id); }
+  function k(n) { return "$" + Math.round(n) + "K"; }
+  function r10(n) { return Math.round(n / 10) * 10; }
+  function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  function who(name) { return '<span class="who"><i>' + name[0] + "</i>" + name + "</span>"; }
+  var playIcon = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>';
+  var pauseIcon = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>';
+
+  var MAX = 750, RATE = 0.07, LADDER = 0.04;
+  var RESERVE = 50 * ((1 - Math.pow(1 + LADDER, -10)) / LADDER) * (1 + LADDER);
+  function potAt(year, rate) { if (year < 2027) return 0; return 300 * Math.pow(1 + rate, year - 2027) + (year >= 2028 ? 150 * Math.pow(1 + rate, year - 2028) : 0); }
+  function pileAAfter(year) { var r = RESERVE; for (var yr = 2033; yr <= year; yr++) { r -= 50; if (yr < year) r *= 1 + LADDER; } return Math.max(0, r); }
+
+  var ui = { grow: 2033, bills: 2033, scen: "none", mix: 40, lens: "wins", pile: "a", slice: 3, year: 2031, side: "most", derisk: "late", profile: "balanced", own: "s:core", tr: null };
+  var timer = null;
+  function stopPlay() { if (timer) { clearInterval(timer); timer = null; } var p = $("play"); if (p) p.innerHTML = playIcon + "Play"; }
+  function playLoop(key, min, max, cb) {
+    var btn = $("play");
+    btn.addEventListener("click", function () {
+      if (timer) { stopPlay(); return; }
+      if (ui[key] >= max) ui[key] = min;
+      cb(); btn.innerHTML = pauseIcon + "Pause";
+      timer = setInterval(function () { if (ui[key] >= max) { stopPlay(); return; } ui[key]++; cb(); }, 750);
+    });
+  }
+  /* place a centred floating label over pct% of its container without running off either edge; the arrow keeps pointing at pct */
+  function clampPin(el, box, pct) {
+    var W = box.getBoundingClientRect().width, w = el.getBoundingClientRect().width, cx = W * pct / 100;
+    var c = Math.min(Math.max(cx, w / 2), W - w / 2);
+    el.style.left = c + 'px'; el.style.setProperty('--ax', (cx - (c - w / 2)) + 'px');
+  }
+  function pressGroup(root, attr, current) {
+    Array.prototype.forEach.call(root.querySelectorAll("[" + attr + "]"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute(attr) === String(current))); });
+  }
+
+  /* ================= STEPS ================= */
+  var STEPS = [];
+  function S(o) { STEPS.push(o); }
+
+  /* ---------- Chapter 1: the story ---------- */
+  S({ ch: "The story", title: "Laura is building an art house.",
+    say: "In <b>2033</b> she wants to open a place in <b>Taiwan</b> where artists and writers can live and work for a while. We’re her money team, Wall Street Warriors. Our job: make sure her yearly $50K payments are covered, and work out how much she can put toward the building.",
+    pot: function () { return { when: "2026, right now", total: "$0", segs: [], empty: "Nothing invested yet" }; },
+    html: '<p class="note plain">Right now is <b>2026</b>. The case calls it <b>Year 0</b>, which just means nothing has happened yet. She hasn’t given us a dollar.</p>' });
+
+  S({ ch: "The story", title: "She gives us money, twice.",
+    say: "<b>$300K</b> at the start of 2027, then <b>$150K</b> more at the start of 2028. That’s <b>$450K</b> in all. After that, nobody adds or takes anything out until 2033.",
+    pot: function () { return { when: "2027 and 2028", segs: [{ cls: "dep", v: 300, label: "First deposit, 2027" }, { cls: "dep2", v: 150, label: "Second deposit, 2028" }] }; } });
+
+  S({ ch: "The story", title: "We let it grow.",
+    say: "Drag the slider or press Play. Solid blue is what she put in. The stripes are <b>growth</b>, money the investments made on their own. This example assumes about <b>7% a year</b>.",
+    pot: function () { var y = ui.grow, t = potAt(y, RATE), p = y >= 2028 ? 450 : 300; return { when: "Start of " + y, segs: [{ cls: "dep", v: p, label: "What she put in" }, { cls: "grow", v: t - p, label: "Growth" }] }; },
+    html: '<div class="panel"><div class="row"><button class="play" id="play" type="button">' + playIcon + 'Play</button><div><input type="range" id="grow" min="2027" max="2033" step="1" aria-label="Year"><div class="ticks"><span>2027</span><span>2033</span></div></div></div><p class="cap" id="cap" aria-live="polite"></p></div>' +
+      '<p class="note plain"><b>Why six years, not seven?</b> Money that goes in at the start of 2027 and gets counted at the start of 2033 has had six birthdays (2033 minus 2027). The $150K from 2028 gets five.</p>',
+    mount: function (draw) {
+      $("grow").addEventListener("input", function () { stopPlay(); ui.grow = +this.value; draw(); });
+      playLoop("grow", 2027, 2033, draw);
+    },
+    update: function () {
+      var y = ui.grow, g = potAt(y, RATE) - (y >= 2028 ? 450 : 300);
+      $("grow").value = y;
+      $("cap").innerHTML = y === 2027 ? "<b>2027:</b> the first $300K goes in. No growth yet."
+        : y === 2028 ? "<b>2028:</b> the second $150K goes in. The first chunk has already grown a little."
+        : y < 2033 ? "<b>" + y + ":</b> nobody touches it. Growth is up to " + k(g) + "."
+        : "<b>2033:</b> at 7% a year it has grown to about $661K. That’s " + k(g) + " the investments made.";
+    } });
+
+  S({ ch: "The story", title: "In 2033, we split it into two piles.",
+    say: "One pile pays her bills. The other is what’s left, and we decide how much of it goes to the building.",
+    pot: function () { var t = potAt(2033, RATE); return { when: "Start of 2033 (example: 7% growth, bonds paying 4%)", segs: [{ cls: "a", v: RESERVE, label: "Pile A: the bills" }, { cls: "b", v: t - RESERVE, label: "Pile B: the leftover" }] }; },
+    html: '<p class="note a"><b>Pile A is the bills.</b> She promised the art house $50K a year for 10 years, 2033 to 2042. This pile has to cover every one with a high degree of certainty. The case calls it the <b>operating reserve</b>.</p>' +
+      '<p class="note b"><b>Pile B is the leftover.</b> We recommend how much of it she puts toward the building, and she keeps the rest as a cushion.</p>' });
+
+  S({ ch: "The story", title: "Watch Pile A pay the bills.",
+    say: "Each column is one year. Every year $50K goes out, so the pile shrinks. It’s kept in <b>bonds</b> (loans to the government that pay back on a set date). If they pay about 4%, the pile earns a little while it waits. Tap a year or press Play.",
+    html: '<div class="cols" id="cols" role="group" aria-label="Pile A left after each yearly payment"></div>' +
+      '<div class="panel"><div class="row"><button class="play" id="play" type="button">' + playIcon + 'Play</button><p class="cap" id="cap" aria-live="polite" style="min-height:0"></p></div></div>',
+    mount: function (draw) {
+      var h = "";
+      for (var y = 2033; y <= 2042; y++) h += '<button class="col" type="button" data-year="' + y + '" aria-label="' + y + '"><div class="well"><div class="fill"></div></div><span>’' + String(y).slice(2) + "</span></button>";
+      $("cols").innerHTML = h;
+      $("cols").addEventListener("click", function (e) { var b = e.target.closest("[data-year]"); if (!b) return; stopPlay(); ui.bills = +b.getAttribute("data-year"); draw(); });
+      playLoop("bills", 2033, 2042, draw);
+    },
+    update: function () {
+      Array.prototype.forEach.call($("cols").children, function (c) {
+        var y = +c.getAttribute("data-year"), left = pileAAfter(y);
+        c.querySelector(".fill").style.height = (left / RESERVE * 100) + "%";
+        c.classList.toggle("on", y === ui.bills); c.classList.toggle("future", y > ui.bills);
+      });
+      var n = ui.bills - 2032, left = Math.round(pileAAfter(ui.bills));
+      $("cap").innerHTML = n < 10 ? "<b>" + ui.bills + ":</b> " + n + " bill" + (n > 1 ? "s" : "") + " paid (" + k(50 * n) + "). " + k(left) + " still in Pile A."
+        : "<b>2042:</b> all ten bills paid, $500K in total, and the pile is empty. It only started at about $422K. <b>The other $78K came from what the bonds earned.</b>";
+    } });
+
+  S({ ch: "The story", title: "The market decides how big Pile B is.",
+    say: "Tap the buttons to try different markets from 2027 to 2033. <b>Pile A needs about $422K no matter what.</b> The market decides how much is left over for Pile B.",
+    pot: function () {
+      var rate = { none: 0, slow: 0.05, normal: 0.07, strong: 0.09 }[ui.scen], t = potAt(2033, rate);
+      return { when: "Start of 2033", segs: [{ cls: "a", v: RESERVE, label: "Pile A: the bills" }, { cls: "b", v: t - RESERVE, label: "Pile B: the leftover" }] };
+    },
+    html: '<div class="seg-btns four" id="scen" role="group" aria-label="How the market goes" style="--n:4">' +
+      [["none", "No growth", "0% a year"], ["slow", "Slow", "5% a year"], ["normal", "Normal", "7% a year"], ["strong", "Strong", "9% a year"]].map(function (s) {
+        return '<button type="button" id="scen-' + s[0] + '" data-scen="' + s[0] + '">' + s[1] + "<small>" + s[2] + "</small></button>"; }).join("") + "</div>" +
+      '<p class="note plain"><b>The real danger is before 2033.</b> Until then it’s all one pot. A bad stretch could shrink it below $422K and leave the bills short. That’s why we get safer as 2033 gets close.</p>',
+    mount: function (draw) { $("scen").addEventListener("click", function (e) { var b = e.target.closest("[data-scen]"); if (!b) return; ui.scen = b.getAttribute("data-scen"); draw(); }); },
+    update: function () { pressGroup($("scen"), "data-scen", ui.scen); } });
+
+  /* ---------- Chapter 2: WInS ---------- */
+  S({ ch: "WInS", title: "How WInS connects to Laura’s money.",
+    say: "They’re linked by our <b>plan</b>, not by real dollars. The plan is a recipe: how much goes into safe stuff and how much into growth. WInS follows the recipe, and so does Laura’s money. Drag the slider and watch both change together.",
+    html: '<div class="panel"><label for="mix" style="font:700 14px/1.3 var(--display)">Our recipe</label><input type="range" id="mix" min="0" max="100" step="10"><span id="mix-out" style="font:700 15px/1.3 var(--display);color:var(--ink-2)"></span></div>' +
+      '<div class="compare">' +
+        '<article class="cmp"><h3>WInS</h3><p class="sub">The trading simulator. Sep 28 to Nov 6. A demo for the judges.</p><span class="big" id="w-total"></span><div class="minibar" id="w-bar"><div></div><div></div></div><ul class="legend" id="w-leg"></ul></article>' +
+        '<article class="cmp"><h3>Laura’s money</h3><p class="sub">In a spreadsheet, not WInS. 2027 to 2042. Her real plan.</p><span class="big" id="l-total"></span><div class="minibar" id="l-bar"><div></div><div></div></div><ul class="legend" id="l-leg"></ul></article>' +
+      "</div>" +
+      '<div class="link"><span class="eq">=</span><span><b>Same recipe, different dollars.</b> WInS uses practice money, not Laura’s. Only the percentages have to match.</span></div>',
+    mount: function (draw) { $("mix").addEventListener("input", function () { ui.mix = +this.value; draw(); }); },
+    update: function () {
+      var safe = ui.mix / 100; $("mix").value = ui.mix;
+      $("mix-out").textContent = ui.mix + "% safe, " + (100 - ui.mix) + "% growth";
+      [["w", 300, "WInS practice money (example amount)"], ["l", 450, "What Laura puts in"]].forEach(function (c) {
+        var sv = Math.round(c[1] * safe), gv = c[1] - sv, bars = $(c[0] + "-bar").children;
+        $(c[0] + "-total").textContent = k(c[1]);
+        bars[0].style.cssText = "width:" + safe * 100 + "%;background:" + css("--a") + ";display:" + (sv ? "block" : "none");
+        bars[1].style.cssText = "width:" + (1 - safe) * 100 + "%;background:" + css("--dep") + ";display:" + (gv ? "block" : "none");
+        $(c[0] + "-leg").innerHTML = '<li><span class="sw" style="background:' + css("--a") + '"></span><span>Safe (bonds)</span><span class="amt">' + k(sv) + '</span></li><li><span class="sw" style="background:' + css("--dep") + '"></span><span>Growth (stocks)</span><span class="amt">' + k(gv) + "</span></li>";
+      });
+    } });
+
+  var LENS = {
+    wins: { from: 2026.74, to: 2026.85, pin: "6 weeks of trading", icon: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>', t: "WInS: the starting mix", d: "We only trade for 6 weeks. That’s enough to buy the mix Laura’s money would start with, and to show the judges how we pick." },
+    ips: { from: 2027, to: 2042, pin: "How the mix changes, year by year", icon: '<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/>', t: "The IPS (Investment Policy Statement): the blueprint", d: "In writing, we explain what happens after that first mix. More growth early, safer by 2031, Pile A locked into bonds in 2033." },
+    sheet: { from: 2027, to: 2033, pin: "Math fast-forwards the years", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/>', t: "The spreadsheet: the time machine", d: "We can’t wait 16 years, so we assume a return (like 7% a year) and let the math show where her money ends up. We never add WInS gains or losses to her numbers." }
+  };
+  S({ ch: "WInS", title: "How do we cover 16 years in 10 weeks?",
+    say: "We don’t trade for 16 years. We use <b>three tools</b>, and each covers a different part of the timeline. Tap each one.",
+    html: '<div class="seg-btns" id="lens" role="group" aria-label="Tool" style="--n:3">' +
+      '<button type="button" id="lens-wins" data-lens="wins">WInS<small>6 weeks</small></button><button type="button" id="lens-ips" data-lens="ips">The IPS<small>our written plan</small></button><button type="button" id="lens-sheet" data-lens="sheet">Spreadsheet<small>the math</small></button></div>' +
+      '<div class="ribbon" id="ribbon"><div class="track"></div><div class="hl" id="hl"></div><div class="pin" id="pin"></div>' +
+      '<span class="yr l" style="left:0">2026</span><span class="yr" style="left:' + (7 / 16 * 100) + '%">2033</span><span class="yr r" style="left:100%">2042</span></div>' +
+      '<div class="explain"><span class="ic"><svg viewBox="0 0 24 24" id="lens-ic" aria-hidden="true"></svg></span><div><b id="lens-t"></b><span id="lens-d"></span></div></div>' +
+      '<p class="note plain">It works like an architect. The architect doesn’t build the house in the meeting. They bring a <b>model</b> (WInS), a <b>blueprint</b> (the IPS), and the <b>math</b> (the spreadsheet).</p>',
+    mount: function (draw) { $("lens").addEventListener("click", function (e) { var b = e.target.closest("[data-lens]"); if (!b) return; ui.lens = b.getAttribute("data-lens"); draw(); }); },
+    update: function () {
+      var L = LENS[ui.lens], x = function (y) { return (y - 2026) / 16 * 100; };
+      var left = x(L.from), width = Math.max(1.6, x(L.to) - left);
+      $("hl").style.left = left + "%"; $("hl").style.width = width + "%";
+      $("hl").style.background = ui.lens === "wins" ? css("--b") : ui.lens === "ips" ? css("--dep") : css("--a");
+      var pin = $("pin"); pin.textContent = L.pin;
+      pin.className = "pin"; clampPin(pin, $("ribbon"), left + width / 2);
+      $("lens-ic").innerHTML = L.icon; $("lens-t").textContent = L.t; $("lens-d").textContent = L.d;
+      pressGroup($("lens"), "data-lens", ui.lens);
+    } });
+
+  S({ ch: "WInS", title: "What WInS is actually graded on.",
+    say: "Wharton uses our WInS trades as <b>proof</b> that we really follow our own plan. It’s like a practice round with judges watching: they grade the swing, not the score.",
+    html: '<div class="counts">' +
+        '<section class="yes"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Counts</h3><ul><li>Our trades match our plan</li><li>Why we made each trade (trading notes)</li><li>The plan itself (the IPS)</li><li>The final report on how it went</li></ul></section>' +
+        '<section class="no"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Doesn’t count</h3><ul><li>How much WInS makes or loses</li><li>Our ranking</li><li>How many trades we make</li><li>Beating other teams</li></ul></section>' +
+      "</div>" +
+      '<h3 style="font:800 15px/1.3 var(--display);margin:4px 0 -4px">The deadlines</h3><ol class="flow" aria-label="Deadlines"><li><time>Sep 28</time><span><b>Trading starts.</b> Our rule: every trade gets a note saying why.</span></li><li><time>Oct 23</time><span><b>We pick 3 trades</b> and explain how they fit Laura’s goals.</span></li><li><time>Nov 6</time><span><b>Turn in the IPS.</b> WInS freezes. No more trades.</span></li><li><time>Dec 4</time><span><b>Final report</b> (plus school documentation): did our trades follow the plan, and what does the math say for Laura?</span></li></ol>' });
+
+  /* ---------- Chapter 3: building the plan ---------- */
+  S({ ch: "Our plan", title: "How much risk can Laura take?",
+    say: "The case never gives a label like “low risk.” We have to figure it out from clues. Tap each clue, then see the answer below.",
+    html: '<div class="clues" id="clues">' +
+      [["She has been willing to take thoughtful risks throughout her entrepreneurial career.", "She’s <b>not scared of risk</b>, as long as it’s smart."],
+       ["An appropriate balance between pursuing growth and protecting the capital required for her goals.", "She wants <b>both</b>: growth, and safety for the money she really needs."],
+       ["All ten payments must be funded… with a high degree of certainty.", "The bill money has to be <b>almost guaranteed</b>."]].map(function (c, i) {
+        return '<button class="clue" type="button" id="clue-' + i + '" aria-expanded="false"><q>' + c[0] + '</q><span class="tap">Tap to see what it means</span><span class="mean">' + c[1] + "</span></button>"; }).join("") + "</div>" +
+      '<div class="panel"><span style="font:800 15px/1.3 var(--display)">So the answer depends on the pile:</span>' +
+      '<div class="seg-btns" id="pile" role="group" aria-label="Which money" style="--n:2"><button type="button" id="pile-a" data-pile="a">Bill money<small>Pile A</small></button><button type="button" id="pile-g" data-pile="g">Growth money<small>before 2033</small></button></div>' +
+      '<div class="scale"><div class="mk" id="mk"><span id="mk-t"></span></div><div class="stops"><i></i><i></i><i></i><i></i><i></i></div><div class="lab"><span>Very safe</span><span>Risky</span></div></div>' +
+      '<p class="cap" id="pile-cap" style="min-height:0"></p></div>',
+    mount: function (draw) {
+      $("clues").addEventListener("click", function (e) { var b = e.target.closest(".clue"); if (b) b.setAttribute("aria-expanded", String(b.getAttribute("aria-expanded") !== "true")); });
+      $("pile").addEventListener("click", function (e) { var b = e.target.closest("[data-pile]"); if (!b) return; ui.pile = b.getAttribute("data-pile"); draw(); });
+    },
+    update: function () {
+      var a = ui.pile === "a";
+      $("mk-t").textContent = a ? "Very low risk" : "Medium to higher"; clampPin($("mk"), $("mk").parentNode, a ? 10 : 70);
+      $("pile-cap").innerHTML = a ? "<b>Bill money:</b> once it’s set aside in 2033, it has to be there, so we take almost no risk with it." : "<b>Growth money:</b> before 2033 it’s all one pot. While 2033 is years away we can take smart risks, then get safer as it gets close.";
+      pressGroup($("pile"), "data-pile", ui.pile);
+    } });
+
+  S({ ch: "Our plan", title: "Laura doesn’t pick stocks. We do.",
+    say: "The case gives her <b>goals</b>, not stock picks. Every pick has to answer one question: <b>which of her goals does this help?</b> Tap each card and guess before you look.",
+    html: '<div class="picks" id="picks">' +
+      [["good", "A US stock index fund", "Fits: growth", "Hundreds of companies in one buy. Grows the pot while 2033 is still years away."],
+       ["bad", "A stock that went viral on TikTok", "Doesn’t fit", "No reason tied to Laura. Judges will spot a hype pick right away."],
+       ["good", "A US Treasury bond fund", "Fits: the safe part", "Safe and steady. In 2033 the bill money moves into bonds that come due one per year."],
+       ["bad", "Crypto", "Doesn’t fit", "Wild swings are the opposite of “high certainty.” It probably isn’t on Wharton’s approved list either."],
+       ["good", "A company we researched", "Fits: growth", "Fine, as long as we can say why it helps Laura and write a note on it."],
+       ["bad", "Going all in on one hot stock", "Doesn’t fit", "If it crashes, Pile A gets hit. Spreading money out is the whole point."]].map(function (p, i) {
+        return '<button class="pick ' + p[0] + '" type="button" id="pick-' + i + '" aria-expanded="false"><b>' + p[1] + '</b><span class="q">Fits Laura? Tap to check</span><span class="badge">' + p[2] + '</span><span class="v">' + p[3] + "</span></button>"; }).join("") + "</div>" +
+      '<p class="note plain"><b>Before we pick anything:</b> Wharton only lets us buy from an approved list. It’s on the Trading page of the competition website (SurveyMonkey Apply). We grab it before anyone picks anything. And remember: this is about Laura’s case in the competition, not advice for anyone’s real money.</p>',
+    mount: function () { $("picks").addEventListener("click", function (e) { var b = e.target.closest(".pick"); if (b) b.setAttribute("aria-expanded", String(b.getAttribute("aria-expanded") !== "true")); }); } });
+
+  var SLICES = [
+    { name: "US stock index fund", pct: 30, grp: "Growth", color: "--g1", why: "Laura has years before 2033, usually enough time to recover from bad years.", goal: "Growth for Pile B, the building.", risk: "Stocks can drop 20% or more in a bad year. That’s why we get safer as 2033 gets close." },
+    { name: "International stock fund", pct: 15, grp: "Growth", color: "--g2", why: "Spreads our growth beyond just US companies.", goal: "Growth for Pile B.", risk: "Other countries’ markets and currencies can move differently from the US." },
+    { name: "Stocks we researched", pct: 15, grp: "Growth", color: "--g3", why: "Companies with a clear reason to grow, each one researched.", goal: "Growth for Pile B, and it shows judges our analysis.", risk: "One company can drop fast, so no single stock gets big." },
+    { name: "Treasury bond fund", pct: 25, grp: "Safe", color: "--s1", why: "Treasuries are loans to the US government. They swing much less than stocks, and the bills need high certainty.", goal: "The safe part now, and Pile A later.", risk: "When new bonds pay more, older bonds are worth a bit less. We accept that because it swings far less than stocks." },
+    { name: "Short-term Treasuries", pct: 15, grp: "Safe", color: "--s2", why: "Treasuries that come due within a year or two. They barely move, so they’re a cushion when stocks have a rough stretch.", goal: "Protecting the safe part.", risk: "Very low. It just doesn’t grow much." }
+  ];
+  S({ ch: "Our plan", title: "What our starting mix could look like.",
+    say: "An <b>example only</b>, not our final answer: 60% growth, 40% safe. Tap a slice to see the <b>trading note</b> we’d write for it.",
+    html: '<div class="donut-wrap"><svg class="donut" id="donut" viewBox="0 0 220 220" role="img" aria-label="Example mix: 60% growth, 40% safe"></svg><div class="keys" id="keys"></div></div>' +
+      '<article class="tnote" id="tnote" aria-live="polite"></article>' +
+      '<p class="note plain"><b>Why not 90% growth?</b> Laura only puts in $450K. If we go too aggressive and the market has a bad few years, Pile A could come up short. We’d only buy funds that are on Wharton’s approved list. Every trade gets a note like this.</p>',
+    mount: function (draw) {
+      var R = 80, C = 2 * Math.PI * R, start = 0, svg = "";
+      SLICES.forEach(function (s, i) {
+        var len = s.pct / 100 * C;
+        svg += '<circle class="slice" data-slice="' + i + '" cx="110" cy="110" r="' + R + '" stroke-dasharray="' + (len - 3) + " " + (C - len + 3) + '" stroke-dashoffset="' + (-start) + '" transform="rotate(-90 110 110)"/>';
+        start += len;
+      });
+      svg += '<text class="ctr1" x="110" y="112" text-anchor="middle">60 / 40</text><text class="ctr2" x="110" y="132" text-anchor="middle">growth / safe</text>';
+      $("donut").innerHTML = svg;
+      $("keys").innerHTML = SLICES.map(function (s, i) { return '<button class="key" type="button" id="key-' + i + '" data-slice="' + i + '"><span class="sw" data-c="' + s.color + '"></span><span>' + s.name + "</span><b>" + s.pct + "%</b></button>"; }).join("");
+      function pick(e) { var b = e.target.closest("[data-slice]"); if (!b) return; ui.slice = +b.getAttribute("data-slice"); draw(); }
+      $("donut").addEventListener("click", pick); $("keys").addEventListener("click", pick);
+    },
+    update: function () {
+      Array.prototype.forEach.call($("donut").querySelectorAll(".slice"), function (c, i) { c.style.stroke = css(SLICES[i].color); c.style.strokeWidth = i === ui.slice ? 40 : 30; });
+      Array.prototype.forEach.call($("keys").querySelectorAll(".sw"), function (s) { s.style.background = css(s.getAttribute("data-c")); });
+      pressGroup($("keys"), "data-slice", ui.slice);
+      var s = SLICES[ui.slice];
+      $("tnote").innerHTML = '<span class="t">Example trading note</span><p><b>Bought:</b>' + s.name + ", " + s.pct + "% of the portfolio</p><p><b>Why:</b>" + s.why + "</p><p><b>Which goal:</b>" + s.goal + "</p><p><b>Risk:</b>" + s.risk + "</p>";
+    } });
+
+  var MIX = { 2027: 60, 2028: 60, 2029: 55, 2030: 45, 2031: 30, 2032: 25, 2033: 25 };
+  var MIXCAP = {
+    2027: "Laura’s $300K goes in with the starting mix. Lots of time, so more growth.",
+    2028: "The $150K goes in with the same mix.",
+    2029: "We start easing toward safer stuff.",
+    2030: "A little safer every year.",
+    2031: "<b>She tells co-sponsors a range this year</b>, so the money can’t swing wildly anymore. Much safer.",
+    2032: "Getting ready to lock in Pile A.",
+    2033: "<b>The split.</b> Pile A (about $422K) goes into bonds that come due one per year. Pile B is the leftover, and we decide how it’s invested."
+  };
+  S({ ch: "Our plan", title: "How the mix changes over the years.",
+    say: "WInS only shows the starting mix. This part goes in the <b>IPS</b>. It’s an <b>example path</b>, not final. Drag through the years: blue is growth, gray is safe.",
+    html: '<div class="area"><svg id="area" viewBox="0 0 600 256" role="img" aria-label="Share in growth versus safe investments, 2027 to 2033"></svg></div>' +
+      '<div class="panel"><input type="range" id="myear" min="2027" max="2033" step="1" aria-label="Year"><div class="readout"><span class="y" id="my"></span><span class="m" id="mm"></span></div><p class="cap" id="mcap"></p></div>',
+    mount: function (draw) {
+      var X = function (y) { return 30 + (y - 2027) * 90; }, Y = function (p) { return 20 + (100 - p) / 100 * 190; };
+      var yrs = [2027, 2028, 2029, 2030, 2031, 2032, 2033];
+      var top = yrs.map(function (y) { return X(y) + "," + Y(0 + (100 - MIX[y])); });
+      /* safe band from bottom (0%) up to safe%, growth band from safe% to 100% */
+      var safeLine = yrs.map(function (y) { return X(y) + "," + Y(100 - MIX[y]); }).join(" ");
+      var svg = '<polygon id="a-growth" points="' + X(2027) + "," + Y(100) + " " + X(2033) + "," + Y(100) + " " + yrs.slice().reverse().map(function (y) { return X(y) + "," + Y(100 - MIX[y]); }).join(" ") + '"/>' +
+        '<polygon id="a-safe" points="' + safeLine + " " + X(2033) + "," + Y(0) + " " + X(2027) + "," + Y(0) + '"/>';
+      yrs.forEach(function (y) { svg += '<text x="' + X(y) + '" y="238" text-anchor="middle">’' + String(y).slice(2) + "</text>"; });
+      svg += '<text class="in" x="' + X(2028) + '" y="' + Y(84) + '" text-anchor="middle">Growth</text><text class="in" x="' + X(2028) + '" y="' + Y(18) + '" text-anchor="middle">Safe</text>';
+      svg += '<line class="mark" id="a-mark" y1="14" y2="216"/>';
+      $("area").innerHTML = svg;
+      $("myear").addEventListener("input", function () { ui.year = +this.value; draw(); });
+    },
+    update: function () {
+      $("a-growth").style.fill = css("--dep"); $("a-safe").style.fill = css("--a");
+      var x = 30 + (ui.year - 2027) * 90; $("a-mark").setAttribute("x1", x); $("a-mark").setAttribute("x2", x);
+      $("myear").value = ui.year;
+      var g = MIX[ui.year];
+      $("my").textContent = ui.year;
+      $("mm").textContent = ui.year === 2033 ? "Split into Pile A and Pile B" : g + "% growth · " + (100 - g) + "% safe";
+      $("mcap").innerHTML = MIXCAP[ui.year];
+    } });
+
+  /* ---------- Chapter 4: how we win ---------- */
+  var VS = [
+    ["The goal", "Pick good stocks and try to make money.", "Say it straight: this case isn’t about making the most money. It’s about making sure the bills get paid."],
+    ["Getting safer", "Get safer around 2033.", "Get safer by 2031, when Laura has to tell co-sponsors a range."],
+    ["“High certainty”", "Say “we’ll be safe” and leave it there.", "Put a number on it, for example “95% chance every bill gets paid,” and show how we tested it."],
+    ["Pile A", "Keep it in cash, or buy bonds that grow with inflation (TIPS).", "Buy regular bonds that come due one each year. The bills never grow with inflation, so inflation protection isn’t needed. Compared with cash, this needs about $78K less, which can go to the building."],
+    ["Telling co-sponsors", "Give one number.", "Give a range and how sure we are, like “$180K to $300K, and we’re about 90% confident.”"],
+    ["The three papers", "Write each one separately.", "Tell one story across the trading notes, the IPS and the final report. Wharton says it considers all three together."]
+  ];
+  S({ ch: "How we win", title: "If everyone does this, how do we win?",
+    say: "Last season about 6,300 teams signed up and only about 2,300 turned in a final report. Just finishing puts us ahead. To reach the top 50, flip the switch and see what we do differently.",
+    html: '<div class="seg-btns" id="side" role="group" aria-label="Compare" style="--n:2"><button type="button" id="side-most" data-side="most">Most teams (probably)</button><button type="button" id="side-us" data-side="us">Wall Street Warriors</button></div>' +
+      '<div class="vs" id="vs"></div>',
+    mount: function (draw) { $("side").addEventListener("click", function (e) { var b = e.target.closest("[data-side]"); if (!b) return; ui.side = b.getAttribute("data-side"); draw(); }); },
+    update: function () {
+      var us = ui.side === "us";
+      $("vs").className = "vs" + (us ? " us" : "");
+      $("vs").innerHTML = VS.map(function (r) { return '<div class="vs-row"><span class="topic">' + r[0] + '</span><span class="txt">' + (us ? r[2] : r[1]) + "</span></div>"; }).join("");
+      pressGroup($("side"), "data-side", ui.side);
+    } });
+
+  S({ ch: "How we win", title: "Edge 1: get safer by 2031, not 2033.",
+    say: "In 2031, Laura has to tell co-sponsors how much she’ll give toward the building. The range she can honestly give depends on how risky her money still is. Flip between the two.",
+    html: '<div class="seg-btns" id="derisk" role="group" aria-label="When we get safer" style="--n:2"><button type="button" id="derisk-late" data-derisk="late">Still risky in 2031<small>most teams</small></button><button type="button" id="derisk-early" data-derisk="early">Safer by 2031<small>our plan</small></button></div>' +
+      '<div class="range"><div class="rtrack"><div class="rfill" id="rfill"></div></div><div class="rticks"><span style="left:0">$0</span><span style="left:25%">$125K</span><span style="left:50%">$250K</span><span style="left:75%">$375K</span><span style="left:100%">$500K</span></div></div>' +
+      '<div class="bubble" id="bubble" aria-live="polite"></div>' +
+      '<p class="note plain">Rough example numbers, assuming the money swings much less by 2031. We work out the real range in the spreadsheet.</p>',
+    mount: function (draw) { $("derisk").addEventListener("click", function (e) { var b = e.target.closest("[data-derisk]"); if (!b) return; ui.derisk = b.getAttribute("data-derisk"); draw(); }); },
+    update: function () {
+      var early = ui.derisk === "early", lo = early ? 180 : 50, hi = early ? 300 : 420;
+      $("rfill").style.left = (lo / 500 * 100) + "%"; $("rfill").style.width = ((hi - lo) / 500 * 100) + "%";
+      $("bubble").innerHTML = '<span class="verdict-chip ' + (early ? "good" : "bad") + '">' + (early ? "Sounds believable" : "Sounds unsure") + "</span><br>Laura to co-sponsors: “I’ll give somewhere between <b>" + k(lo) + "</b> and <b>" + k(hi) + "</b>" + (early ? ", and we’re about 90% confident" : "") + ".”" +
+        "<small>" + (early ? "A tight range. Co-sponsors can plan around it." : "That range is so wide it’s basically a guess. The case warns that promising more than she can give could hurt her credibility with co-sponsors.") + "</small>";
+      pressGroup($("derisk"), "data-derisk", ui.derisk);
+    } });
+
+  var PROFILE = { careful: [0.05, 0.06], balanced: [0.06, 0.10], aggressive: [0.075, 0.16] };
+  var sim = { ok: 0, avg: 0, res: [] };
+  function gauss() { var u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+  function runSim() {
+    var p = PROFILE[ui.profile], res = [], ok = 0, sum = 0;
+    for (var i = 0; i < 100; i++) {
+      var a = 300, b = 0;
+      for (var y = 0; y < 6; y++) { var r = Math.max(-0.6, p[0] + p[1] * gauss()); if (y === 1) b = 150; a *= 1 + r; if (y >= 1) b *= 1 + r; }
+      var left = a + b - RESERVE; res.push(left >= 0); if (left >= 0) ok++; sum += left;
+    }
+    sim = { ok: ok, avg: sum / 100, res: res };
+  }
+  S({ ch: "How we win", title: "Edge 2: put a number on “certainty.”",
+    say: "The case asks us to define “a high degree of certainty.” So we test it: play out 100 pretend futures and count how often every bill gets paid.",
+    html: '<div class="seg-btns" id="prof" role="group" aria-label="Mix" style="--n:3"><button type="button" id="prof-careful" data-prof="careful">Careful<small>safe-heavy</small></button><button type="button" id="prof-balanced" data-prof="balanced">Balanced<small>60 / 40</small></button><button type="button" id="prof-aggressive" data-prof="aggressive">Aggressive<small>stock-heavy</small></button></div>' +
+      '<p class="cap" style="min-height:0">Pick a mix. <b>Green</b> = every bill paid. <b>Red</b> = Pile A came up short.</p>' +
+      '<div class="dots-grid" id="futs" role="img"></div>' +
+      '<div class="stats"><div class="stat"><span class="k">Bills paid</span><span class="v" id="s-ok"></span></div><div class="stat"><span class="k">Avg. left for building</span><span class="v" id="s-avg"></span></div></div>' +
+      '<button class="run" id="run" type="button">Run 100 new futures</button>' +
+      '<p class="note plain"><b>The tradeoff:</b> aggressive leaves more for the building on average, but pays the bills less often. Pretend market, made-up numbers, and each mix stays the same the whole time to keep it simple. Our real plan gets safer over time, which helps. The real version runs 1,000 futures in the spreadsheet.</p>',
+    mount: function (draw) {
+      $("futs").innerHTML = new Array(101).join('<i class="fut"></i>');
+      function go(animate) {
+        runSim(); draw();
+        var dots = $("futs").children, reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+        Array.prototype.forEach.call(dots, function (d, i) {
+          d.className = "fut";
+          var set = function () { d.className = "fut " + (sim.res[i] ? "ok" : "short"); };
+          if (animate && !reduce) setTimeout(set, i * 12); else set();
+        });
+      }
+      $("prof").addEventListener("click", function (e) { var b = e.target.closest("[data-prof]"); if (!b) return; ui.profile = b.getAttribute("data-prof"); go(true); });
+      $("run").addEventListener("click", function () { go(true); });
+      go(false);
+    },
+    update: function () {
+      $("s-ok").textContent = sim.ok + " of 100";
+      $("s-avg").textContent = k(Math.max(0, sim.avg));
+      $("futs").setAttribute("aria-label", sim.ok + " of 100 futures paid every bill");
+      pressGroup($("prof"), "data-prof", ui.profile);
+    } });
+
+  /* ---------- Chapter 5: the team ---------- */
+  S({ ch: "Our team", title: "The three questions we answer.",
+    say: "These are the three big questions in the case. The trading notes, IPS and final report are how we answer them.",
+    html: '<ol class="qs">' +
+      "<li><div><b>How big is Pile A, and what do we keep it in?</b><span>Safe enough that every bill gets paid. Put a number on how sure we are.</span></div></li>" +
+      "<li><div><b>How much of Pile B can go to the building?</b><span>Leave her some cushion. Don’t spend every dollar.</span></div></li>" +
+      "<li><div><b>What does she promise co-sponsors in 2031?</b><span>A range, plus how sure we are, plus a short pitch she could actually send.</span></div></li>" +
+      "</ol>" });
+
+  var SLICES_OWN = [
+    { id: "core", name: "Core funds", pct: "about 45%", tag: "US and international index funds", cls: "t-core", owner: "", does: ["Researches index funds on Wharton’s approved list", "Keeps the mix on target, called rebalancing", "Proposes every trade in this slice"] },
+    { id: "safe", name: "Safe part", pct: "about 40%", tag: "Bonds and Treasuries", cls: "t-safe", owner: "", does: ["Researches bond and Treasury funds", "Plans how the safe part grows as 2031 and 2033 get close", "Proposes every trade in this slice"] },
+    { id: "sa", name: "Stocks A", pct: "about 5%", tag: "Tech and communication", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] },
+    { id: "sb", name: "Stocks B", pct: "about 5%", tag: "Healthcare and consumer", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] },
+    { id: "sc", name: "Stocks C", pct: "about 5%", tag: "Banks, industry and energy", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] }
+  ];
+  var TEAM_JOBS = [
+    { id: "lead", name: "Team leader and submissions", owner: "Michael", does: ["Turns in every deliverable on SurveyMonkey Apply", "Runs a 15-minute check-in each week", "Breaks ties when a vote is stuck"] },
+    { id: "risk", name: "Risk checker", owner: "", does: ["Checks every trade against our limits before the vote", "Can pause a trade that breaks a rule", "Looks over every holding at the weekly check-in"] },
+    { id: "log", name: "Trade log and notes", owner: "", does: ["Keeps the shared sheet: every trade, who proposed it, who placed it", "Makes sure every trade has a note", "Picks the 3 notes for the Oct 23 analysis"] },
+    { id: "client", name: "Laura’s case and the math", owner: "", does: ["Knows Laura’s case best", "Runs the spreadsheet for her real money", "Checks that every note ties back to her goals"] },
+    { id: "research", name: "Research and sources", owner: "", does: ["A short market update each week", "Keeps the list of sources, including any AI use, which the rules say we must cite", "Edits the final report"] }
+  ];
+  function ownerPill(o) { return o ? '<span class="pillname set">' + o + "</span>" : '<span class="pillname open">Open</span>'; }
+  S({ ch: "Our team", title: "Our jobs: one slice, one team job each.",
+    say: "<b>A proposal for our next meeting, not decided yet.</b> Each of us picks one slice of the portfolio to research and one team job. The three stock slices come from Federico’s idea: that’s where medium- and higher-risk picks go, kept small so they can’t take over. Tap any tile or job.",
+    html: '<div class="tree" id="tree" role="group" aria-label="Portfolio slices, sizes are rough">' +
+        '<div class="top">' + SLICES_OWN.slice(0, 2).map(function (t) { return '<button class="tile ' + t.cls + '" type="button" id="tile-' + t.id + '" data-pick="s:' + t.id + '"><span class="nm">' + t.name + '</span><span class="pc">' + t.pct + "</span>" + (t.owner ? '<span class="ow">' + t.owner + "</span>" : '<span class="ow">Open</span>') + "</button>"; }).join("") + "</div>" +
+        '<div class="bot">' + SLICES_OWN.slice(2).map(function (t) { return '<button class="tile ' + t.cls + '" type="button" id="tile-' + t.id + '" data-pick="s:' + t.id + '"><span class="nm">' + t.name + '</span><span class="pc">' + t.pct + "</span>" + '<span class="ow">Open</span>' + "</button>"; }).join("") + "</div>" +
+      "</div>" +
+      '<h3 class="sub-h">Team jobs</h3>' +
+      '<div class="jobs" id="jobs">' + TEAM_JOBS.map(function (j) { return '<button class="jobrow" type="button" id="job-' + j.id + '" data-pick="j:' + j.id + '"><span>' + j.name + "</span>" + ownerPill(j.owner) + "</button>"; }).join("") + "</div>" +
+      '<article class="detail" id="pickd" aria-live="polite"></article>' +
+      '<p class="note b"><b>One rule for everyone:</b> go through steps 1 to 13 of this guide before you vote on or place a trade.</p>',
+    mount: function (draw) {
+      function pick(e) { var b = e.target.closest("[data-pick]"); if (!b) return; ui.own = b.getAttribute("data-pick"); draw(); }
+      $("tree").addEventListener("click", pick); $("jobs").addEventListener("click", pick);
+    },
+    update: function () {
+      var sel = ui.own, kind = sel.split(":")[0], id = sel.split(":")[1];
+      Array.prototype.forEach.call(document.querySelectorAll("#tree [data-pick], #jobs [data-pick]"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-pick") === sel)); });
+      var item = (kind === "s" ? SLICES_OWN : TEAM_JOBS).filter(function (x) { return x.id === id; })[0];
+      $("pickd").innerHTML = '<span class="k">' + (kind === "s" ? "Slice · " + item.pct + " · " + item.tag : "Team job") + "</span><h3>" + item.name + "</h3>" +
+        "<ul>" + item.does.map(function (d) { return "<li>" + d + "</li>"; }).join("") + "</ul>" +
+        '<span class="count">Owner: ' + (item.owner || "open, pick at the meeting") + "</span>";
+    } });
+
+  var VOTERS = ["Michael", "Caleb", "Dylan", "Joe", "Federico"];
+  var CHK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+  function msg(who, html, cls) {
+    if (cls) return '<div class="msg sys ' + cls + '"><span class="bub">' + html + "</span></div>";
+    return '<div class="msg"><span class="av2">' + who[0] + '</span><span class="bub"><span class="who2">' + who + "</span>" + html + "</span></div>";
+  }
+  var tradeCard = '<span class="card2">' +
+    '<span class="row2"><b>Trade</b><span>BUY a US stock index fund, 4% of the portfolio</span></span>' +
+    '<span class="row2"><b>Slice</b><span>Core funds</span></span>' +
+    '<span class="row2"><b>Why</b><span>Core funds are at 26% and our plan says 30%</span></span>' +
+    '<span class="row2"><b>Goal</b><span>Growth for Pile B while 2033 is years away</span></span>' +
+    '<span class="row2"><b>Risk</b><span>Can drop in a bad year. We trim it as 2031 gets close.</span></span></span>';
+  S({ ch: "Our team", title: "How a trade happens.",
+    say: "Anyone can place a trade, since it’s during school and whoever is free can do it. But <b>nobody trades alone.</b> Walk through an example in our team chat.",
+    html: '<div class="chat" id="chat" aria-live="polite"></div>' +
+      '<div id="voteBox" class="panel" hidden><span class="count" id="vcount"></span><div class="votes" id="votes"></div></div>' +
+      '<div class="acts" id="acts"></div>' +
+      '<h3 class="sub-h">The rules</h3>' +
+      '<ul class="rules">' +
+        "<li>" + CHK + "<span><b>3 of 5 yes</b> to make a trade. The person proposing it counts.</span></li>" +
+        "<li>" + CHK + "<span><b>Big trades need 4 of 5:</b> over 5% of the portfolio, a new type of investment, or changing our recipe.</span></li>" +
+        "<li>" + CHK + "<span><b>No answer isn’t a yes.</b> Give it 4 hours during school, or post by 8pm to trade tomorrow.</span></li>" +
+        "<li>" + CHK + "<span><b>Anyone can say HOLD once</b>, with a reason. The proposer answers, then we vote again.</span></li>" +
+        "<li>" + CHK + "<span><b>Say “placing it now” before you trade</b>, so nobody buys it twice. The proposer turns their post into the trading note that day.</span></li>" +
+      "</ul>",
+    mount: function (draw) {
+      ui.tr = { stage: 0, yes: ["Dylan"], held: false };
+      $("votes").innerHTML = VOTERS.map(function (v) { return '<button class="vote" type="button" id="vote-' + v + '" data-vote="' + v + '"><i>' + v[0] + "</i>" + v + "</button>"; }).join("");
+      $("votes").addEventListener("click", function (e) {
+        var b = e.target.closest("[data-vote]"); if (!b || b.disabled) return;
+        var v = b.getAttribute("data-vote"), t = ui.tr, i = t.yes.indexOf(v);
+        if (i >= 0) t.yes.splice(i, 1); else t.yes.push(v);
+        draw();
+      });
+      $("acts").addEventListener("click", function (e) {
+        var b = e.target.closest("[data-act]"); if (!b) return;
+        var a = b.getAttribute("data-act"), t = ui.tr;
+        if (a === "post") t.stage = 1;
+        else if (a === "check") t.stage = 2;
+        else if (a === "hold") { t.held = true; t.yes = ["Dylan"]; t.stage = 2; }
+        else if (a === "place") t.stage = 4;
+        else if (a === "note") t.stage = 5;
+        else if (a === "reset") { t.stage = 0; t.yes = ["Dylan"]; t.held = false; }
+        draw();
+      });
+    },
+    update: function () {
+      var t = ui.tr, h = "";
+      /* settle the stage from the votes before drawing, so the chat never shows a stale "Approved" */
+      if (t.stage === 3 && t.yes.length < 3) t.stage = 2;
+      if (t.stage === 2 && t.yes.length >= 3) t.stage = 3;
+      if (t.stage === 0) h += '<p class="cap" style="min-height:0;text-align:center;margin:auto">The chat is empty. Tap <b>Post the trade</b> to start.</p>';
+      if (t.stage >= 1) h += msg("Dylan (example)", "Proposing a trade:" + tradeCard);
+      if (t.stage >= 2) h += msg("Risk checker", "Rules OK: under 5%, and the fund is on the approved list.");
+      if (t.held) h += msg("Joe", "HOLD. We already own a US index fund. Do we need more?") + msg("Dylan (example)", "Yes. It’s one fund, just under target. This brings it back to 30%.") + msg("", "Vote again", "hold");
+      if (t.stage >= 3) h += msg("", "Approved · " + t.yes.length + " of 5 yes", "ok");
+      if (t.stage >= 4) h += msg("Caleb", "Free period, placing it now.") + msg("Caleb", "Filled. Checked our holdings first, no double buy.");
+      if (t.stage >= 5) h += msg("Dylan (example)", "Trading note saved in WInS.") + msg("", "Logged in the trade sheet", "ok");
+      $("chat").innerHTML = h;
+      $("voteBox").hidden = !(t.stage === 2 || t.stage === 3);
+      $("vcount").textContent = (t.stage === 3 ? "Approved. " : "Tap teammates to vote yes. ") + t.yes.length + " of 5 yes (3 needed)";
+      Array.prototype.forEach.call($("votes").children, function (b) {
+        var v = b.getAttribute("data-vote");
+        b.setAttribute("aria-pressed", String(t.yes.indexOf(v) >= 0));
+        b.disabled = v === "Dylan" || t.stage >= 4;
+      });
+      var acts = "";
+      if (t.stage === 0) acts = '<button class="act" type="button" id="act-post" data-act="post">Post the trade</button>';
+      else if (t.stage === 1) acts = '<button class="act" type="button" id="act-check" data-act="check">Check the rules</button>';
+      else if (t.stage === 2) acts = (t.held ? "" : '<button class="act ghost" type="button" id="act-hold" data-act="hold">Someone says HOLD</button>');
+      else if (t.stage === 3) acts = '<button class="act" type="button" id="act-place" data-act="place">Place it in WInS</button>';
+      else if (t.stage === 4) acts = '<button class="act" type="button" id="act-note" data-act="note">Save the trading note</button>';
+      else acts = '<button class="act ghost" type="button" id="act-reset" data-act="reset">Start over</button>';
+      $("acts").innerHTML = acts;
+    } });
+
+  S({ ch: "Our team", title: "Words you’ll see, translated.",
+    say: "Same story, fancier words.",
+    html: '<dl class="words">' +
+      "<div><dt>Operating reserve</dt><dd>Pile A. The money set aside for the ten $50K bills.</dd></div>" +
+      "<div><dt>Operating commitment</dt><dd>The bills themselves: $50K a year, 2033 to 2042.</dd></div>" +
+      "<div><dt>Facility contribution</dt><dd>The part of Pile B she gives toward the building.</dd></div>" +
+      "<div><dt>Co-sponsors</dt><dd>Other people or groups helping pay for the building.</dd></div>" +
+      "<div><dt>Ladder</dt><dd>Safe bonds lined up so one pays out each year, right when a bill is due.</dd></div>" +
+      "<div><dt>Risk tolerance</dt><dd>How big a drop the plan can handle. For Laura it depends on the pile.</dd></div>" +
+      "<div><dt>Treasuries</dt><dd>Loans to the US government. Some of the safest investments there are.</dd></div>" +
+      "<div><dt>Allocation, or mix</dt><dd>Our recipe: what percent goes into each kind of investment.</dd></div>" +
+      "<div><dt>WInS</dt><dd>The trading simulator. A demo of our plan. Its gains and losses never count toward Laura’s money.</dd></div>" +
+      "<div><dt>Slice</dt><dd>A part of the portfolio one of us researches and proposes trades for.</dd></div>" +
+      "<div><dt>HOLD</dt><dd>What you say in the chat to pause a trade once, with a reason.</dd></div>" +
+      "<div><dt>Trading note</dt><dd>A short note on every trade: what we bought, why, which goal, and the risk.</dd></div>" +
+      "<div><dt>IPS</dt><dd>Investment Policy Statement. Our written plan, due Nov 6.</dd></div>" +
+      "<div><dt>Out of scope</dt><dd>Taxes, Taiwan’s laws, and the building’s total cost. The case says to skip them.</dd></div>" +
+      "<div><dt>Year 0, Year 7</dt><dd>A count of years from now. Year 0 is 2026. Year 7 is 2033.</dd></div>" +
+      "</dl>" });
+
+  /* ================= ENGINE ================= */
+  var CHAPTERS = [];
+  STEPS.forEach(function (s, i) { if (!CHAPTERS.length || CHAPTERS[CHAPTERS.length - 1].name !== s.ch) CHAPTERS.push({ name: s.ch, first: i }); });
+
+  var i = 0;
+  try { var saved = parseInt(localStorage.getItem("two-piles-step-v3"), 10); if (saved >= 0 && saved < STEPS.length) i = saved; } catch (e) {}
+
+  function drawPot(view) {
+    var pot = $("pot");
+    pot.hidden = !view;
+    if (!view) return;
+    var segs = view.segs.filter(function (s) { return s.v > 0.5; }), bar = $("bar");
+    while (bar.querySelectorAll(".seg").length < 2) { var d = document.createElement("div"); d.className = "seg"; bar.appendChild(d); }
+    Array.prototype.forEach.call(bar.querySelectorAll(".seg"), function (n, j) {
+      var s = segs[j];
+      if (!s) { n.style.width = "0"; n.style.display = "none"; return; }
+      n.style.display = "block";
+      n.className = "seg " + s.cls + (segs.length === 1 ? " only" : j === 0 ? " first" : " last");
+      n.style.width = (s.v / MAX * 100) + "%";
+    });
+    var e = bar.querySelector(".empty");
+    if (view.empty) { if (!e) { e = document.createElement("div"); e.className = "empty"; bar.appendChild(e); } e.textContent = view.empty; } else if (e) e.remove();
+    var total = segs.reduce(function (a, s) { return a + s.v; }, 0);
+    bar.setAttribute("aria-label", segs.length ? segs.map(function (s) { return s.label + " " + k(s.v); }).join(", ") : view.empty);
+    $("when").textContent = view.when;
+    $("total").textContent = view.total || k(total);
+    var tok = { dep: "--dep", dep2: "--dep-2", grow: "--dep-2", a: "--a", b: "--b" };
+    $("legend").hidden = !view.segs.length;
+    $("legend").innerHTML = view.segs.map(function (s) {
+      return '<li><span class="sw" style="background:' + css(tok[s.cls]) + (s.cls === "grow" ? ";background-image:repeating-linear-gradient(135deg," + css("--grow") + " 0 4px," + css("--dep-2") + " 4px 8px)" : "") + '"></span><span>' + s.label + '</span><span class="amt">' + k(s.v) + "</span></li>";
+    }).join("");
+  }
+
+  function draw() {
+    var step = STEPS[i];
+    drawPot(step.pot ? step.pot() : null);
+    if (step.update) step.update();
+  }
+
+  function render(animate) {
+    stopPlay();
+    var step = STEPS[i];
+    $("text").innerHTML = '<span class="step-n">' + step.ch + " · Step " + (i + 1) + " of " + STEPS.length + "</span><h1>" + step.title + '</h1><p class="say">' + step.say + "</p>";
+    $("body").innerHTML = step.html || "";
+    $("body").hidden = !step.html;
+    if (step.mount) step.mount(draw);
+    draw();
+    if (animate) { var t = $("text"); t.classList.remove("fade"); void t.offsetWidth; t.classList.add("fade"); }
+    $("back").disabled = i === 0;
+    $("next").textContent = i === STEPS.length - 1 ? "Start over" : "Next";
+    $("prog").style.width = ((i + 1) / STEPS.length * 100) + "%";
+    var chIdx = 0; CHAPTERS.forEach(function (c, j) { if (i >= c.first) chIdx = j; });
+    Array.prototype.forEach.call($("chapters").children, function (b, j) { b.setAttribute("aria-current", String(j === chIdx)); });
+    var cur = $("chapters").children[chIdx]; if (cur && cur.scrollIntoView) cur.scrollIntoView({ block: "nearest", inline: "nearest" });
+    try { localStorage.setItem("two-piles-step-v3", String(i)); } catch (e) {}
+  }
+
+  $("chapters").innerHTML = CHAPTERS.map(function (c, j) { return '<button type="button" id="ch-' + j + '">' + c.name + "</button>"; }).join("");
+  $("chapters").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; i = CHAPTERS[Array.prototype.indexOf.call($("chapters").children, b)].first; render(true); window.scrollTo({ top: 0 }); });
+  $("next").addEventListener("click", function () { i = i === STEPS.length - 1 ? 0 : i + 1; render(true); window.scrollTo({ top: 0 }); });
+  $("back").addEventListener("click", function () { if (i > 0) { i--; render(true); window.scrollTo({ top: 0 }); } });
+  document.addEventListener("keydown", function (e) {
+    if (e.target.closest && e.target.closest("input,textarea,select")) return;
+    if (e.key === "ArrowRight" && i < STEPS.length - 1) { i++; render(true); }
+    else if (e.key === "ArrowLeft" && i > 0) { i--; render(true); }
+  });
+  try {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", draw);
+    new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  } catch (e) {}
+  render(false);
+})();
+</script>
+
+</body>
+</html>
