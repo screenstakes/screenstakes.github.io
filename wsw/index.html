@@ -15,18 +15,20 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142F63'/%3E%3Crect x='12' y='30' width='22' height='22' rx='4' fill='%236F7FA0'/%3E%3Crect x='38' y='40' width='14' height='12' rx='4' fill='%23D98B2B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"></noscript>
 <style>
 :root{
-  --ground:#F5F7FB; --card:#FFFFFF; --ink:#142F63; --ink-2:#4B5872; --ink-3:#6E7B94;
+  --ground:#F5F7FB; --card:#FFFFFF; --ink:#142F63; --ink-2:#4B5872; --ink-3:#5B6780;
   --line:#DDE3EC; --well:#EEF2F8;
   --dep:#2D5DA8; --dep-2:#6F95D2; --grow:#B9CDEB;
-  --a:#6F7FA0; --a-soft:#E6EAF2; --paid:#C3CBDA;
+  --a:#6F7FA0; --a-soft:#E6EAF2; --paid:#9AA6BD;
   --b:#D98B2B; --b-soft:#FBEEDC;
-  --g1:#1E4B95; --g2:#4F7BC4; --g3:#93B2E0; --s1:#5E6E8F; --s2:#A3AEC4;
+  --g1:#1E4B95; --g2:#4F7BC4; --g3:#7E9FD6; --s1:#5E6E8F; --s2:#8E9AB3;
   --yes:#1B7549; --yes-soft:#E3F2E9; --no:#A33A2E; --no-soft:#F8E7E4;
-  --r1:#D3DDEF; --r2:#A9BDE0; --r3:#7C9CD1; --r4:#4F7BC4; --r5:#1E4B95;
+  --r1:#BCCBE6; --r2:#A9BDE0; --r3:#7C9CD1; --r4:#4F7BC4; --r5:#1E4B95;
   --av-b:#A8620F; --av-ink:#FFFFFF;
+  --tile-stk:#3F6BB5; --btn:#142F63; --btn-ink:#FFFFFF;
   --focus:#2D5DA8;
   --display:"Montserrat","Avenir Next","Segoe UI",system-ui,sans-serif;
   --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
@@ -36,12 +38,13 @@
     --ground:#0E1627; --card:#16213A; --ink:#E8EEF9; --ink-2:#B3BFD6; --ink-3:#8E9BB4;
     --line:#2A3858; --well:#1C2945;
     --dep:#6F95D2; --dep-2:#A8C1E8; --grow:#35507F;
-    --a:#8A9ABD; --a-soft:#243252; --paid:#3A4868;
+    --a:#8A9ABD; --a-soft:#243252; --paid:#56648A;
     --b:#E9A650; --b-soft:#3A2D1C;
-    --g1:#7FA7E8; --g2:#4F7BC4; --g3:#34558C; --s1:#C7CEDB; --s2:#7D889E;
+    --g1:#7FA7E8; --g2:#4F7BC4; --g3:#3E64A3; --s1:#C7CEDB; --s2:#8A95AB;
     --yes:#7FD0A0; --yes-soft:#17352A; --no:#F0998D; --no-soft:#3D2226;
-    --r1:#2E4470; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
+    --r1:#3A5585; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
     --av-b:#E9A650; --av-ink:#0E1627;
+    --tile-stk:#93B5EC; --btn:#A8C1E8; --btn-ink:#0E1627;
     --focus:#A8C1E8;
   }
 }
@@ -49,12 +52,13 @@
   --ground:#0E1627; --card:#16213A; --ink:#E8EEF9; --ink-2:#B3BFD6; --ink-3:#8E9BB4;
   --line:#2A3858; --well:#1C2945;
   --dep:#6F95D2; --dep-2:#A8C1E8; --grow:#35507F;
-  --a:#8A9ABD; --a-soft:#243252; --paid:#3A4868;
+  --a:#8A9ABD; --a-soft:#243252; --paid:#56648A;
   --b:#E9A650; --b-soft:#3A2D1C;
-  --g1:#7FA7E8; --g2:#4F7BC4; --g3:#34558C; --s1:#C7CEDB; --s2:#7D889E;
+  --g1:#7FA7E8; --g2:#4F7BC4; --g3:#3E64A3; --s1:#C7CEDB; --s2:#8A95AB;
   --yes:#7FD0A0; --yes-soft:#17352A; --no:#F0998D; --no-soft:#3D2226;
-  --r1:#2E4470; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
+  --r1:#3A5585; --r2:#3F5F95; --r3:#5A7DBA; --r4:#7FA0D8; --r5:#A8C1EE;
   --av-b:#E9A650; --av-ink:#0E1627;
+  --tile-stk:#93B5EC; --btn:#A8C1E8; --btn-ink:#0E1627;
   --focus:#A8C1E8;
 }
 *{box-sizing:border-box}
@@ -67,8 +71,8 @@ button{font-family:inherit}
 /* chapters */
 .chapters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-block:2px}
 .chapters::-webkit-scrollbar{display:none}
-.chapters button{flex:none;font:700 13px/1 var(--display);color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px;min-height:38px;cursor:pointer;white-space:nowrap}
-.chapters button[aria-current="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
+.chapters button{flex:none;font:700 13px/1 var(--display);color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px;min-height:44px;cursor:pointer;white-space:nowrap}
+.chapters button[aria-current="true"]{background:var(--btn);border-color:var(--btn);color:var(--btn-ink)}
 .progress{height:4px;background:var(--line);border-radius:4px;overflow:hidden}
 .progress i{display:block;height:100%;background:var(--b);width:0;transition:width .35s ease}
 
@@ -101,7 +105,7 @@ h1{font:800 clamp(24px,6vw,32px)/1.15 var(--display);letter-spacing:-.015em;marg
 .panel{background:var(--well);border-radius:12px;padding:14px 16px;display:grid;gap:10px}
 .row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
 @media (max-width:560px){.row{grid-template-columns:1fr;gap:8px}.row .play{justify-self:start}}
-.play{font:700 14px/1 var(--display);color:var(--card);background:var(--ink);border:0;border-radius:10px;min-height:44px;padding:0 16px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.play{font:700 14px/1 var(--display);color:var(--btn-ink);background:var(--btn);border:0;border-radius:10px;min-height:44px;padding:0 16px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
 .play svg{width:12px;height:12px;fill:currentColor}
 input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor:pointer}
 .ticks{display:flex;justify-content:space-between;font:600 12px/1 var(--display);color:var(--ink-3);margin-top:-2px;font-variant-numeric:tabular-nums}
@@ -110,8 +114,9 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .seg-btns{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:8px}
 .seg-btns button{font:600 15px/1.25 var(--body);color:var(--ink);background:var(--well);border:1px solid var(--line);border-radius:10px;padding:10px 8px;min-height:52px;cursor:pointer}
 .seg-btns button small{display:block;font-size:12.5px;color:var(--ink-3);font-weight:500;margin-top:2px}
-.seg-btns button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
-.seg-btns button[aria-pressed="true"] small{color:var(--card);opacity:.85}
+.seg-btns button[aria-pressed="true"]{background:var(--btn);border-color:var(--btn);color:var(--btn-ink)}
+.seg-btns button[aria-pressed="true"] small{color:var(--btn-ink);opacity:.85}
+.panel .seg-btns button:not([aria-pressed="true"]){background:var(--card)}
 @media (max-width:520px){.seg-btns.four{--n:2 !important}.seg-btns button{padding:10px 4px;font-size:14px}}
 .note{border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.55;color:var(--ink-2);margin:0}
 .note b{color:var(--ink)}
@@ -128,11 +133,14 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .col.on .fill{background:var(--ink)}
 .col span{font:700 11px/1 var(--display);color:var(--ink-3);font-variant-numeric:tabular-nums}
 .col.on span{color:var(--ink)}
-@media (max-width:420px){.col span{font-size:9.5px}.cols{gap:3px}}
+@media (max-width:420px){.col span{font-size:12px;letter-spacing:-.02em}.cols{gap:3px}}
 
 /* ---- step 7: recipe compare ---- */
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:540px){.compare{grid-template-columns:1fr}}
+.compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.cmp{min-width:0}
+@media (max-width:360px){.compare{grid-template-columns:minmax(0,1fr)}}
+.cmp .big small{display:block;font:600 12px/1.3 var(--display);color:var(--ink-3);margin-top:4px}
+@media (max-width:540px){.cmp{padding:12px}.cmp .sub{display:none}.cmp h3{font-size:16px}.cmp .big{font-size:20px}.cmp .legend li{font-size:13.5px;grid-template-columns:12px 1fr auto;gap:6px}.cmp .legend .amt{font-size:14px}.compare{gap:8px}}
 .cmp{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
 .cmp h3{font:800 18px/1.2 var(--display);margin:0}
 .cmp .sub{font-size:14px;line-height:1.45;color:var(--ink-3);margin:-4px 0 0}
@@ -155,7 +163,8 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .explain .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line)}
 .explain .ic svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .explain b{display:block;font:800 16px/1.3 var(--display);color:var(--ink);margin-bottom:2px}
-.explain span{font-size:15px;line-height:1.5;color:var(--ink-2)}
+.explain span{display:block;font-size:15px;line-height:1.5;color:var(--ink-2)}
+@media (max-width:560px){.explain{min-height:150px;align-content:start}}
 
 /* ---- step 9: counts ---- */
 .counts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -214,10 +223,11 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .donut text{fill:var(--ink);font-family:var(--display)}
 .donut .ctr1{font-weight:800;font-size:26px}.donut .ctr2{font-weight:600;font-size:12px;fill:var(--ink-3)}
 .keys{display:grid;gap:6px;width:100%}
-.key{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;text-align:left;background:none;border:1px solid transparent;border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--ink-2);font-size:14.5px}
+.key{display:grid;grid-template-columns:14px 1fr auto;gap:10px;min-height:44px;align-items:center;text-align:left;background:none;border:1px solid transparent;border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--ink-2);font-size:14.5px}
 .key b{font:800 15px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
 .key[aria-pressed="true"]{background:var(--well);border-color:var(--line);color:var(--ink)}
 .key .grp{grid-column:2 / 4;font:700 11px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:-2px}
+@media (max-width:560px){.tnote{min-height:260px;align-content:start}}
 .tnote{border:1px solid var(--line);border-left:4px solid var(--b);border-radius:10px;padding:14px 16px;display:grid;gap:6px;background:var(--card)}
 .tnote .t{font:800 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .tnote p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-2);display:grid;grid-template-columns:96px 1fr;gap:10px}
@@ -227,7 +237,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 /* ---- step 13: area chart ---- */
 .area svg{display:block;width:100%;height:auto}
 .area text{font-family:var(--display);font-size:14px;font-weight:700;fill:var(--ink-3)}
-.area text.in{fill:var(--card);font-size:16px;font-weight:800}
+.area text.in{fill:var(--card);font-size:19px;font-weight:800}
 .area .mark{stroke:var(--b);stroke-width:5;stroke-linecap:round}
 @media (max-width:560px){.area text{font-size:26px}.area text.in{font-size:28px}}
 .readout{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
@@ -249,23 +259,25 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .rticks{position:relative;height:16px;font:700 12px/1 var(--display);color:var(--ink-3)}
 .rticks span{position:absolute;transform:translateX(-50%)}
 .rticks span:first-child{transform:none}.rticks span:last-child{transform:translateX(-100%)}
+@media (max-width:420px){.rticks span:nth-child(2),.rticks span:nth-child(4){display:none}}
 .bubble{position:relative;border-radius:14px;padding:16px 18px;background:var(--card);border:1px solid var(--line);font:600 17px/1.45 var(--display);color:var(--ink)}
 .bubble small{display:block;font:600 13px/1.4 var(--body);color:var(--ink-3);margin-top:6px}
 .verdict-chip{display:inline-block;font:800 12px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:5px 8px;margin-bottom:8px}
 .verdict-chip.bad{background:var(--no-soft);color:var(--no)}.verdict-chip.good{background:var(--yes-soft);color:var(--yes)}
 
 /* ---- step 16: futures ---- */
-.dots-grid{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px;max-width:520px}
+.dots-grid{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px}
 @media (max-width:460px){.dots-grid{gap:3px}}
 .fut{aspect-ratio:1;border-radius:50%;background:var(--line);transform:scale(.6);transition:transform .2s,background .2s}
 .fut.ok{background:var(--yes);transform:scale(1)}
 .fut.short{background:transparent;box-shadow:inset 0 0 0 2.5px var(--no);transform:scale(1)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stats{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
 .stat{background:var(--well);border-radius:12px;padding:12px 14px}
 .stat .k{display:block;font:700 12px/1.3 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .stat .v{display:block;font:800 26px/1.1 var(--display);color:var(--ink);margin-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (max-width:460px){.stat .v{font-size:22px}}
-.run{font:700 15px/1 var(--display);color:var(--card);background:var(--ink);border:0;border-radius:10px;min-height:46px;padding:0 18px;cursor:pointer;justify-self:start}
+@media (max-width:360px){.stat .v{font-size:18px}}
+.run{font:700 15px/1 var(--display);color:var(--btn-ink);background:var(--btn);border:0;border-radius:10px;min-height:46px;padding:0 18px;cursor:pointer;justify-self:start}
 
 /* ---- questions, team, words ---- */
 .qs{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:q}
@@ -286,7 +298,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .job .role{font:700 13px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .job ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15.5px;line-height:1.5;color:var(--ink)}
 .words{margin:0;display:grid}
-.words div{display:grid;grid-template-columns:minmax(120px,36%) 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+.words div{display:grid;grid-template-columns:minmax(120px,30%) 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
 .words div:first-child{border-top:0;padding-top:0}
 .words dt{font:700 15px/1.4 var(--display);color:var(--ink)}
 .words dd{margin:0;font-size:15px;color:var(--ink-2)}
@@ -297,26 +309,28 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .tree .bot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;height:84px}
 .tile{position:relative;display:grid;align-content:space-between;gap:4px;text-align:left;border:2px solid transparent;border-radius:12px;padding:10px 12px;cursor:pointer;color:var(--card);min-width:0;overflow:hidden}
 .tile .nm{font:800 15px/1.2 var(--display)}
-.tile .pc{font:700 12px/1 var(--display);opacity:.9}
-.tile .ow{justify-self:start;font:700 11.5px/1 var(--display);background:rgba(255,255,255,.22);border-radius:999px;padding:4px 8px;white-space:nowrap}
-.tile.t-safe{background:var(--s1)}.tile.t-core{background:var(--g1)}.tile.t-stk{background:var(--g2)}
+.tile .pc{font:700 12px/1 var(--display)}
+.tile .ow{justify-self:start;font:700 12px/1 var(--display);background:rgba(0,0,0,.2);border-radius:999px;padding:4px 8px;white-space:nowrap}
+.tile.t-safe{background:var(--s1)}.tile.t-core{background:var(--g1)}.tile.t-stk{background:var(--tile-stk)}
 .bot .tile{padding:8px 9px}.bot .tile .nm{font-size:13.5px}
 .tile[aria-pressed="true"]{border-color:var(--b);box-shadow:0 0 0 3px var(--b-soft)}
 .jobs{display:grid;gap:6px}
 .jobrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer;color:var(--ink);font:700 15px/1.3 var(--display)}
-.jobrow[aria-pressed="true"]{border-color:var(--ink);background:var(--well)}
+.jobrow[aria-pressed="true"]{border-color:var(--b);background:var(--well);box-shadow:0 0 0 3px var(--b-soft)}
+.jobrow[aria-pressed="true"] .pillname.open{background:var(--card)}
 .pillname{font:700 12px/1 var(--display);border-radius:999px;padding:5px 9px;white-space:nowrap}
 .pillname.open{background:var(--well);color:var(--ink-3);border:1px dashed var(--line)}
 .pillname.set{background:var(--av-b);color:var(--av-ink)}
 .detail{border-radius:12px;padding:14px 16px;background:var(--well);display:grid;gap:6px}
-.detail .k{font:800 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.detail .k{font:800 12px/1.35 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .detail h3{font:800 18px/1.25 var(--display);margin:0}
 .detail ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px;line-height:1.45}
 .sub-h{font:800 15px/1.3 var(--display);margin:4px 0 -4px}
-@media (max-width:420px){.tree .top{height:128px}.tree .bot{height:92px}.bot .tile .nm{font-size:12.5px}.tile .ow{font-size:10.5px;padding:3px 6px}}
+@media (max-width:420px){.tree .top{height:128px}.tree .bot{height:92px}.bot .tile .nm{font-size:12.5px}.tile .ow{font-size:12px;padding:3px 7px}}
 
 .chat{border:1px solid var(--line);border-radius:14px;background:var(--well);padding:12px;display:grid;gap:8px;min-height:120px}
-.msg{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:start;animation:fade .3s ease both}
+.msg{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:start}
+.msg.new{animation:fade .3s ease both}
 .msg .av2{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:800 12px/1 var(--display);background:var(--s1);color:var(--av-ink)}
 .msg .bub{background:var(--card);border:1px solid var(--line);border-radius:4px 12px 12px 12px;padding:9px 12px;font-size:14.5px;line-height:1.45;color:var(--ink);min-width:0}
 .msg .bub .who2{display:block;font:800 12px/1 var(--display);color:var(--ink-3);margin-bottom:4px}
@@ -325,9 +339,10 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .msg.sys.ok .bub{background:var(--yes-soft);color:var(--yes);border-color:transparent}
 .msg.sys.hold .bub{background:var(--no-soft);color:var(--no);border-color:transparent}
 .card2{display:grid;gap:3px;margin-top:2px}
-.card2 .row2{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13.5px}
-.card2 .row2 b{font:800 11.5px/1.5 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
+.card2 .row2{display:grid;grid-template-columns:52px 1fr;gap:8px;font-size:13.5px}
+.card2 .row2 b{font:800 12px/1.5 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
 .votes{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+@media (max-width:460px){.votes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.vote{padding:0 8px 0 4px;font-size:13px}}
 .vote{display:inline-flex;align-items:center;gap:6px;font:700 13.5px/1 var(--display);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 12px 0 5px;min-height:40px;cursor:pointer}
 .vote i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--display);font-style:normal;background:var(--well);color:var(--ink-2)}
 .vote[aria-pressed="true"]{border-color:var(--yes);background:var(--yes-soft)}
@@ -335,17 +350,22 @@ input[type=range]{width:100%;accent-color:var(--ink);height:40px;margin:0;cursor
 .vote:disabled{cursor:default;opacity:.85}
 .count{font:800 14px/1.3 var(--display);color:var(--ink-2)}
 .acts{display:flex;flex-wrap:wrap;gap:8px}
-.act{font:700 15px/1 var(--display);border-radius:10px;min-height:46px;padding:0 16px;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--card)}
+.act{font:700 15px/1 var(--display);border-radius:10px;min-height:46px;padding:0 16px;cursor:pointer;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink)}
 .act.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
 .act:disabled{opacity:.4;cursor:default}
 .rules{margin:0;padding:0;list-style:none;display:grid;gap:0}
 .rules li{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.45;color:var(--ink)}
 .rules li:first-child{border-top:0;padding-top:0}
 .rules li svg{width:18px;height:18px;margin-top:2px;stroke:var(--b);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+details.fold2 > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px;font:800 15px/1.3 var(--display);color:var(--ink)}
+details.fold2 > summary::-webkit-details-marker{display:none}
+details.fold2 > summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:rotate(45deg);transition:transform .15s}
+details.fold2[open] > summary::after{transform:rotate(-135deg)}
+details.fold2{border-top:1px solid var(--line);padding-top:4px}
 .nav{display:flex;gap:10px}
 .nav button{font:700 16px/1 var(--display);border-radius:12px;padding:0 22px;min-height:54px;cursor:pointer;border:1px solid var(--line)}
 .nav .back{background:var(--card);color:var(--ink-2)}
-.nav .next{background:var(--ink);color:var(--card);border-color:var(--ink);flex:1;max-width:320px;margin-left:auto}
+.nav .next{background:var(--btn);color:var(--btn-ink);border-color:var(--btn);flex:1;max-width:320px;margin-left:auto}
 .nav button:disabled{opacity:.35;cursor:default}
 .hint{text-align:center;font-size:13px;color:var(--ink-3);margin:0}
 .fade{animation:fade .35s ease both}
@@ -379,7 +399,8 @@ img{max-width:100%}
     <button class="back" id="back" type="button">Back</button>
     <button class="next" id="next" type="button">Next</button>
   </div>
-  <p class="hint">Tap Next to keep going. Numbers are rounded, and anything marked “example” is a sample, not our final plan.</p>
+  <p class="hint" id="hint">Tap Next to keep going. Numbers are rounded, and anything marked “example” is a sample, not our final plan.</p>
+  <p class="hint">Made with help from AI. If anything here ends up in a deliverable, cite it.</p>
 </div>
 
 <script>
@@ -397,7 +418,7 @@ img{max-width:100%}
   function potAt(year, rate) { if (year < 2027) return 0; return 300 * Math.pow(1 + rate, year - 2027) + (year >= 2028 ? 150 * Math.pow(1 + rate, year - 2028) : 0); }
   function pileAAfter(year) { var r = RESERVE; for (var yr = 2033; yr <= year; yr++) { r -= 50; if (yr < year) r *= 1 + LADDER; } return Math.max(0, r); }
 
-  var ui = { grow: 2033, bills: 2033, scen: "none", mix: 40, lens: "wins", pile: "a", slice: 3, year: 2031, side: "most", derisk: "late", profile: "balanced", own: "s:core", tr: null };
+  var ui = { grow: 2033, bills: 2033, scen: "none", mix: 40, lens: "wins", pile: "a", slice: 0, year: 2031, side: "most", derisk: "late", profile: "balanced", own: "s:core", tr: null };
   var timer = null;
   function stopPlay() { if (timer) { clearInterval(timer); timer = null; } var p = $("play"); if (p) p.innerHTML = playIcon + "Play"; }
   function playLoop(key, min, max, cb) {
@@ -453,8 +474,8 @@ img{max-width:100%}
 
   S({ ch: "The story", title: "In 2033, we split it into two piles.",
     say: "One pile pays her bills. The other is what’s left, and we decide how much of it goes to the building.",
-    pot: function () { var t = potAt(2033, RATE); return { when: "Start of 2033 (example: 7% growth, bonds paying 4%)", segs: [{ cls: "a", v: RESERVE, label: "Pile A: the bills" }, { cls: "b", v: t - RESERVE, label: "Pile B: the leftover" }] }; },
-    html: '<p class="note a"><b>Pile A is the bills.</b> She promised the art house $50K a year for 10 years, 2033 to 2042. This pile has to cover every one with a high degree of certainty. The case calls it the <b>operating reserve</b>.</p>' +
+    pot: function () { var t = potAt(2033, RATE); return { when: "Start of 2033 (example)", segs: [{ cls: "a", v: RESERVE, label: "Pile A: the bills" }, { cls: "b", v: t - RESERVE, label: "Pile B: the leftover" }] }; },
+    html: '<p class="note a"><b>Pile A is the bills.</b> She promised the art house $50K a year for 10 years, 2033 to 2042. This pile has to cover every one with a high degree of certainty. The case calls it the <b>operating reserve</b>. Example numbers: 7% growth a year, bonds paying about 4%.</p>' +
       '<p class="note b"><b>Pile B is the leftover.</b> We recommend how much of it she puts toward the building, and she keeps the rest as a cushion.</p>' });
 
   S({ ch: "The story", title: "Watch Pile A pay the bills.",
@@ -473,14 +494,15 @@ img{max-width:100%}
         var y = +c.getAttribute("data-year"), left = pileAAfter(y);
         c.querySelector(".fill").style.height = (left / RESERVE * 100) + "%";
         c.classList.toggle("on", y === ui.bills); c.classList.toggle("future", y > ui.bills);
+        c.setAttribute("aria-pressed", String(y === ui.bills)); c.setAttribute("aria-label", y + ": " + k(left) + " left in Pile A");
       });
       var n = ui.bills - 2032, left = Math.round(pileAAfter(ui.bills));
       $("cap").innerHTML = n < 10 ? "<b>" + ui.bills + ":</b> " + n + " bill" + (n > 1 ? "s" : "") + " paid (" + k(50 * n) + "). " + k(left) + " still in Pile A."
-        : "<b>2042:</b> all ten bills paid, $500K in total, and the pile is empty. It only started at about $422K. <b>The other $78K came from what the bonds earned.</b>";
+        : "<b>2042:</b> all ten bills paid, $500K in total, and the pile is empty. It only started at about $422K. <b>The other $78K came from what the bonds earned</b>, if they pay about 4%.";
     } });
 
   S({ ch: "The story", title: "The market decides how big Pile B is.",
-    say: "Tap the buttons to try different markets from 2027 to 2033. <b>Pile A needs about $422K no matter what.</b> The market decides how much is left over for Pile B.",
+    say: "Tap the buttons to try different markets from 2027 to 2033. <b>Pile A needs about $422K no matter what</b> (if bonds pay about 4%). The market decides how much is left over for Pile B.",
     pot: function () {
       var rate = { none: 0, slow: 0.05, normal: 0.07, strong: 0.09 }[ui.scen], t = potAt(2033, rate);
       return { when: "Start of 2033", segs: [{ cls: "a", v: RESERVE, label: "Pile A: the bills" }, { cls: "b", v: t - RESERVE, label: "Pile B: the leftover" }] };
@@ -488,7 +510,7 @@ img{max-width:100%}
     html: '<div class="seg-btns four" id="scen" role="group" aria-label="How the market goes" style="--n:4">' +
       [["none", "No growth", "0% a year"], ["slow", "Slow", "5% a year"], ["normal", "Normal", "7% a year"], ["strong", "Strong", "9% a year"]].map(function (s) {
         return '<button type="button" id="scen-' + s[0] + '" data-scen="' + s[0] + '">' + s[1] + "<small>" + s[2] + "</small></button>"; }).join("") + "</div>" +
-      '<p class="note plain"><b>The real danger is before 2033.</b> Until then it’s all one pot. A bad stretch could shrink it below $422K and leave the bills short. That’s why we get safer as 2033 gets close.</p>',
+      '<p class="note plain"><b>The real danger is before 2033.</b> Until then it’s all one pot. A bad stretch could shrink it below $422K and leave the bills short. That’s why we start getting safer before 2031.</p>',
     mount: function (draw) { $("scen").addEventListener("click", function (e) { var b = e.target.closest("[data-scen]"); if (!b) return; ui.scen = b.getAttribute("data-scen"); draw(); }); },
     update: function () { pressGroup($("scen"), "data-scen", ui.scen); } });
 
@@ -504,13 +526,13 @@ img{max-width:100%}
     mount: function (draw) { $("mix").addEventListener("input", function () { ui.mix = +this.value; draw(); }); },
     update: function () {
       var safe = ui.mix / 100; $("mix").value = ui.mix;
-      $("mix-out").textContent = ui.mix + "% safe, " + (100 - ui.mix) + "% growth";
+      $("mix-out").textContent = ui.mix + "% safe, " + (100 - ui.mix) + "% growth"; $("mix").setAttribute("aria-valuetext", $("mix-out").textContent);
       [["w", 300, "WInS practice money (example amount)"], ["l", 450, "What Laura puts in"]].forEach(function (c) {
         var sv = Math.round(c[1] * safe), gv = c[1] - sv, bars = $(c[0] + "-bar").children;
-        $(c[0] + "-total").textContent = k(c[1]);
+        $(c[0] + "-total").innerHTML = k(c[1]) + (c[0] === "w" ? "<small>example amount</small>" : "<small>what she puts in</small>");
         bars[0].style.cssText = "width:" + safe * 100 + "%;background:" + css("--a") + ";display:" + (sv ? "block" : "none");
         bars[1].style.cssText = "width:" + (1 - safe) * 100 + "%;background:" + css("--dep") + ";display:" + (gv ? "block" : "none");
-        $(c[0] + "-leg").innerHTML = '<li><span class="sw" style="background:' + css("--a") + '"></span><span>Safe (bonds)</span><span class="amt">' + k(sv) + '</span></li><li><span class="sw" style="background:' + css("--dep") + '"></span><span>Growth (stocks)</span><span class="amt">' + k(gv) + "</span></li>";
+        $(c[0] + "-leg").innerHTML = '<li><span class="sw" style="background:' + css("--a") + '"></span><span>Safe</span><span class="amt">' + k(sv) + '</span></li><li><span class="sw" style="background:' + css("--dep") + '"></span><span>Growth</span><span class="amt">' + k(gv) + "</span></li>";
       });
     } });
 
@@ -519,7 +541,7 @@ img{max-width:100%}
     ips: { from: 2027, to: 2042, pin: "How the mix changes, year by year", icon: '<path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/>', t: "The IPS (Investment Policy Statement): the blueprint", d: "In writing, we explain what happens after that first mix. More growth early, safer by 2031, Pile A locked into bonds in 2033." },
     sheet: { from: 2027, to: 2033, pin: "Math fast-forwards the years", icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/>', t: "The spreadsheet: the time machine", d: "We can’t wait 16 years, so we assume a return (like 7% a year) and let the math show where her money ends up. We never add WInS gains or losses to her numbers." }
   };
-  S({ ch: "WInS", title: "How do we cover 16 years in 10 weeks?",
+  S({ ch: "WInS", title: "How do we cover 16 years in a 10-week contest?",
     say: "We don’t trade for 16 years. We use <b>three tools</b>, and each covers a different part of the timeline. Tap each one.",
     html: '<div class="seg-btns" id="lens" role="group" aria-label="Tool" style="--n:3">' +
       '<button type="button" id="lens-wins" data-lens="wins">WInS<small>6 weeks</small></button><button type="button" id="lens-ips" data-lens="ips">The IPS<small>our written plan</small></button><button type="button" id="lens-sheet" data-lens="sheet">Spreadsheet<small>the math</small></button></div>' +
@@ -545,11 +567,11 @@ img{max-width:100%}
         '<section class="yes"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Counts</h3><ul><li>Our trades match our plan</li><li>Why we made each trade (trading notes)</li><li>The plan itself (the IPS)</li><li>The final report on how it went</li></ul></section>' +
         '<section class="no"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Doesn’t count</h3><ul><li>How much WInS makes or loses</li><li>Our ranking</li><li>How many trades we make</li><li>Beating other teams</li></ul></section>' +
       "</div>" +
-      '<h3 style="font:800 15px/1.3 var(--display);margin:4px 0 -4px">The deadlines</h3><ol class="flow" aria-label="Deadlines"><li><time>Sep 28</time><span><b>Trading starts.</b> Our rule: every trade gets a note saying why.</span></li><li><time>Oct 23</time><span><b>We pick 3 trades</b> and explain how they fit Laura’s goals.</span></li><li><time>Nov 6</time><span><b>Turn in the IPS.</b> WInS freezes. No more trades.</span></li><li><time>Dec 4</time><span><b>Final report</b> (plus school documentation): did our trades follow the plan, and what does the math say for Laura?</span></li></ol>' });
+      '<details class="fold2"><summary>The deadlines</summary><ol class="flow" aria-label="Deadlines"><li><time>Sep 28</time><span><b>Trading starts.</b> Our rule: every trade gets a note saying why.</span></li><li><time>Oct 23</time><span><b>We pick 3 trades</b> and explain how they fit Laura’s goals.</span></li><li><time>Nov 6</time><span><b>Turn in the IPS.</b> WInS freezes. No more trades.</span></li><li><time>Dec 4</time><span><b>Final report</b> (plus school documentation): did our trades follow the plan, and what does the math say for Laura?</span></li></ol></details>' });
 
   /* ---------- Chapter 3: building the plan ---------- */
   S({ ch: "Our plan", title: "How much risk can Laura take?",
-    say: "The case never gives a label like “low risk.” We have to figure it out from clues. Tap each clue, then see the answer below.",
+    say: "<b>Short version:</b> the bill money takes almost no risk, and the growth money takes smart risk. The case never gives a label like “low risk.” We have to figure it out from clues. Tap each clue, then see the answer below.",
     html: '<div class="clues" id="clues">' +
       [["She has been willing to take thoughtful risks throughout her entrepreneurial career.", "She’s <b>not scared of risk</b>, as long as it’s smart."],
        ["An appropriate balance between pursuing growth and protecting the capital required for her goals.", "She wants <b>both</b>: growth, and safety for the money she really needs."],
@@ -566,7 +588,7 @@ img{max-width:100%}
     update: function () {
       var a = ui.pile === "a";
       $("mk-t").textContent = a ? "Very low risk" : "Medium to higher"; clampPin($("mk"), $("mk").parentNode, a ? 10 : 70);
-      $("pile-cap").innerHTML = a ? "<b>Bill money:</b> once it’s set aside in 2033, it has to be there, so we take almost no risk with it." : "<b>Growth money:</b> before 2033 it’s all one pot. While 2033 is years away we can take smart risks, then get safer as it gets close.";
+      $("pile-cap").innerHTML = a ? "<b>Bill money:</b> once it’s set aside in 2033, it has to be there, so we take almost no risk with it." : "<b>Growth money:</b> before 2033 it’s all one pot. While 2033 is years away we can take smart risks, then start getting safer before 2031.";
       pressGroup($("pile"), "data-pile", ui.pile);
     } });
 
@@ -580,21 +602,21 @@ img{max-width:100%}
        ["good", "A company we researched", "Fits: growth", "Fine, as long as we can say why it helps Laura and write a note on it."],
        ["bad", "Going all in on one hot stock", "Doesn’t fit", "If it crashes, Pile A gets hit. Spreading money out is the whole point."]].map(function (p, i) {
         return '<button class="pick ' + p[0] + '" type="button" id="pick-' + i + '" aria-expanded="false"><b>' + p[1] + '</b><span class="q">Fits Laura? Tap to check</span><span class="badge">' + p[2] + '</span><span class="v">' + p[3] + "</span></button>"; }).join("") + "</div>" +
-      '<p class="note plain"><b>Before we pick anything:</b> Wharton only lets us buy from an approved list. It’s on the Trading page of the competition website (SurveyMonkey Apply). We grab it before anyone picks anything. And remember: this is about Laura’s case in the competition, not advice for anyone’s real money.</p>',
+      '<p class="note plain">We can only buy from Wharton’s approved list (the Trading page on SurveyMonkey Apply). This is about Laura’s case in the competition, not advice for anyone’s real money.</p>',
     mount: function () { $("picks").addEventListener("click", function (e) { var b = e.target.closest(".pick"); if (b) b.setAttribute("aria-expanded", String(b.getAttribute("aria-expanded") !== "true")); }); } });
 
   var SLICES = [
-    { name: "US stock index fund", pct: 30, grp: "Growth", color: "--g1", why: "Laura has years before 2033, usually enough time to recover from bad years.", goal: "Growth for Pile B, the building.", risk: "Stocks can drop 20% or more in a bad year. That’s why we get safer as 2033 gets close." },
+    { name: "US stock index fund", pct: 30, grp: "Growth", color: "--g1", why: "Laura has years before 2033, usually enough time to recover from bad years.", goal: "Growth for Pile B, the building.", risk: "Stocks can drop 20% or more in a bad year. That’s why we start getting safer before 2031." },
     { name: "International stock fund", pct: 15, grp: "Growth", color: "--g2", why: "Spreads our growth beyond just US companies.", goal: "Growth for Pile B.", risk: "Other countries’ markets and currencies can move differently from the US." },
     { name: "Stocks we researched", pct: 15, grp: "Growth", color: "--g3", why: "Companies with a clear reason to grow, each one researched.", goal: "Growth for Pile B, and it shows judges our analysis.", risk: "One company can drop fast, so no single stock gets big." },
-    { name: "Treasury bond fund", pct: 25, grp: "Safe", color: "--s1", why: "Treasuries are loans to the US government. They swing much less than stocks, and the bills need high certainty.", goal: "The safe part now, and Pile A later.", risk: "When new bonds pay more, older bonds are worth a bit less. We accept that because it swings far less than stocks." },
+    { name: "Treasury bond fund", pct: 25, grp: "Safe", color: "--s1", why: "Treasuries are loans to the US government. They swing much less than stocks, and the bills need high certainty.", goal: "The safe part now. In 2033, Pile A moves into bonds that come due one per year.", risk: "When new bonds pay more, older bonds are worth a bit less. We accept that because it swings far less than stocks." },
     { name: "Short-term Treasuries", pct: 15, grp: "Safe", color: "--s2", why: "Treasuries that come due within a year or two. They barely move, so they’re a cushion when stocks have a rough stretch.", goal: "Protecting the safe part.", risk: "Very low. It just doesn’t grow much." }
   ];
   S({ ch: "Our plan", title: "What our starting mix could look like.",
     say: "An <b>example only</b>, not our final answer: 60% growth, 40% safe. Tap a slice to see the <b>trading note</b> we’d write for it.",
     html: '<div class="donut-wrap"><svg class="donut" id="donut" viewBox="0 0 220 220" role="img" aria-label="Example mix: 60% growth, 40% safe"></svg><div class="keys" id="keys"></div></div>' +
       '<article class="tnote" id="tnote" aria-live="polite"></article>' +
-      '<p class="note plain"><b>Why not 90% growth?</b> Laura only puts in $450K. If we go too aggressive and the market has a bad few years, Pile A could come up short. We’d only buy funds that are on Wharton’s approved list. Every trade gets a note like this.</p>',
+      '<p class="note plain">We’d only buy funds on Wharton’s approved list, and every trade gets a note like this.</p>',
     mount: function (draw) {
       var R = 80, C = 2 * Math.PI * R, start = 0, svg = "";
       SLICES.forEach(function (s, i) {
@@ -622,7 +644,7 @@ img{max-width:100%}
     2028: "The $150K goes in with the same mix.",
     2029: "We start easing toward safer stuff.",
     2030: "A little safer every year.",
-    2031: "<b>She tells co-sponsors a range this year</b>, so the money can’t swing wildly anymore. Much safer.",
+    2031: "<b>She tells co‑sponsors a range this year</b>, so the money can’t swing wildly anymore. Much safer.",
     2032: "Getting ready to lock in Pile A.",
     2033: "<b>The split.</b> Pile A (about $422K) goes into bonds that come due one per year. Pile B is the leftover, and we decide how it’s invested."
   };
@@ -657,10 +679,8 @@ img{max-width:100%}
   /* ---------- Chapter 4: how we win ---------- */
   var VS = [
     ["The goal", "Pick good stocks and try to make money.", "Say it straight: this case isn’t about making the most money. It’s about making sure the bills get paid."],
-    ["Getting safer", "Get safer around 2033.", "Get safer by 2031, when Laura has to tell co-sponsors a range."],
-    ["“High certainty”", "Say “we’ll be safe” and leave it there.", "Put a number on it, for example “95% chance every bill gets paid,” and show how we tested it."],
-    ["Pile A", "Keep it in cash, or buy bonds that grow with inflation (TIPS).", "Buy regular bonds that come due one each year. The bills never grow with inflation, so inflation protection isn’t needed. Compared with cash, this needs about $78K less, which can go to the building."],
-    ["Telling co-sponsors", "Give one number.", "Give a range and how sure we are, like “$180K to $300K, and we’re about 90% confident.”"],
+    ["Pile A", "Keep it in cash, or buy bonds that grow with inflation (TIPS).", "Buy regular bonds that come due one each year. The bills never grow with inflation, so inflation protection isn’t needed. Compared with cash, this needs about $78K less (if bonds pay about 4%), which can go to the building."],
+    ["Telling co‑sponsors", "Give one number.", "Give a range and how sure we are, like “$180K to $300K, and we’re about 90% confident.”"],
     ["The three papers", "Write each one separately.", "Tell one story across the trading notes, the IPS and the final report. Wharton says it considers all three together."]
   ];
   S({ ch: "How we win", title: "If everyone does this, how do we win?",
@@ -676,7 +696,7 @@ img{max-width:100%}
     } });
 
   S({ ch: "How we win", title: "Edge 1: get safer by 2031, not 2033.",
-    say: "In 2031, Laura has to tell co-sponsors how much she’ll give toward the building. The range she can honestly give depends on how risky her money still is. Flip between the two.",
+    say: "In 2031, Laura has to tell co‑sponsors how much she’ll give toward the building. The range she can honestly give depends on how risky her money still is. Flip between the two.",
     html: '<div class="seg-btns" id="derisk" role="group" aria-label="When we get safer" style="--n:2"><button type="button" id="derisk-late" data-derisk="late">Still risky in 2031<small>most teams</small></button><button type="button" id="derisk-early" data-derisk="early">Safer by 2031<small>our plan</small></button></div>' +
       '<div class="range"><div class="rtrack"><div class="rfill" id="rfill"></div></div><div class="rticks"><span style="left:0">$0</span><span style="left:25%">$125K</span><span style="left:50%">$250K</span><span style="left:75%">$375K</span><span style="left:100%">$500K</span></div></div>' +
       '<div class="bubble" id="bubble" aria-live="polite"></div>' +
@@ -685,8 +705,8 @@ img{max-width:100%}
     update: function () {
       var early = ui.derisk === "early", lo = early ? 180 : 50, hi = early ? 300 : 420;
       $("rfill").style.left = (lo / 500 * 100) + "%"; $("rfill").style.width = ((hi - lo) / 500 * 100) + "%";
-      $("bubble").innerHTML = '<span class="verdict-chip ' + (early ? "good" : "bad") + '">' + (early ? "Sounds believable" : "Sounds unsure") + "</span><br>Laura to co-sponsors: “I’ll give somewhere between <b>" + k(lo) + "</b> and <b>" + k(hi) + "</b>" + (early ? ", and we’re about 90% confident" : "") + ".”" +
-        "<small>" + (early ? "A tight range. Co-sponsors can plan around it." : "That range is so wide it’s basically a guess. The case warns that promising more than she can give could hurt her credibility with co-sponsors.") + "</small>";
+      $("bubble").innerHTML = '<span class="verdict-chip ' + (early ? "good" : "bad") + '">' + (early ? "Sounds believable" : "Sounds unsure") + "</span><br>Where Pile B could land in 2033: between <b>" + k(lo) + "</b> and <b>" + k(hi) + "</b>" + (early ? ", and we’re about 90% confident" : "") + "." +
+        "<small>" + (early ? "Tight enough to plan around. She’d promise part of it, not the top." : "So wide it’s basically a guess. The case warns that promising more than she can give could hurt her credibility with co‑sponsors.") + "</small>";
       pressGroup($("derisk"), "data-derisk", ui.derisk);
     } });
 
@@ -704,12 +724,12 @@ img{max-width:100%}
   }
   S({ ch: "How we win", title: "Edge 2: put a number on “certainty.”",
     say: "The case asks us to define “a high degree of certainty.” So we test it: play out 100 pretend futures and count how often every bill gets paid.",
-    html: '<div class="seg-btns" id="prof" role="group" aria-label="Mix" style="--n:3"><button type="button" id="prof-careful" data-prof="careful">Careful<small>safe-heavy</small></button><button type="button" id="prof-balanced" data-prof="balanced">Balanced<small>60 / 40</small></button><button type="button" id="prof-aggressive" data-prof="aggressive">Aggressive<small>stock-heavy</small></button></div>' +
+    html: '<div class="seg-btns" id="prof" role="group" aria-label="Mix" style="--n:3"><button type="button" id="prof-careful" data-prof="careful">Careful<small>about 5% a year</small></button><button type="button" id="prof-balanced" data-prof="balanced">Balanced<small>about 6% a year</small></button><button type="button" id="prof-aggressive" data-prof="aggressive">Aggressive<small>about 7.5% a year</small></button></div>' +
       '<p class="cap" style="min-height:0">Pick a mix. <b>Green</b> = every bill paid. <b>Red</b> = Pile A came up short.</p>' +
       '<div class="dots-grid" id="futs" role="img"></div>' +
-      '<div class="stats"><div class="stat"><span class="k">Bills paid</span><span class="v" id="s-ok"></span></div><div class="stat"><span class="k">Avg. left for building</span><span class="v" id="s-avg"></span></div></div>' +
+      '<div class="stats"><div class="stat"><span class="k">Bills paid</span><span class="v" id="s-ok"></span></div><div class="stat"><span class="k">Avg. for building</span><span class="v" id="s-avg"></span></div></div>' +
       '<button class="run" id="run" type="button">Run 100 new futures</button>' +
-      '<p class="note plain"><b>The tradeoff:</b> aggressive leaves more for the building on average, but pays the bills less often. Pretend market, made-up numbers, and each mix stays the same the whole time to keep it simple. Our real plan gets safer over time, which helps. The real version runs 1,000 futures in the spreadsheet.</p>',
+      '<p class="note plain"><b>The tradeoff:</b> aggressive leaves more for the building, but misses bills more often. Made-up numbers, and each mix stays the same the whole time. Our real plan gets safer over time.</p>',
     mount: function (draw) {
       $("futs").innerHTML = new Array(101).join('<i class="fut"></i>');
       function go(animate) {
@@ -738,40 +758,44 @@ img{max-width:100%}
     html: '<ol class="qs">' +
       "<li><div><b>How big is Pile A, and what do we keep it in?</b><span>Safe enough that every bill gets paid. Put a number on how sure we are.</span></div></li>" +
       "<li><div><b>How much of Pile B can go to the building?</b><span>Leave her some cushion. Don’t spend every dollar.</span></div></li>" +
-      "<li><div><b>What does she promise co-sponsors in 2031?</b><span>A range, plus how sure we are, plus a short pitch she could actually send.</span></div></li>" +
+      "<li><div><b>What does she promise co‑sponsors in 2031?</b><span>A range, plus how sure we are, plus a short pitch she could actually send.</span></div></li>" +
       "</ol>" });
 
   var SLICES_OWN = [
     { id: "core", name: "Core funds", pct: "about 45%", tag: "US and international index funds", cls: "t-core", owner: "", does: ["Researches index funds on Wharton’s approved list", "Keeps the mix on target, called rebalancing", "Proposes every trade in this slice"] },
     { id: "safe", name: "Safe part", pct: "about 40%", tag: "Bonds and Treasuries", cls: "t-safe", owner: "", does: ["Researches bond and Treasury funds", "Plans how the safe part grows as 2031 and 2033 get close", "Proposes every trade in this slice"] },
-    { id: "sa", name: "Stocks A", pct: "about 5%", tag: "Tech and communication", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] },
-    { id: "sb", name: "Stocks B", pct: "about 5%", tag: "Healthcare and consumer", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] },
-    { id: "sc", name: "Stocks C", pct: "about 5%", tag: "Banks, industry and energy", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 5% of the portfolio"] }
+    { id: "sa", name: "Stocks A", pct: "about 5%", tag: "Tech and communication", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 3% of the portfolio"] },
+    { id: "sb", name: "Stocks B", pct: "about 5%", tag: "Healthcare and consumer", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 3% of the portfolio"] },
+    { id: "sc", name: "Stocks C", pct: "about 5%", tag: "Banks, industry and energy", cls: "t-stk", owner: "", does: ["Researches 1 to 3 companies in these areas", "Tags each pick medium or higher risk, with a reason", "No single stock over 3% of the portfolio"] }
   ];
   var TEAM_JOBS = [
-    { id: "lead", name: "Team leader and submissions", owner: "Michael", does: ["Turns in every deliverable on SurveyMonkey Apply", "Runs a 15-minute check-in each week", "Breaks ties when a vote is stuck"] },
+    { id: "lead", name: "Team leader and submissions", owner: "Michael", does: ["Turns in every deliverable on SurveyMonkey Apply", "Runs a 15-minute check-in each week", "Pulls the IPS together (everyone writes their own slice’s part)", "Settles it when a vote or a HOLD gets stuck"] },
     { id: "risk", name: "Risk checker", owner: "", does: ["Checks every trade against our limits before the vote", "Can pause a trade that breaks a rule", "Looks over every holding at the weekly check-in"] },
-    { id: "log", name: "Trade log and notes", owner: "", does: ["Keeps the shared sheet: every trade, who proposed it, who placed it", "Makes sure every trade has a note", "Picks the 3 notes for the Oct 23 analysis"] },
+    { id: "log", name: "Trade log and notes", owner: "", does: ["Keeps the shared sheet: every trade, who proposed it, who placed it", "Makes sure every trade has a note", "Picks the 3 notes and drafts the Oct 23 analysis"] },
     { id: "client", name: "Laura’s case and the math", owner: "", does: ["Knows Laura’s case best", "Runs the spreadsheet for her real money", "Checks that every note ties back to her goals"] },
     { id: "research", name: "Research and sources", owner: "", does: ["A short market update each week", "Keeps the list of sources, including any AI use, which the rules say we must cite", "Edits the final report"] }
   ];
   function ownerPill(o) { return o ? '<span class="pillname set">' + o + "</span>" : '<span class="pillname open">Open</span>'; }
   S({ ch: "Our team", title: "Our jobs: one slice, one team job each.",
-    say: "<b>A proposal for our next meeting, not decided yet.</b> Each of us picks one slice of the portfolio to research and one team job. The three stock slices come from Federico’s idea: that’s where medium- and higher-risk picks go, kept small so they can’t take over. Tap any tile or job.",
-    html: '<div class="tree" id="tree" role="group" aria-label="Portfolio slices, sizes are rough">' +
+    say: "<b>A proposal for our next meeting, not decided yet.</b> Each of us picks one slice to research and one team job. The small stock slices are Federico’s idea. Only the leader job is filled, because Wharton made Michael team leader.",
+    html: '<div class="seg-btns" id="ownview" role="group" aria-label="Show" style="--n:2"><button type="button" id="ownview-s" data-view="s">Slices<small>what we research</small></button><button type="button" id="ownview-j" data-view="j">Team jobs<small>what we run</small></button></div>' +
+      '<div class="tree" id="tree" role="group" aria-label="Portfolio slices, sizes are rough">' +
         '<div class="top">' + SLICES_OWN.slice(0, 2).map(function (t) { return '<button class="tile ' + t.cls + '" type="button" id="tile-' + t.id + '" data-pick="s:' + t.id + '"><span class="nm">' + t.name + '</span><span class="pc">' + t.pct + "</span>" + (t.owner ? '<span class="ow">' + t.owner + "</span>" : '<span class="ow">Open</span>') + "</button>"; }).join("") + "</div>" +
         '<div class="bot">' + SLICES_OWN.slice(2).map(function (t) { return '<button class="tile ' + t.cls + '" type="button" id="tile-' + t.id + '" data-pick="s:' + t.id + '"><span class="nm">' + t.name + '</span><span class="pc">' + t.pct + "</span>" + '<span class="ow">Open</span>' + "</button>"; }).join("") + "</div>" +
       "</div>" +
-      '<h3 class="sub-h">Team jobs</h3>' +
       '<div class="jobs" id="jobs">' + TEAM_JOBS.map(function (j) { return '<button class="jobrow" type="button" id="job-' + j.id + '" data-pick="j:' + j.id + '"><span>' + j.name + "</span>" + ownerPill(j.owner) + "</button>"; }).join("") + "</div>" +
       '<article class="detail" id="pickd" aria-live="polite"></article>' +
+      '<p class="note plain"><b>How we pick:</b> everyone names their top 2 slices and top 2 jobs, and Michael matches them up. We can swap after two weeks. If someone’s out, anyone can cover.</p>' +
       '<p class="note b"><b>One rule for everyone:</b> go through steps 1 to 13 of this guide before you vote on or place a trade.</p>',
     mount: function (draw) {
       function pick(e) { var b = e.target.closest("[data-pick]"); if (!b) return; ui.own = b.getAttribute("data-pick"); draw(); }
       $("tree").addEventListener("click", pick); $("jobs").addEventListener("click", pick);
+      $("ownview").addEventListener("click", function (e) { var b = e.target.closest("[data-view]"); if (!b) return; var v = b.getAttribute("data-view"); if (ui.own.charAt(0) !== v) ui.own = v === "s" ? "s:core" : "j:lead"; draw(); });
     },
     update: function () {
       var sel = ui.own, kind = sel.split(":")[0], id = sel.split(":")[1];
+      $("tree").hidden = kind !== "s"; $("jobs").hidden = kind !== "j";
+      pressGroup($("ownview"), "data-view", kind);
       Array.prototype.forEach.call(document.querySelectorAll("#tree [data-pick], #jobs [data-pick]"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-pick") === sel)); });
       var item = (kind === "s" ? SLICES_OWN : TEAM_JOBS).filter(function (x) { return x.id === id; })[0];
       $("pickd").innerHTML = '<span class="k">' + (kind === "s" ? "Slice · " + item.pct + " · " + item.tag : "Team job") + "</span><h3>" + item.name + "</h3>" +
@@ -788,30 +812,32 @@ img{max-width:100%}
   var tradeCard = '<span class="card2">' +
     '<span class="row2"><b>Trade</b><span>BUY a US stock index fund, 4% of the portfolio</span></span>' +
     '<span class="row2"><b>Slice</b><span>Core funds</span></span>' +
-    '<span class="row2"><b>Why</b><span>Core funds are at 26% and our plan says 30%</span></span>' +
+    '<span class="row2"><b>Why</b><span>Our US index fund is at 26%. The example plan says 30%.</span></span>' +
     '<span class="row2"><b>Goal</b><span>Growth for Pile B while 2033 is years away</span></span>' +
     '<span class="row2"><b>Risk</b><span>Can drop in a bad year. We trim it as 2031 gets close.</span></span></span>';
   S({ ch: "Our team", title: "How a trade happens.",
     say: "Anyone can place a trade, since it’s during school and whoever is free can do it. But <b>nobody trades alone.</b> Walk through an example in our team chat.",
-    html: '<div class="chat" id="chat" aria-live="polite"></div>' +
-      '<div id="voteBox" class="panel" hidden><span class="count" id="vcount"></span><div class="votes" id="votes"></div></div>' +
+    html: '<div class="chat" id="chat"></div>' +
+      '<div id="voteBox" class="panel" hidden><span class="count" id="vcount" aria-live="polite"></span><div class="votes" id="votes"></div></div>' +
       '<div class="acts" id="acts"></div>' +
-      '<h3 class="sub-h">The rules</h3>' +
-      '<ul class="rules">' +
+      '<details class="fold2" id="rulesd"><summary>The rules</summary><ul class="rules">' +
         "<li>" + CHK + "<span><b>3 of 5 yes</b> to make a trade. The person proposing it counts.</span></li>" +
-        "<li>" + CHK + "<span><b>Big trades need 4 of 5:</b> over 5% of the portfolio, a new type of investment, or changing our recipe.</span></li>" +
-        "<li>" + CHK + "<span><b>No answer isn’t a yes.</b> Give it 4 hours during school, or post by 8pm to trade tomorrow.</span></li>" +
-        "<li>" + CHK + "<span><b>Anyone can say HOLD once</b>, with a reason. The proposer answers, then we vote again.</span></li>" +
-        "<li>" + CHK + "<span><b>Say “placing it now” before you trade</b>, so nobody buys it twice. The proposer turns their post into the trading note that day.</span></li>" +
-      "</ul>",
+        "<li>" + CHK + "<span><b>Big trades need 4 of 5:</b> over 10% of the portfolio, a new type of investment, or changing our recipe. On day one we vote on the whole starting mix at once.</span></li>" +
+        "<li>" + CHK + "<span><b>No answer isn’t a yes.</b> Give it 4 hours during school, or post by 8pm to trade tomorrow. Not enough yes votes in time? It expires, so repost it.</span></li>" +
+        "<li>" + CHK + "<span><b>Anyone can say HOLD once per trade</b>, with a reason. The proposer answers, then the votes start over.</span></li>" +
+        "<li>" + CHK + "<span><b>Say “placing it now” before you trade</b>, and check our holdings first, so nobody buys it twice.</span></li>" +
+        "<li>" + CHK + "<span><b>The proposer turns their post into the trading note</b> that day, and it goes in the trade sheet.</span></li>" +
+        "<li>" + CHK + "<span><b>One shared WInS login</b>, the way Wharton set it up. Keep it inside the team.</span></li>" +
+      "</ul></details>",
     mount: function (draw) {
       ui.tr = { stage: 0, yes: ["Dylan"], held: false };
-      $("votes").innerHTML = VOTERS.map(function (v) { return '<button class="vote" type="button" id="vote-' + v + '" data-vote="' + v + '"><i>' + v[0] + "</i>" + v + "</button>"; }).join("");
+      $("votes").innerHTML = VOTERS.map(function (v) { return '<button class="vote" type="button" id="vote-' + v + '" data-vote="' + v + '"><i aria-hidden="true">' + v[0] + "</i>" + v + "</button>"; }).join("");
       $("votes").addEventListener("click", function (e) {
         var b = e.target.closest("[data-vote]"); if (!b || b.disabled) return;
         var v = b.getAttribute("data-vote"), t = ui.tr, i = t.yes.indexOf(v);
         if (i >= 0) t.yes.splice(i, 1); else t.yes.push(v);
         draw();
+        if (!$("acts").hidden && $("acts").scrollIntoView) $("acts").scrollIntoView({ block: "nearest", behavior: "smooth" });
       });
       $("acts").addEventListener("click", function (e) {
         var b = e.target.closest("[data-act]"); if (!b) return;
@@ -823,27 +849,31 @@ img{max-width:100%}
         else if (a === "note") t.stage = 5;
         else if (a === "reset") { t.stage = 0; t.yes = ["Dylan"]; t.held = false; }
         draw();
+        var tgt = !$("voteBox").hidden ? $("voteBox") : $("acts");
+        if (tgt.scrollIntoView) tgt.scrollIntoView({ block: "nearest", behavior: "smooth" });
       });
     },
     update: function () {
-      var t = ui.tr, h = "";
+      var t = ui.tr, m = [];
       /* settle the stage from the votes before drawing, so the chat never shows a stale "Approved" */
       if (t.stage === 3 && t.yes.length < 3) t.stage = 2;
       if (t.stage === 2 && t.yes.length >= 3) t.stage = 3;
-      if (t.stage === 0) h += '<p class="cap" style="min-height:0;text-align:center;margin:auto">The chat is empty. Tap <b>Post the trade</b> to start.</p>';
-      if (t.stage >= 1) h += msg("Dylan (example)", "Proposing a trade:" + tradeCard);
-      if (t.stage >= 2) h += msg("Risk checker", "Rules OK: under 5%, and the fund is on the approved list.");
-      if (t.held) h += msg("Joe", "HOLD. We already own a US index fund. Do we need more?") + msg("Dylan (example)", "Yes. It’s one fund, just under target. This brings it back to 30%.") + msg("", "Vote again", "hold");
-      if (t.stage >= 3) h += msg("", "Approved · " + t.yes.length + " of 5 yes", "ok");
-      if (t.stage >= 4) h += msg("Caleb", "Free period, placing it now.") + msg("Caleb", "Filled. Checked our holdings first, no double buy.");
-      if (t.stage >= 5) h += msg("Dylan (example)", "Trading note saved in WInS.") + msg("", "Logged in the trade sheet", "ok");
-      $("chat").innerHTML = h;
+      if (t.stage >= 1) m.push(msg("Dylan (example)", "Proposing a trade:" + tradeCard));
+      if (t.stage >= 2) m.push(msg("Risk checker", "Rules OK: under 10% of the portfolio, and the fund is on the approved list."));
+      if (t.held) { m.push(msg("Michael", "HOLD. We already own a US index fund. Do we need more?")); m.push(msg("Dylan (example)", "Yes. It\u2019s one fund, and it\u2019s below the example plan. This brings it back to 30%.")); m.push(msg("", "Votes start over", "hold")); }
+      if (t.stage >= 3) m.push(msg("", "Approved \u00b7 " + t.yes.length + " of 5 yes", "ok"));
+      if (t.stage >= 4) { m.push(msg("Caleb", "Placing it now.")); m.push(msg("Caleb", "Filled. I checked our holdings first, so no double buy.")); }
+      if (t.stage >= 5) { m.push(msg("Dylan (example)", "Trading note saved in WInS.")); m.push(msg("", "Logged in the trade sheet", "ok")); }
+      var chat = $("chat"), have = chat.querySelectorAll(".msg").length;
+      /* only messages that weren't there before get the fade-in */
+      chat.innerHTML = m.length ? m.map(function (x, j) { return j >= have ? x.replace('class="msg', 'class="msg new') : x; }).join("")
+        : '<p class="cap" style="min-height:0;text-align:center;margin:auto">The chat is empty. Tap <b>Post the trade</b> to start.</p>';
       $("voteBox").hidden = !(t.stage === 2 || t.stage === 3);
-      $("vcount").textContent = (t.stage === 3 ? "Approved. " : "Tap teammates to vote yes. ") + t.yes.length + " of 5 yes (3 needed)";
+      $("vcount").innerHTML = (t.stage === 3 ? "<b>Approved.</b> " : "<b>Tap teammates to vote yes.</b> ") + t.yes.length + " of 5 yes (3 needed)";
       Array.prototype.forEach.call($("votes").children, function (b) {
         var v = b.getAttribute("data-vote");
         b.setAttribute("aria-pressed", String(t.yes.indexOf(v) >= 0));
-        b.disabled = v === "Dylan" || t.stage >= 4;
+        b.disabled = v === "Dylan" || t.stage >= 4 || $("voteBox").hidden;
       });
       var acts = "";
       if (t.stage === 0) acts = '<button class="act" type="button" id="act-post" data-act="post">Post the trade</button>';
@@ -852,7 +882,10 @@ img{max-width:100%}
       else if (t.stage === 3) acts = '<button class="act" type="button" id="act-place" data-act="place">Place it in WInS</button>';
       else if (t.stage === 4) acts = '<button class="act" type="button" id="act-note" data-act="note">Save the trading note</button>';
       else acts = '<button class="act ghost" type="button" id="act-reset" data-act="reset">Start over</button>';
+      var hadFocus = $("acts").contains(document.activeElement);
       $("acts").innerHTML = acts;
+      $("acts").hidden = !acts;
+      if (hadFocus) { var fb = $("acts").querySelector("button") || $("votes").querySelector("button:not([disabled])"); if (fb) fb.focus({ preventScroll: true }); }
     } });
 
   S({ ch: "Our team", title: "Words you’ll see, translated.",
@@ -861,16 +894,20 @@ img{max-width:100%}
       "<div><dt>Operating reserve</dt><dd>Pile A. The money set aside for the ten $50K bills.</dd></div>" +
       "<div><dt>Operating commitment</dt><dd>The bills themselves: $50K a year, 2033 to 2042.</dd></div>" +
       "<div><dt>Facility contribution</dt><dd>The part of Pile B she gives toward the building.</dd></div>" +
-      "<div><dt>Co-sponsors</dt><dd>Other people or groups helping pay for the building.</dd></div>" +
+      "<div><dt>Co‑sponsors</dt><dd>Other people or groups helping pay for the building.</dd></div>" +
       "<div><dt>Ladder</dt><dd>Safe bonds lined up so one pays out each year, right when a bill is due.</dd></div>" +
       "<div><dt>Risk tolerance</dt><dd>How big a drop the plan can handle. For Laura it depends on the pile.</dd></div>" +
+      "<div><dt>Stock</dt><dd>A small piece of one company.</dd></div>" +
+      "<div><dt>Bond</dt><dd>A loan you make to a government or company. It pays you back on a set date.</dd></div>" +
+      "<div><dt>Index fund</dt><dd>One investment that holds hundreds of companies at once.</dd></div>" +
+      "<div><dt>Portfolio</dt><dd>Everything we’re invested in, all together.</dd></div>" +
       "<div><dt>Treasuries</dt><dd>Loans to the US government. Some of the safest investments there are.</dd></div>" +
       "<div><dt>Allocation, or mix</dt><dd>Our recipe: what percent goes into each kind of investment.</dd></div>" +
       "<div><dt>WInS</dt><dd>The trading simulator. A demo of our plan. Its gains and losses never count toward Laura’s money.</dd></div>" +
       "<div><dt>Slice</dt><dd>A part of the portfolio one of us researches and proposes trades for.</dd></div>" +
       "<div><dt>HOLD</dt><dd>What you say in the chat to pause a trade once, with a reason.</dd></div>" +
       "<div><dt>Trading note</dt><dd>A short note on every trade: what we bought, why, which goal, and the risk.</dd></div>" +
-      "<div><dt>IPS</dt><dd>Investment Policy Statement. Our written plan, due Nov 6.</dd></div>" +
+      "<div><dt>IPS</dt><dd>Investment Policy Statement. Our written plan, due Nov 6.</dd></div>" +
       "<div><dt>Out of scope</dt><dd>Taxes, Taiwan’s laws, and the building’s total cost. The case says to skip them.</dd></div>" +
       "<div><dt>Year 0, Year 7</dt><dd>A count of years from now. Year 0 is 2026. Year 7 is 2033.</dd></div>" +
       "</dl>" });
@@ -917,14 +954,17 @@ img{max-width:100%}
   function render(animate) {
     stopPlay();
     var step = STEPS[i];
-    $("text").innerHTML = '<span class="step-n">' + step.ch + " · Step " + (i + 1) + " of " + STEPS.length + "</span><h1>" + step.title + '</h1><p class="say">' + step.say + "</p>";
+    $("text").innerHTML = '<span class="step-n">' + step.ch + " · Step " + (i + 1) + " of " + STEPS.length + "</span><h1 tabindex=\"-1\">" + step.title + '</h1><p class="say">' + step.say + "</p>";
     $("body").innerHTML = step.html || "";
     $("body").hidden = !step.html;
     if (step.mount) step.mount(draw);
+    /* reference folds start open on bigger screens, closed on phones */
+    if (!(window.matchMedia && matchMedia("(max-width:700px)").matches)) Array.prototype.forEach.call($("body").querySelectorAll("details.fold2"), function (d) { d.open = true; });
     draw();
     if (animate) { var t = $("text"); t.classList.remove("fade"); void t.offsetWidth; t.classList.add("fade"); }
     $("back").disabled = i === 0;
     $("next").textContent = i === STEPS.length - 1 ? "Start over" : "Next";
+    $("hint").textContent = i === STEPS.length - 1 ? "That\u2019s the whole guide. Tap Start over to go again." : "Tap Next to keep going. Numbers are rounded, and anything marked \u201cexample\u201d is a sample, not our final plan.";
     $("prog").style.width = ((i + 1) / STEPS.length * 100) + "%";
     var chIdx = 0; CHAPTERS.forEach(function (c, j) { if (i >= c.first) chIdx = j; });
     Array.prototype.forEach.call($("chapters").children, function (b, j) { b.setAttribute("aria-current", String(j === chIdx)); });
@@ -937,10 +977,15 @@ img{max-width:100%}
   $("next").addEventListener("click", function () { i = i === STEPS.length - 1 ? 0 : i + 1; render(true); window.scrollTo({ top: 0 }); });
   $("back").addEventListener("click", function () { if (i > 0) { i--; render(true); window.scrollTo({ top: 0 }); } });
   document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || e.defaultPrevented) return;
     if (e.target.closest && e.target.closest("input,textarea,select")) return;
-    if (e.key === "ArrowRight" && i < STEPS.length - 1) { i++; render(true); }
-    else if (e.key === "ArrowLeft" && i > 0) { i--; render(true); }
+    var inBody = $("body").contains(document.activeElement), moved = false;
+    if (e.key === "ArrowRight" && i < STEPS.length - 1) { i++; render(true); moved = true; }
+    else if (e.key === "ArrowLeft" && i > 0) { i--; render(true); moved = true; }
+    if (moved && inBody) document.querySelector("#text h1").focus({ preventScroll: true });
   });
+  /* floating labels are placed in pixels, so re-place them when the screen size changes */
+  var rq; window.addEventListener("resize", function () { cancelAnimationFrame(rq); rq = requestAnimationFrame(draw); });
   try {
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
     if (mq.addEventListener) mq.addEventListener("change", draw);
