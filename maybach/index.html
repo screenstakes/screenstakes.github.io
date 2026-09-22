@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maybach GLS600 — Dallas, Oct 24</title>
+<meta name="description" content="The bouncing Maybach is the GLS600. There is one in Dallas, self-drive, $1,200 a day. Who to call, what to ask, and what the driver is signing up for.">
+<meta property="og:title" content="Maybach GLS600 — Dallas, Oct 24">
+<meta property="og:description" content="One car, one phone number, and the four questions that matter before anyone pays.">
+<meta property="og:image" content="img/gls-side.jpg">
+<meta name="theme-color" content="#FBFAF7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  :root{
+    --paper:#FBFAF7; --card:#FFFFFF; --sink:#F4F2ED;
+    --ink:#17161A; --ink-2:#4E4C55; --ink-3:#7C7A84;
+    --bronze:#8A6A2B; --bronze-lite:#C9A961; --bronze-wash:#FAF4E6;
+    --edge:#E6E2D9;
+    --warn:#A8661C; --warn-wash:#FDF4E8;
+    --stop:#A83C30; --stop-wash:#FCF1EF;
+    --shadow:0 1px 2px rgba(23,22,26,.04), 0 8px 24px -12px rgba(23,22,26,.10);
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  img{max-width:100%;display:block}
+  .wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:32px 40px}
+  section{margin-block:0 54px}
+
+  .eyebrow{
+    font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin:0 0 13px
+  }
+  h1{
+    font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+    font-size:clamp(38px,9vw,66px);line-height:1.04;letter-spacing:-.01em;
+    margin:0 0 10px;text-wrap:balance
+  }
+  h1 em{font-style:italic;color:var(--bronze)}
+  h2{
+    font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+    font-size:clamp(26px,6vw,36px);line-height:1.14;margin:0 0 16px;text-wrap:balance
+  }
+  h3{font-size:17px;font-weight:600;margin:0 0 6px;letter-spacing:-.01em}
+  p{margin:0 0 14px;max-width:62ch;color:var(--ink-2)}
+  p.lede{color:var(--ink);font-size:clamp(17px,4vw,20px);line-height:1.5}
+  strong{color:var(--ink);font-weight:600}
+  em.said{color:var(--ink);font-style:italic}
+  a{color:var(--bronze)}
+
+  .date{
+    display:inline-flex;gap:8px;font-family:"JetBrains Mono",monospace;font-size:11.5px;
+    letter-spacing:.1em;color:var(--ink-3);border:1px solid var(--edge);border-radius:999px;
+    padding:6px 13px;margin-bottom:22px;background:var(--card)
+  }
+  .date b{color:var(--bronze);font-weight:700}
+
+  /* hero photo */
+  .hero-img{
+    border-radius:16px;overflow:hidden;border:1px solid var(--edge);
+    margin:22px 0 10px;box-shadow:var(--shadow);background:var(--sink)
+  }
+  .hero-img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .cap{
+    font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-3);
+    margin:0 0 26px;line-height:1.5;max-width:none
+  }
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+  .gal figure{margin:0;border-radius:13px;overflow:hidden;border:1px solid var(--edge);background:var(--sink)}
+  .gal img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  @media (max-width:520px){.gal{grid-template-columns:1fr}}
+
+  /* the call block */
+  .callnow{
+    border:1px solid var(--bronze-lite);background:var(--bronze-wash);
+    border-radius:18px;padding:24px 20px;box-shadow:var(--shadow);margin:26px 0 0
+  }
+  .callnow .who{
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--bronze);margin:0 0 10px
+  }
+  .bigtel{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    font-family:"JetBrains Mono",monospace;font-size:clamp(22px,6.5vw,30px);font-weight:700;
+    color:#fff;background:var(--bronze);text-decoration:none;
+    border-radius:13px;padding:17px 16px;min-height:56px;margin:0 0 14px;
+    letter-spacing:-.01em
+  }
+  .bigtel:active{background:#6F5522}
+  .callnow p{font-size:14.5px;margin-bottom:0;color:var(--ink-2)}
+
+  /* stat row */
+  .spec{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:0 0 20px}
+  @media (max-width:560px){.spec{grid-template-columns:repeat(2,1fr)}}
+  .sp{border:1px solid var(--edge);border-radius:13px;padding:15px 14px;background:var(--card)}
+  .sp .n{
+    font-family:"JetBrains Mono",monospace;font-size:20px;font-weight:700;color:var(--bronze);
+    display:block;letter-spacing:-.02em;font-variant-numeric:tabular-nums
+  }
+  .sp .l{font-size:12px;color:var(--ink-3);margin-top:5px;display:block;line-height:1.4}
+
+  /* cards */
+  .calls{display:flex;flex-direction:column;gap:13px}
+  .call{border:1px solid var(--edge);border-radius:16px;background:var(--card);padding:20px;box-shadow:var(--shadow)}
+  .call.top{border-color:var(--bronze-lite);background:var(--bronze-wash)}
+  .call.dead{border-color:#EBD9D5;background:var(--stop-wash);box-shadow:none}
+  .call-head{display:flex;gap:12px;margin-bottom:11px}
+  .rank{
+    flex:0 0 auto;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;
+    width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+    background:var(--sink);color:var(--ink-3);border:1px solid var(--edge);margin-top:2px
+  }
+  .call.top .rank{background:var(--bronze);color:#fff;border-color:transparent}
+  .call.dead .rank{background:#F3DDD9;color:var(--stop);border-color:transparent}
+  .call-head h3{font-size:18px;line-height:1.2}
+  .car{
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.05em;
+    color:var(--bronze);text-transform:uppercase;margin-top:3px;display:block
+  }
+  .call.dead .car{color:var(--stop)}
+  .tel{
+    display:inline-flex;align-items:center;min-height:44px;
+    font-family:"JetBrains Mono",monospace;font-size:19px;font-weight:700;
+    color:var(--ink);text-decoration:none;border-bottom:2px solid var(--bronze-lite);
+    margin:0 0 10px
+  }
+  .site{
+    display:inline-flex;align-items:center;gap:7px;font-family:"JetBrains Mono",monospace;
+    font-size:12px;font-weight:700;color:var(--bronze);text-decoration:none;
+    border:1px solid var(--bronze-lite);border-radius:9px;padding:10px 13px;min-height:44px;
+    margin:0 0 13px;background:var(--card);word-break:break-word
+  }
+  .site::after{content:"\2197";font-weight:400;opacity:.7}
+  .meta{
+    font-family:"JetBrains Mono",monospace;font-size:11.5px;line-height:1.75;
+    color:var(--ink-3);margin:0 0 11px;max-width:none
+  }
+  .call p{font-size:14.5px;margin-bottom:0}
+  .call p + p{margin-top:11px}
+  .flag{
+    display:block;margin-top:13px;padding:12px 14px;border-radius:10px;
+    background:var(--warn-wash);border:1px solid #F0DDC2;font-size:13.5px;
+    color:#7A4B12;line-height:1.5
+  }
+  .flag b{color:var(--warn)}
+
+  .cond{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--edge);
+    border-radius:14px;overflow:hidden;margin-bottom:16px;background:var(--card)}
+  @media (max-width:560px){.cond{grid-template-columns:1fr}}
+  .cond div{padding:12px 16px;font-size:13.5px;color:var(--ink-2);border-bottom:1px solid var(--edge)}
+  .cond div:nth-child(odd){border-right:1px solid var(--edge)}
+  @media (max-width:560px){.cond div:nth-child(odd){border-right:0}}
+
+  .avoid{display:flex;flex-direction:column;border:1px solid #EBD9D5;border-radius:16px;overflow:hidden}
+  .avoid div{padding:15px 18px;background:var(--stop-wash);font-size:14px;color:var(--ink-2)}
+  .avoid div + div{border-top:1px solid #EFDFDB}
+  .avoid b{color:var(--ink);font-weight:600;display:block;font-size:14.5px;margin-bottom:3px}
+  .avoid b a{word-break:break-word}
+
+  .asks{counter-reset:ask;display:flex;flex-direction:column;gap:19px;margin-top:6px}
+  .ask{padding-left:42px;position:relative}
+  .ask::before{
+    counter-increment:ask;content:counter(ask);position:absolute;left:0;top:1px;
+    font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;
+    width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+    color:var(--bronze);border:1px solid var(--bronze-lite);background:var(--card)
+  }
+  .quote{
+    font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:18.5px;
+    line-height:1.38;color:var(--ink);margin:0 0 7px;max-width:56ch
+  }
+  .why{font-size:14px;color:var(--ink-3);margin:0;max-width:58ch}
+
+  .money{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+  @media (max-width:560px){.money{grid-template-columns:1fr}}
+  .fig{border:1px solid var(--edge);border-radius:14px;padding:17px;background:var(--card)}
+  .fig .n{
+    font-family:"JetBrains Mono",monospace;font-size:23px;font-weight:700;color:var(--bronze);
+    display:block;letter-spacing:-.02em;font-variant-numeric:tabular-nums
+  }
+  .fig .l{font-size:12.5px;color:var(--ink-3);margin-top:5px;display:block;line-height:1.4}
+
+  .srcs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--edge);
+    border-radius:16px;overflow:hidden;background:var(--card)}
+  @media (max-width:640px){.srcs{grid-template-columns:1fr}}
+  .srcs a{display:block;padding:14px 17px;font-size:13.5px;color:var(--ink-2);
+    text-decoration:none;border-bottom:1px solid var(--edge);line-height:1.45;min-height:44px}
+  .srcs a:nth-child(odd){border-right:1px solid var(--edge)}
+  @media (max-width:640px){.srcs a:nth-child(odd){border-right:0}}
+  .srcs a:active{background:var(--bronze-wash)}
+  .srcs b{display:block;color:var(--bronze);font-weight:600;font-size:14px;margin-bottom:2px}
+  .srcs span{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink-3);word-break:break-all}
+
+  .rule{border:0;border-top:1px solid var(--edge);margin:0 0 48px}
+  footer{font-size:13px;color:var(--ink-3);border-top:1px solid var(--edge);padding-top:20px}
+  footer p{font-size:13px;color:var(--ink-3);max-width:64ch}
+
+  /* sticky mobile call bar */
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;
+    background:rgba(251,250,247,.94);backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);border-top:1px solid var(--edge);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px))
+  }
+  .bar a{
+    display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;
+    background:var(--bronze);color:#fff;text-decoration:none;border-radius:12px;
+    font-family:"JetBrains Mono",monospace;font-weight:700;font-size:16px
+  }
+  .bar a:active{background:#6F5522}
+  @media (max-width:760px){
+    .bar{display:block}
+    body{padding-bottom:86px}
+  }
+  :focus-visible{outline:2px solid var(--bronze);outline-offset:3px;border-radius:4px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <span class="date">SAT <b>24 OCT 2026</b> &middot; DALLAS</span>
+    <h1>It&rsquo;s in Dallas.<br><em>$1,200</em> for the day.</h1>
+    <p class="lede">The bouncing Maybach is the GLS600, and there is one sitting on Walnut Hill in their self-drive inventory. Same list as the Aventador and the Cullinan. One phone call and this is done.</p>
+
+    <div class="hero-img">
+      <img src="img/gls-side.jpg" alt="Two-tone black over champagne Mercedes-Maybach GLS 600 in The Classic Lifestyle's Dallas showroom" width="1000" height="667">
+    </div>
+    <p class="cap">The actual car, in their Dallas showroom. Photo: The Classic Lifestyle.</p>
+
+    <div class="callnow">
+      <p class="who">The Classic Lifestyle &middot; Dallas</p>
+      <a class="bigtel" href="tel:+14696778002">(469) 677-8002</a>
+      <p>Ask for the <strong>Maybach GLS600, Saturday October 24, self-drive.</strong> The parent driving needs to be 25 or older with their own full-coverage policy and a credit card in their name. That is the whole gate.</p>
+    </div>
+  </header>
+
+  <section style="margin-top:44px">
+    <p class="eyebrow">Proof it is the right car</p>
+    <h2>The badge says GLS 600</h2>
+    <div class="gal">
+      <figure><img src="img/gls-rear.jpg" alt="Rear of the Maybach GLS 600 showing the GLS 600 badge on the tailgate" loading="lazy" width="1000" height="667"></figure>
+      <figure><img src="img/gls-interior.jpg" alt="Maybach GLS 600 interior with dual MBUX screens, wood trim and pink ambient lighting" loading="lazy" width="1000" height="667"></figure>
+    </div>
+    <p class="cap">Left: the tailgate badge, which is what confirms this is the 600 and not a GLS 580 or 450. Right: the cabin. Both photos are theirs, shot in their own showroom &mdash; not manufacturer press images, which is the first thing worth checking anywhere else you shop.</p>
+    <p>This matters because <strong>only the GLS 600 gets E&#8209;Active Body Control as standard.</strong> The 580 can have it as a $6,500 option, the 450 cannot have it at all, and no Maybach sedan of any year gets the off-road modes that make it bounce.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">The numbers</p>
+    <h2>What the day costs</h2>
+    <div class="spec">
+      <div class="sp"><span class="n">$1,200</span><span class="l">per day, self-drive</span></div>
+      <div class="sp"><span class="n">100 mi</span><span class="l">included in the day</span></div>
+      <div class="sp"><span class="n">$1,200</span><span class="l">refundable deposit, matches the rate</span></div>
+      <div class="sp"><span class="n">25+</span><span class="l">minimum age for the driver</span></div>
+    </div>
+    <p>It sits between their G&#8209;Wagon at $1,250 and their S580 at $1,000, in a list topped by the Aventador S at $2,500 and the Cullinan at $2,000. Booking runs through Book Now buttons and an Apply link that opens an Adobe e&#8209;signature document &mdash; the normal self-drive flow, not a chauffeur enquiry.</p>
+    <p><strong>Start the credit application early.</strong> It comes before the booking confirms, and leaving it to the week of the 24th is how this falls apart.</p>
+    <span class="flag"><b>Confirm on the call:</b> that the GLS600 is free for self-drive on the 24th rather than held for chauffeur work &mdash; they run both lines and the car appears on both sides of their site. Also ask whether Saturday carries a premium, and what the mileage overage costs, since 100 miles goes fast across a full night.</span>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Set expectations</p>
+    <h2>Thirty seconds, parked, doors shut</h2>
+    <p>Mercedes does not call it bounce mode. It is <strong>Recovery mode</strong>, also labelled Free Driving Assist, and it was built to shake a stuck car out of deep sand. Say &ldquo;bounce mode&rdquo; on the phone and you get a blank look. Say &ldquo;E&#8209;Active Body Control recovery mode&rdquo; and you get an answer.</p>
+    <div class="spec">
+      <div class="sp"><span class="n">30s</span><span class="l">per activation, then it re-arms</span></div>
+      <div class="sp"><span class="n">9 mph</span><span class="l">cuts out above this</span></div>
+      <div class="sp"><span class="n">0 mph</span><span class="l">must be stopped to start it</span></div>
+      <div class="sp"><span class="n">2021+</span><span class="l">standard on every US GLS 600</span></div>
+    </div>
+    <p>All of these have to be true at once or the menu item is greyed out:</p>
+    <div class="cond">
+      <div>Vehicle completely stationary</div>
+      <div>OFF-ROAD or OFF-ROAD+ drive program</div>
+      <div>Suspension raised to off-road height 1 or 2</div>
+      <div>Transmission in D or R, never Park</div>
+      <div>All doors and the hood closed</div>
+      <div>Outdoors, not in a garage</div>
+      <div>No trailer attached</div>
+      <div>Under roughly 15 degrees of tilt</div>
+    </div>
+    <p>Menu path is <strong>Settings &rarr; Assistance &rarr; Off-road Assistant &rarr; Recovery Mode &rarr; Start</strong>. It is a trick you stop the car and perform, not something you do rolling down the street.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Read before using it</p>
+    <h2>It may void the damage waiver</h2>
+    <p>No rental agreement names this feature. The problem is what it requires: <strong>OFF-ROAD drive program with the suspension raised.</strong> Exotic contracts routinely list off-road use and areas not intended for normal vehicle traffic under Prohibited Use, and violating those clauses terminates the rental and voids all liability protection, damage waiver included.</p>
+    <p>The physics back up the worry. On sand, the sand absorbs the impact. On concrete, that energy goes back into the air struts, the 48&#8209;volt actuators and the bushings. Mercedes built in an automatic shutdown when the system detects a hard underbody strike, which tells you what they were designing against. Suspension work on a Maybach GLS is dealer-only and runs into the thousands, and tyres, wheels and underbody are the exact categories waivers exclude anyway.</p>
+    <span class="flag"><b>Get it in writing.</b> An email saying <em class="said">&ldquo;we authorize use of the vehicle&rsquo;s E-Active Body Control recovery mode&rdquo;</em> is the whole ballgame. Factory-installed is not implied permission.</span>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Before money changes hands</p>
+    <h2>Four questions</h2>
+    <div class="asks">
+      <div class="ask">
+        <p class="quote">&ldquo;Is the GLS600 available self-drive on Saturday the 24th, or is it held for chauffeur work?&rdquo;</p>
+        <p class="why">The one ambiguity in their listing. The car appears in the self-drive inventory and on the chauffeur page, and an earlier read of their site concluded wrongly that it was driver-only. Settle it in the first minute.</p>
+      </div>
+      <div class="ask">
+        <p class="quote">&ldquo;Walk to the car, put it in drive with OFF-ROAD selected, and send me a photo of the Off-road Assistant screen.&rdquo;</p>
+        <p class="why">The best verification there is. You want Recovery Mode visible and <strong>not greyed out</strong>. It proves the feature works, the car is the right model, and the system is not in a fault state. Two minutes of their time.</p>
+      </div>
+      <div class="ask">
+        <p class="quote">&ldquo;Is it the four-seat or the five-seat cabin?&rdquo;</p>
+        <p class="why">Mercedes builds the GLS 600 five-seat standard with a four-seat executive layout optional. Rental fleets usually buy the four-seat version because the captain&rsquo;s chairs are the showpiece. Four seats means three of you ride; five means four.</p>
+      </div>
+      <div class="ask">
+        <p class="quote">&ldquo;Does the damage waiver also cover diminished value and loss of use?&rdquo;</p>
+        <p class="why">The question that actually caps the downside. A waiver covering repair cost alone still leaves six figures exposed &mdash; see below. Ask it in the same breath as the recovery-mode permission, because a waiver you have voided protects nothing.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Show this to the parent</p>
+    <h2>The deposit is $1,200. The exposure is $300,000.</h2>
+    <p class="lede">A refundable hold equal to one day&rsquo;s rate reads as &ldquo;my downside is $1,200.&rdquo; It is not a cap on anything.</p>
+    <div class="money">
+      <div class="fig"><span class="n">$200k</span><span class="l">the car&rsquo;s actual cash value</span></div>
+      <div class="fig"><span class="n">$40&ndash;80k</span><span class="l">diminished value, owed even after a perfect repair</span></div>
+      <div class="fig"><span class="n">$35&ndash;55k</span><span class="l">loss of use, 30&ndash;45 days out of the fleet</span></div>
+    </div>
+    <p>Those stack. Total the car and the realistic bill is <strong>$280,000 to $340,000</strong> before towing and admin fees. Texas courts let rental companies recover loss of use, and a fleet with one Maybach argues persuasively that nothing substitutes for it.</p>
+    <p><strong>The credit card will not save them.</strong> Visa Signature and Infinite exclude any car over $75,000 MSRP and name Maybach on the excluded-exotics list &mdash; that benefit pays zero. Chase Sapphire Reserve is the best mainstream card here and caps at $75,000. Amex&rsquo;s free benefit caps at $50,000; its paid Premium Car Rental Protection tops out near $100,000. That is the ceiling across the entire card market, and all of them exclude diminished value by name.</p>
+    <p><strong>Their liability coverage is the wrong coverage.</strong> Part A excludes damage to property &ldquo;in the care of&rdquo; the insured. The Maybach is in their care, so liability limits are irrelevant to the car itself. Only comprehensive and collision can reach it, and whether that extends to a $200,000 exotic lives in their carrier&rsquo;s filed form &mdash; the only acceptable answer is one in writing citing the form number.</p>
+    <span class="flag"><b>The absolute rule:</b> you cannot touch the wheel. Not to move it in a lot, not for a photo, not for ten feet. An unlisted driver voids everything above instantly and makes the parent personally liable for the full value of the car.</span>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">The other risk</p>
+    <h2>Injuring someone else&rsquo;s kid</h2>
+    <p>Texas minimum financial responsibility is <strong>30/60/25</strong>. One serious injury to a teenager with surgery and rehab clears $60,000 immediately, and the driver is personally liable for everything above it. A minor&rsquo;s limitations period generally does not start running until they turn 18, so the exposure stays open for years.</p>
+    <p>Before the 24th: raise bodily injury to <strong>250/500</strong> and confirm a <strong>$1M&ndash;$2M umbrella covering non-owned and rented autos</strong>. Most do, but it has to be confirmed rather than assumed. Text each parent naming who is driving, what car, where and when, and get a yes back &mdash; not a legal shield, but it prevents the much worse conversation where a parent says they never agreed.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Backups</p>
+    <h2>If Dallas says no</h2>
+    <div class="calls">
+      <article class="call">
+        <div class="call-head">
+          <span class="rank">2</span>
+          <div>
+            <h3>NexGen Luxury</h3>
+            <span class="car">$699/day &middot; Dallas claimed, unverified</span>
+          </div>
+        </div>
+        <a class="tel" href="tel:+13053948122">(305) 394-8122</a><br>
+        <a class="site" href="https://nexgenluxe.com/">nexgenluxe.com</a>
+        <p class="meta">Maybach GLS 600 at $699/day &middot; lists Austin, Dallas, Houston, San Antonio<br>Headquarters: 31 N Dixie Hwy, Hallandale Beach, FL 33009</p>
+        <p>Half the price, which is the problem. They name Dallas as a market but their address is Florida and the page never says where this particular car physically sits. That is the profile of a national marketing page that transports a Miami car on request. <strong>Ask where the vehicle is right now</strong> before anything else &mdash; if the answer is Florida, transport erases the saving.</p>
+      </article>
+      <article class="call">
+        <div class="call-head">
+          <span class="rank">3</span>
+          <div>
+            <h3>iExotic Auto</h3>
+            <span class="car">Houston &middot; verified self-drive</span>
+          </div>
+        </div>
+        <a class="tel" href="tel:+18888503155">888-850-3155</a><br>
+        <a class="site" href="https://iexoticauto.com/rent-a-car/mercedes-maybach-gls-600-rent-houston/">iexoticauto.com &middot; GLS 600</a>
+        <p class="meta">3472 Bering Dr, Houston TX 77057<br>$1,000/day &middot; 100 mi/day, $5 over &middot; $1,000 deposit &middot; 4 seats</p>
+        <p>About 3.5 hours each way. Their site advertises a &ldquo;14 Cities&rdquo; service area without naming them, so Dallas delivery is a question, not a given. Ask that and the delivery fee first.</p>
+      </article>
+      <article class="call dead">
+        <div class="call-head">
+          <span class="rank">&times;</span>
+          <div>
+            <h3>Black Label Exotics</h3>
+            <span class="car">Wrong Maybach</span>
+          </div>
+        </div>
+        <p class="meta">(469) 200-0286 &middot; 1845 Woodall Rodgers Fwy, Dallas</p>
+        <p>Their $1,190/day Maybach is the <strong>S&#8209;Class sedan</strong>. Real company, real car, and it will never bounce &mdash; no S&#8209;Class of any year gets the off-road modes. Only relevant if arriving in a Maybach matters more than the trick.</p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Skip entirely</p>
+    <h2>One of these is not a real company</h2>
+    <div class="avoid">
+      <div><b>Exotic Texas Car Rental &mdash; <a href="https://exotictexascarrental.com">exotictexascarrental.com</a></b>Not thin &mdash; fake. The site&rsquo;s own embedded data still names the organisation <em class="said">&ldquo;Air fryer chicken receipes.&rdquo;</em> A repurposed WordPress recipe blog, two pages, domain registered ten months ago, no phone, no address, a Gmail contact. The &ldquo;Maybach GLS600&rdquo; is body copy, never a bookable car.</div>
+      <div><b>Forza Fleet &mdash; <a href="https://forzafleet.com">forzafleet.com</a></b>Still the top organic result for most &ldquo;Maybach GLS 600 Dallas&rdquo; searches. The vehicle page 404s and their live fleet is seven cars, none of them a Maybach.</div>
+      <div><b>DFW Luxury Car Rental &mdash; <a href="https://dfwluxurycarrental.com">dfwluxurycarrental.com</a></b>Real company, wrong trim. Their SUV is a GLS 450, which cannot be optioned with E-Active Body Control at all.</div>
+      <div><b>Starr Luxury Cars &mdash; <a href="https://starrluxurycars.com">starrluxurycars.com</a></b>Ranks at the top of Google for &ldquo;Maybach Dallas.&rdquo; Registered at Berkeley Square, Mayfair, London. No Dallas presence &mdash; SEO bait that farms the booking out and marks it up.</div>
+      <div><b>Texas Alliance Transport &mdash; <a href="https://dfwtat.com">dfwtat.com</a></b>Page titled Mercedes-Benz Maybach. The vehicle described on it is a Lexus ES 350.</div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Timing</p>
+    <h2>Call this week</h2>
+    <p>Two things break your way. <strong>No Cowboys home game</strong> &mdash; they are at Philadelphia the following Monday, so AT&amp;T Stadium is dark. And the <strong>State Fair closes October 18</strong>, so you miss the biggest ground-transport surge of the DFW autumn by six days.</p>
+    <p>What competes is closer to home. <strong>Friday October 23 is the biggest homecoming night in the Metroplex &mdash; 17 schools, Liberty Christian among them</strong> &mdash; and the dances are Saturday the 24th. With one GLS600 in the city, availability is binary: either that car is free on your date or it is not.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="eyebrow">Check it yourself</p>
+    <h2>Every claim, sourced</h2>
+    <p>Nothing here should be taken on faith. These are the pages the figures came from.</p>
+    <div class="srcs">
+      <a href="https://www.exoticrentalstx.com/dallas-inventory/"><b>The GLS600 at $1,200/day</b><span>exoticrentalstx.com/dallas-inventory</span></a>
+      <a href="https://www.exoticrentalstx.com/dallas-chauffeur-service/"><b>Their chauffeur line, for comparison</b><span>exoticrentalstx.com/dallas-chauffeur-service</span></a>
+      <a href="https://www.mbusa.com/en/vehicles/model/gls/maybach/gls600z4"><b>eABC is standard on the GLS 600</b><span>mbusa.com &middot; official model page</span></a>
+      <a href="https://www.mbusa.com/en/owners/manuals/gls-suv-2024-09-x167-mbux/e-active-body-control/function-of-e-active-body-control"><b>Recovery mode in the owner&rsquo;s manual</b><span>mbusa.com &middot; GLS X167</span></a>
+      <a href="https://www.vindeversmercedes.com/which-mercedes-benz-models-can-bounce-ciq/"><b>Which models bounce, which cannot</b><span>vindeversmercedes.com</span></a>
+      <a href="https://www.autoblog.com/features/mercedes-drops-gle-e-active-body-control"><b>Why the GLE lost the feature in the US</b><span>autoblog.com</span></a>
+      <a href="https://usa.visa.com/dam/VCOM/regional/na/us/pay-with-visa/documents/auto-rental-infinite.pdf"><b>Visa excludes cars over $75k, names Maybach</b><span>usa.visa.com &middot; Auto Rental CDW (PDF)</span></a>
+      <a href="https://static.chasecdn.com/content/services/structured-document/document.en.pdf/card/benefits-center/product-benefits-guide-pdf/BGC11388_v2.pdf"><b>Sapphire Reserve caps at $75k</b><span>chase.com &middot; Guide to Benefits (PDF)</span></a>
+      <a href="https://www.americanexpress.com/content/dam/amex/en-us/insurance/premium-car-rental-protection/PCRP_SampleDescriptionOfCoverage.pdf"><b>Amex Premium Car Rental Protection limits</b><span>americanexpress.com (PDF)</span></a>
+      <a href="https://thecapital.law/how-car-rental-companies-recover-loss-of-use-damages-in-texas/"><b>Texas lets companies recover loss of use</b><span>thecapital.law</span></a>
+      <a href="https://www.thesheldricklawfirm.com/post/diminished-value-guide-for-exotic-supercars-recovering-loss-of-use-and-resale-value"><b>Diminished value on exotics runs 20&ndash;40%</b><span>thesheldricklawfirm.com</span></a>
+      <a href="https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license"><b>Texas graduated licensing</b><span>dps.texas.gov</span></a>
+      <a href="https://www.rgmums.com/hoco-dates"><b>17 DFW schools have homecoming Oct 23</b><span>rgmums.com &middot; 2026 dates</span></a>
+      <a href="https://www.fairparkdallas.com/events/detail/2026-state-fair-of-texas"><b>State Fair closes Oct 18</b><span>fairparkdallas.com</span></a>
+      <a href="https://www.nfl.com/schedules/2026/by-team/dallas-cowboys"><b>No Cowboys home game that weekend</b><span>nfl.com &middot; 2026 schedule</span></a>
+      <a href="https://blacklabelexotics.com/maybach-s580/"><b>The Dallas S580, if you change your mind</b><span>blacklabelexotics.com</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Researched 22 September 2026 for Saturday 24 October 2026. Rates, fleet contents and rental terms change without notice &mdash; every figure here needs confirming on the call. Car photographs belong to The Classic Lifestyle and are shown for identification. Nothing on this page is legal or insurance advice.</p>
+  </footer>
+
+</div>
+
+<div class="bar"><a href="tel:+14696778002">Call The Classic Lifestyle</a></div>
+
+</body>
+</html>
