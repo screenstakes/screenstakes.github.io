@@ -95,7 +95,10 @@
       var people = parseInt(selected(peopleSeg), 10) || 2;
       if (!tier) return;
 
-      var mid     = Math.round((tier.lo + tier.hi) / 2);
+      // Do NOT round the midpoint before dividing: rounding 62.5 lb up to 63 moves
+      // the eighth's price per pound by 11 cents and puts this out of step with
+      // src/check_pricing.py and with the figures quoted in the copy.
+      var mid     = (tier.lo + tier.hi) / 2;
       var months  = mid / (people * LB_PER_PERSON_YEAR / 12);
       var cuft    = mid / LB_PER_CUBIC_FOOT;
       var perLb   = tier.price / mid;
